@@ -20,6 +20,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
 
+import static com.google.common.base.Charsets.UTF_8;
 import static com.googlecode.jmxtrans.model.PropertyResolver.resolveProps;
 
 //RabbitMQ library imports
@@ -126,7 +127,7 @@ public class RabbitMQGraphiteWriter extends BaseOutputWriter {
 	}
 
 	private void writeRabbit(String message) throws IOException {
-		channel.basicPublish(exchange_name, routing_key, MessageProperties.PERSISTENT_TEXT_PLAIN, message.getBytes());
+		channel.basicPublish(exchange_name, routing_key, MessageProperties.PERSISTENT_TEXT_PLAIN, message.getBytes(UTF_8));
 	}
 
 	public void validateSetup(Server server, Query query) throws ValidationException {
