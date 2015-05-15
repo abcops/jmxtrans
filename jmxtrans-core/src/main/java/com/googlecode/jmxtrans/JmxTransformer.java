@@ -89,6 +89,11 @@ public class JmxTransformer implements WatchedCallback {
 			enricher.add(jar);
 		}
 
+		File log4jJar = new File("libs/slf4j-log4j12-1.7.10.jar");
+		enricher.add(log4jJar);
+		File logbackclassicJar = new File("libs/logback-classic-1.1.2.jar");
+		enricher.add(logbackclassicJar);
+
 		Injector injector = Guice.createInjector(new JmxTransModule(configuration));
 
 		JmxTransformer transformer = injector.getInstance(JmxTransformer.class);

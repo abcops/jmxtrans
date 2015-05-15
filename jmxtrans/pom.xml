@@ -26,11 +26,6 @@
 
 	<dependencies>
 		<dependency>
-			<groupId>ch.qos.logback</groupId>
-			<artifactId>logback-classic</artifactId>
-			<scope>runtime</scope>
-		</dependency>
-		<dependency>
 			<!--
 				There is no compile time dependency on acplt. There might be a runtime dependency that I did not
 				identify yet, so let's keep it for the moment. After further analysis, we might be able to remove it.
@@ -102,7 +97,6 @@
 			<resource>
 				<directory>src</directory>
 				<includes>
-					<include>log4j.xml</include>
 					<include>quartz.server.properties</include>
 				</includes>
 			</resource>
@@ -209,12 +203,16 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-surefire-plugin</artifactId>
+        <version>2.18.1</version>
 				<configuration>
 					<systemPropertyVariables>
 						<jmxtrans.log.dir>${project.build.directory}</jmxtrans.log.dir>
 						<myhost>w2</myhost>
 						<myport>1099</myport>
 					</systemPropertyVariables>
+          <classpathDependencyExcludes>
+            <classpathDependencyExclude>ch.qos.logback:logback-classic</classpathDependencyExclude>
+          </classpathDependencyExcludes>
 				</configuration>
 			</plugin>
 			<plugin>

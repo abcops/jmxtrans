@@ -111,22 +111,16 @@
 
 	<dependencyManagement>
 		<dependencies>
-			<dependency>
-				<groupId>ch.qos.logback</groupId>
-				<artifactId>logback-classic</artifactId>
-				<version>1.1.2</version>
-				<exclusions>
-					<exclusion>
-						<groupId>org.slf4j</groupId>
-						<artifactId>slf4j-api</artifactId>
-					</exclusion>
-				</exclusions>
-			</dependency>
-			<dependency>
-				<groupId>ch.qos.logback</groupId>
-				<artifactId>logback-core</artifactId>
-				<version>1.1.2</version>
-			</dependency>
+      <dependency>
+        <groupId>ch.qos.logback</groupId>
+        <artifactId>logback-classic</artifactId>
+        <version>1.1.2</version>
+      </dependency>
+      <dependency>
+        <groupId>ch.qos.logback</groupId>
+        <artifactId>logback-core</artifactId>
+        <version>1.1.2</version>
+      </dependency>
 			<dependency>
 				<groupId>com.amazonaws</groupId>
 				<artifactId>aws-java-sdk-cloudwatch</artifactId>
@@ -681,6 +675,9 @@
 							<include>**/*TestCase.java</include>
 							<include>**/*Tests.java</include>
 						</includes>
+            <classpathDependencyExcludes>
+              <classpathDependencyExclude>ch.qos.logback:logback-classic</classpathDependencyExclude>
+            </classpathDependencyExcludes>
 					</configuration>
 				</plugin>
 				<plugin>
@@ -778,6 +775,9 @@
 							<param>com.googlecode.jmxtrans.*</param>
 						</targetClasses>
 						<timestampedReports>false</timestampedReports>
+            <classpathDependencyExcludes>
+              <classpathDependencyExclude>ch.qos.logback:logback-classic</classpathDependencyExclude>
+            </classpathDependencyExcludes>
 					</configuration>
 				</plugin>
 				<plugin>
@@ -967,26 +967,66 @@
 	</reporting>
 
 	<profiles>
-		<profile>
-			<id>withMutationTests</id>
-			<build>
-				<plugins>
-					<plugin>
-						<groupId>org.pitest</groupId>
-						<artifactId>pitest-maven</artifactId>
-						<executions>
-							<execution>
-								<id>pitest</id>
-								<goals>
-									<goal>mutationCoverage</goal>
-								</goals>
-								<phase>verify</phase>
-							</execution>
-						</executions>
-					</plugin>
-				</plugins>
-			</build>
-		</profile>
+    <profile>
+      <id>withMutationTests</id>
+      <build>
+        <plugins>
+          <plugin>
+            <groupId>org.pitest</groupId>
+            <artifactId>pitest-maven</artifactId>
+            <executions>
+              <execution>
+                <id>pitest</id>
+                <goals>
+                  <goal>mutationCoverage</goal>
+                </goals>
+                <phase>verify</phase>
+              </execution>
+            </executions>
+          </plugin>
+        </plugins>
+      </build>
+    </profile>
+    <profile>
+      <id>withLogback</id>
+      <dependencies>
+        <dependency>
+          <groupId>ch.qos.logback</groupId>
+          <artifactId>logback-classic</artifactId>
+          <scope>compile</scope>
+        </dependency>
+      </dependencies>
+      <build>
+        <resources>
+          <resource>
+            <directory>src</directory>
+            <includes>
+              <include>logback.xml</include>
+            </includes>
+          </resource>
+        </resources>
+      </build>
+    </profile>
+    <profile>
+      <id>withLog4jk</id>
+      <dependencies>
+        <dependency>
+          <groupId>org.slf4j</groupId>
+          <artifactId>slf4j-log4j12</artifactId>
+          <scope>compile</scope>
+        </dependency>
+      </dependencies>
+      <build>
+        <resources>
+          <resource>
+            <directory>src</directory>
+            <includes>
+              <include>log4j.xml</include>
+            </includes>
+          </resource>
+        </resources>
+      </build>
+    </profile>
 		<profile>
 			<id>refreshPITHistory</id>
 			<build>
