@@ -210,6 +210,12 @@
 				<groupId>org.apache.commons</groupId>
 				<artifactId>commons-jexl</artifactId>
 				<version>2.1.1</version>
+        <exclusions>
+          <exclusion>
+            <groupId>commons-logging</groupId>
+            <artifactId>commons-logging</artifactId>
+          </exclusion>
+        </exclusions>
 			</dependency>
 			<dependency>
 				<groupId>org.apache.velocity</groupId>
@@ -574,17 +580,6 @@
 						</dependency>
 					</dependencies>
           <executions>
-          <execution>
-            <id>enforce</id>
-            <configuration>
-              <rules>
-                <dependencyConvergence/>
-              </rules>
-            </configuration>
-            <goals>
-              <goal>enforce</goal>
-            </goals>
-          </execution>
 						<execution>
 							<id>enforce-no-package-cycles</id>
 							<goals>
@@ -593,6 +588,7 @@
 							<phase>test-compile</phase>
 							<configuration>
 								<rules>
+                  <dependencyConvergence/>
 									<NoPackageCyclesRule implementation="de.andrena.tools.nopackagecycles.NoPackageCyclesRule"></NoPackageCyclesRule>
 								</rules>
 							</configuration>
