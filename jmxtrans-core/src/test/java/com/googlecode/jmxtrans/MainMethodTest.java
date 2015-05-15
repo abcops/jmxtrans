@@ -23,7 +23,7 @@ public class MainMethodTest {
 
   @Test(expected = java.io.FileNotFoundException.class )
   public void testAdditionalJars() throws Exception {
-    String[] args = {"-j /home/travis","-a add.jar"};
+    String[] args = {"-j", "/home/travis","-a", "add.jar"};
     JmxTransformer.main(args);
   }
 }
