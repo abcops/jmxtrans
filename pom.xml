@@ -234,6 +234,21 @@
 				<optional>true</optional>
 			</dependency>
 			<dependency>
+				<groupId>org.jboss.logging</groupId>
+				<artifactId>jboss-logging</artifactId>
+				<version>3.1.4.GA</version>
+			</dependency>
+			<dependency>
+				<groupId>org.jboss.marshalling</groupId>
+				<artifactId>jboss-marshalling</artifactId>
+				<version>1.4.8.Final</version>
+			</dependency>
+			<dependency>
+				<groupId>org.jboss.xnio</groupId>
+				<artifactId>xnio-api</artifactId>
+				<version>3.2.0.Final</version>
+			</dependency>
+			<dependency>
 				<groupId>org.jmxtrans</groupId>
 				<artifactId>jmxtrans</artifactId>
 				<version>${project.version}</version>
