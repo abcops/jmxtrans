@@ -2,7 +2,6 @@ package com.googlecode.jmxtrans;
 
 import java.net.URL;
 
-import com.googlecode.jmxtrans.classloader.ClassLoaderEnricher;
 import com.googlecode.jmxtrans.cli.CliArgumentParser;
 import com.googlecode.jmxtrans.cli.JmxTransConfiguration;
 
