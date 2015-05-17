@@ -71,12 +71,6 @@
 		<dependency>
 			<groupId>org.jmxtrans</groupId>
 			<artifactId>jmxtrans-utils-log4j</artifactId>
-			<exclusions>
-				<exclusion>
-					<groupId>org.jmxtrans</groupId>
-					<artifactId>jmxtrans-utils</artifactId>
-				</exclusion>
-			</exclusions>
 		</dependency>
 		<dependency>
 			<groupId>org.quartz-scheduler</groupId>

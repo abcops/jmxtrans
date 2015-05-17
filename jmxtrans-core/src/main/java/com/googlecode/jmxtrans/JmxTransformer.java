@@ -5,6 +5,7 @@ import com.google.common.collect.ImmutableSet;
 import com.google.inject.Guice;
 import com.google.inject.Injector;
 import com.googlecode.jmxtrans.classloader.ClassLoaderEnricher;
+import com.googlecode.jmxtrans.classloader.LoggingLoader;
 import com.googlecode.jmxtrans.cli.CliArgumentParser;
 import com.googlecode.jmxtrans.cli.JmxTransConfiguration;
 import com.googlecode.jmxtrans.exceptions.LifecycleException;
