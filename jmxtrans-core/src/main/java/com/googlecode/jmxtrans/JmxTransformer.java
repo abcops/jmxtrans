@@ -17,7 +17,9 @@ import com.googlecode.jmxtrans.model.Server;
 import com.googlecode.jmxtrans.model.ValidationException;
 import com.googlecode.jmxtrans.util.WatchDir;
 import com.googlecode.jmxtrans.util.WatchedCallback;
+
 import edu.umd.cs.findbugs.annotations.SuppressFBWarnings;
+
 import org.apache.commons.io.FilenameUtils;
 import org.apache.commons.lang.RandomStringUtils;
 import org.quartz.CronExpression;
@@ -33,8 +35,11 @@ import org.slf4j.LoggerFactory;
 
 import javax.inject.Inject;
 import javax.management.MBeanServer;
+
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.lang.management.ManagementFactory;
+import java.net.MalformedURLException;
 import java.text.ParseException;
 import java.util.ArrayList;
 import java.util.Date;
@@ -84,10 +89,9 @@ public class JmxTransformer implements WatchedCallback {
 			return;
 		}
 
-		ClassLoaderEnricher enricher = new ClassLoaderEnricher();
-		for (File jar : configuration.getAdditionalJars()) {
-			enricher.add(jar);
-		}
+		enrichClassPath(configuration);
+		LoggingLoader.enrichWithLog4J();
+		LoggingLoader.enrichWithLogback();
 
 		Injector injector = Guice.createInjector(new JmxTransModule(configuration));
 
@@ -95,6 +99,13 @@ public class JmxTransformer implements WatchedCallback {
 
 		// Start the process
 		transformer.doMain();
+	}
+
+	public static void enrichClassPath(JmxTransConfiguration configuration) throws MalformedURLException, FileNotFoundException {
+		ClassLoaderEnricher enricher = new ClassLoaderEnricher();
+		for (File jar : configuration.getAdditionalJars()) {
+			enricher.add(jar);
+		}
 	}
 
 	/**

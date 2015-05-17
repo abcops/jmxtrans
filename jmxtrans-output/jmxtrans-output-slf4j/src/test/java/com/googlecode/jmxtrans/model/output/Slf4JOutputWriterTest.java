@@ -5,6 +5,7 @@ import com.google.common.collect.ImmutableMap;
 import com.googlecode.jmxtrans.model.Query;
 import com.googlecode.jmxtrans.model.Result;
 import com.googlecode.jmxtrans.model.Server;
+
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -28,6 +29,7 @@ public class Slf4JOutputWriterTest {
 	private Result result;
 
 	@Mock private Logger logger;
+//	private Logger realLogger;
 
 	@Before
 	public void initOutputWriter() {

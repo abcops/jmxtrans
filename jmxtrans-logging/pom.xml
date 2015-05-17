@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>org.jmxtrans</groupId>
+		<artifactId>jmxtrans-parent</artifactId>
+		<version>251-SNAPSHOT</version>
+	</parent>
+
+	<artifactId>jmxtrans-logging</artifactId>
+
+	<name>JmxTrans - Logging</name>
+
+	<description>This module contains dependencies on the projects chosen slf4j logging implementation.</description>
+
+	<dependencies>
+		<dependency>
+			<groupId>ch.qos.logback</groupId>
+			<artifactId>logback-classic</artifactId>
+			<version>1.1.2</version>
+		</dependency>
+	</dependencies>
+
+	<build>
+		<!-- <resources>
+			<resource>
+				<directory>src</directory>
+				<includes>
+					<include>logback.xml</include>
+					<include>log4j.xml</include>
+				</includes>
+			</resource>
+		</resources> -->
+		<pluginManagement>
+			<plugins>
+				<plugin>
+					<!-- There is no Java code in this project, let's skip animal-sniffer -->
+					<groupId>org.codehaus.mojo</groupId>
+					<artifactId>animal-sniffer-maven-plugin</artifactId>
+					<executions>
+						<execution>
+							<id>animal-sniffer-check</id>
+							<phase>none</phase>
+						</execution>
+					</executions>
+				</plugin>
+				<plugin>
+					<!-- There is no Java code in this project, let's skip PIT -->
+					<groupId>org.pitest</groupId>
+					<artifactId>pitest-maven</artifactId>
+					<configuration>
+						<skip>true</skip>
+					</configuration>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+	</build>
+</project>

@@ -24,11 +24,6 @@
 
 	<dependencies>
 		<dependency>
-			<groupId>ch.qos.logback</groupId>
-			<artifactId>logback-classic</artifactId>
-			<scope>runtime</scope>
-		</dependency>
-		<dependency>
 			<!--
 				There is no compile time dependency on acplt. There might be a runtime dependency that I did not
 				identify yet, so let's keep it for the moment. After further analysis, we might be able to remove it.
@@ -64,6 +59,11 @@
 		</dependency>
 		<dependency>
 			<groupId>org.jmxtrans</groupId>
+			<artifactId>jmxtrans-logging</artifactId>
+			<scope>runtime</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.jmxtrans</groupId>
 			<artifactId>jmxtrans-output-cloudwatch</artifactId>
 			<scope>runtime</scope>
 		</dependency>
@@ -89,6 +89,11 @@
 		</dependency>
 		<dependency>
 			<groupId>org.jmxtrans</groupId>
+			<artifactId>jmxtrans-output-slf4j</artifactId>
+			<scope>runtime</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.jmxtrans</groupId>
 			<artifactId>jmxtrans-output-velocity</artifactId>
 			<scope>runtime</scope>
 		</dependency>
@@ -100,7 +105,6 @@
 			<resource>
 				<directory>src</directory>
 				<includes>
-					<include>log4j.xml</include>
 					<include>quartz.server.properties</include>
 				</includes>
 			</resource>
@@ -204,17 +208,6 @@
 				</executions>
 			</plugin>
 			<?SORTPOM RESUME?>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-surefire-plugin</artifactId>
-				<configuration>
-					<systemPropertyVariables>
-						<jmxtrans.log.dir>${project.build.directory}</jmxtrans.log.dir>
-						<myhost>w2</myhost>
-						<myport>1099</myport>
-					</systemPropertyVariables>
-				</configuration>
-			</plugin>
 			<plugin>
 				<groupId>org.codehaus.mojo</groupId>
 				<artifactId>appassembler-maven-plugin</artifactId>

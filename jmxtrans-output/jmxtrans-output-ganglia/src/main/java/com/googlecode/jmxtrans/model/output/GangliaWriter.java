@@ -4,6 +4,7 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.google.common.base.MoreObjects;
 import com.google.common.collect.ImmutableList;
+import com.google.common.io.Closer;
 import com.googlecode.jmxtrans.model.Query;
 import com.googlecode.jmxtrans.model.Result;
 import com.googlecode.jmxtrans.model.Server;
@@ -11,9 +12,11 @@ import com.googlecode.jmxtrans.model.ValidationException;
 import com.googlecode.jmxtrans.model.naming.KeyUtils;
 import com.googlecode.jmxtrans.model.results.CPrecisionValueTransformer;
 import com.googlecode.jmxtrans.model.results.ValueTransformer;
+
 import info.ganglia.gmetric4j.gmetric.GMetric;
 import info.ganglia.gmetric4j.gmetric.GMetricSlope;
 import info.ganglia.gmetric4j.gmetric.GMetricType;
+
 import org.apache.commons.lang.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -175,8 +178,15 @@ public class GangliaWriter extends BaseOutputWriter {
 
 					GMetricType dataType = getType(resultValue.getValue());
 					log.debug("Sending Ganglia metric {}={} [type={}]", name, transformedValue, dataType);
-					new GMetric(host, port, addressingMode, ttl, v31, null, spoofedHostName)
-							.announce(name, transformedValue.toString(), dataType, units, slope, tmax, dmax, groupName);
+					Closer closer = Closer.create();
+					try {
+						GMetric gmetric = closer.register(new GMetric(host, port, addressingMode, ttl, v31, null, spoofedHostName));
+						gmetric.announce(name, transformedValue.toString(), dataType, units, slope, tmax, dmax, groupName);
+					} catch (Throwable t) {
+						throw closer.rethrow(t);
+					} finally {
+						closer.close();
+					}
 				}
 			}
 		}

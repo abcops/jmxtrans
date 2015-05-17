@@ -30,6 +30,7 @@
 		<module>jmxtrans-output-ganglia</module>
 		<module>jmxtrans-output-jrobin</module>
 		<module>jmxtrans-output-log4j</module>
+		<module>jmxtrans-output-slf4j</module>
 		<module>jmxtrans-output-velocity</module>
 	</modules>
 
