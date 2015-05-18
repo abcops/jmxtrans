@@ -94,11 +94,11 @@
 			dogmatic, but to provide consistency in the code.
 		-->
 		<checkstyle.max.allowed.violations>0</checkstyle.max.allowed.violations>
+    <cobertura.logbackVersion>1.1.2</cobertura.logbackVersion>
 		<github.global.server>github</github.global.server>
 		<!-- some versions used by multiple dependencies -->
 		<jackson.version>2.5.1</jackson.version>
 		<jsw.dir>${project.build.directory}/generated-resources/appassembler/jsw/${package.daemon.name}</jsw.dir>
-    <cobertura.logbackVersion>1.1.2</cobertura.logbackVersion>
     <logback-classic.artifact.name>ch.qos.logback:logback-classic</logback-classic.artifact.name>
 		<main.class>com.googlecode.jmxtrans.JmxTransformer</main.class>
 		<maven.build.timestamp.format>yyMMdd_HHmm</maven.build.timestamp.format>
