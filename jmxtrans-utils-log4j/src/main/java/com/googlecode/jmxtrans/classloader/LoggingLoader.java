@@ -33,7 +33,7 @@ public class LoggingLoader {
 
 	public static void enrichWithLogback() throws URISyntaxException, MalformedURLException {
 		String filepath = System.getProperty("outputwriters.logback.jarpath");
-
+		log.debug("outputwriters.logback.jarpath defined as " + filepath);
 		if(StringUtils.isNotEmpty(filepath)) {
 
 			try {

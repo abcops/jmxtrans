@@ -40,10 +40,14 @@
 			<groupId>org.jmxtrans</groupId>
 			<artifactId>jmxtrans-core</artifactId>
 		</dependency>
-		<dependency>
-			<groupId>org.jmxtrans</groupId>
-			<artifactId>jmxtrans-utils</artifactId>
-		</dependency>
+    <dependency>
+      <groupId>org.jmxtrans</groupId>
+      <artifactId>jmxtrans-utils</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.jmxtrans</groupId>
+      <artifactId>jmxtrans-utils-log4j</artifactId>
+    </dependency>
 		<dependency>
 			<groupId>org.slf4j</groupId>
 			<artifactId>slf4j-api</artifactId>
@@ -51,14 +55,14 @@
 		<dependency>
 			<groupId>ch.qos.logback</groupId>
 			<artifactId>logback-classic</artifactId>
+      <version>[1.1.2]</version>
 			<scope>provided</scope>
-			<version>1.1.2</version>
 		</dependency>
 		<dependency>
 			<groupId>org.slf4j</groupId>
 			<artifactId>slf4j-log4j12</artifactId>
+      <version>1.7.12</version>
 			<scope>provided</scope>
-			<version>1.7.12</version>
 		</dependency>
 		<dependency>
 			<groupId>junit</groupId>
