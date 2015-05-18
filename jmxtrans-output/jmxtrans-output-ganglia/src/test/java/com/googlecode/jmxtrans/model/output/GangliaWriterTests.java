@@ -1,10 +1,19 @@
 package com.googlecode.jmxtrans.model.output;
 
+import java.util.Arrays;
+import java.util.Collection;
+import java.util.LinkedList;
+import java.util.List;
+
+import com.google.common.collect.Collections2;
+import com.google.common.collect.ImmutableList;
 import com.googlecode.jmxtrans.model.Query;
 import com.googlecode.jmxtrans.model.Server;
 import com.googlecode.jmxtrans.model.ValidationException;
+
 import info.ganglia.gmetric4j.gmetric.GMetric;
 import info.ganglia.gmetric4j.gmetric.GMetricSlope;
+
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -76,5 +85,37 @@ public class GangliaWriterTests {
         Assert.assertEquals(24, writer.getDmax());
         Assert.assertEquals("dummy", writer.getGroupName());
         Assert.assertEquals(true, writer.isDebugEnabled());
+    }
+
+    /** Test validation for TypeName. */
+    @Test
+    public void testValidationTypeNames() throws ValidationException {
+    	String typeString = "typeName1";
+    	List<String> typeList1 = Arrays.asList("typeName2","typeName3");
+    	List<String> typeList2 = Arrays.asList("typeName1","typeName2","typeName3");
+		GangliaWriter writer = GangliaWriter
+				.builder()
+				.setHost("192.168.1.144")
+				.setBooleanAsNumber(true)
+				.addTypeName(typeString)
+				.addTypeNames(typeList1)
+				.build();
+        Query test = Query.builder()
+				.setObj("test")
+				.build();
+		Server server = Server.builder().setHost("localhost").setPort("123").build();
+		writer.validateSetup(server, test);
+        Assert.assertEquals("192.168.1.144", writer.getHost());
+        Assert.assertEquals(GangliaWriter.DEFAULT_PORT, writer.getPort());
+        Assert.assertEquals(GangliaWriter.DEFAULT_ADDRESSING_MODE.name(), writer.getAddressingMode());
+        Assert.assertEquals(GangliaWriter.DEFAULT_TTL, writer.getTtl());
+        Assert.assertEquals(GangliaWriter.DEFAULT_V31, writer.isV31());
+        Assert.assertEquals(GangliaWriter.DEFAULT_UNITS, writer.getUnits());
+        Assert.assertEquals(GangliaWriter.DEFAULT_SLOPE, writer.getSlope());
+        Assert.assertEquals(GangliaWriter.DEFAULT_TMAX, writer.getTmax());
+        Assert.assertEquals(GangliaWriter.DEFAULT_DMAX, writer.getDmax());
+        Assert.assertEquals(GangliaWriter.DEFAULT_GROUP_NAME, writer.getGroupName());
+        Assert.assertEquals(typeList2, writer.getTypeNames());
+        
     }
 }

@@ -29,7 +29,6 @@ public class Slf4JOutputWriterTest {
 	private Result result;
 
 	@Mock private Logger logger;
-//	private Logger realLogger;
 
 	@Before
 	public void initOutputWriter() {
