@@ -57,6 +57,7 @@ public class GangliaWriterTests {
 				.setTmax(354)
 				.setDmax(24)
 				.setGroupName("dummy")
+				.setDebugEnabled(true)
 				.build();
 
         Query test = Query.builder()
@@ -74,5 +75,6 @@ public class GangliaWriterTests {
         Assert.assertEquals(354, writer.getTmax());
         Assert.assertEquals(24, writer.getDmax());
         Assert.assertEquals("dummy", writer.getGroupName());
+        Assert.assertEquals(true, writer.isDebugEnabled());
     }
 }
