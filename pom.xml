@@ -76,6 +76,11 @@
 	</scm>
 
 	<distributionManagement>
+    <site>
+      <id>local</id>
+      <name>local</name>
+      <url>http://localhost/jmxtrans</url>
+    </site>
 		<repository>
 			<id>ossrh</id>
 			<url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
@@ -111,6 +116,7 @@
 		<packageBuildTimeStamp>${maven.build.timestamp}</packageBuildTimeStamp>
 		<pitest.verbose>false</pitest.verbose>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <surefire.forkcount>1.0C</surefire.forkcount>
 		<verify.mutationThreshold>100</verify.mutationThreshold>
 		<verify.totalBranchRate>100</verify.totalBranchRate>
 		<verify.totalLineRate>100</verify.totalLineRate>
@@ -466,14 +472,22 @@
 					<configuration>
 						<message>Creating site for ${project.name}
 							${project.version}</message>
+            <merge>true</merge>
 					</configuration>
+          <dependencies>
+            <dependency>
+              <groupId>org.eclipse.mylyn.github</groupId>
+              <artifactId>org.eclipse.egit.github.core</artifactId>
+              <version>2.1.5</version>
+            </dependency>
+          </dependencies>
 					<executions>
-						<execution>
-							<goals>
-								<goal>site</goal>
-							</goals>
-							<phase>site</phase>
-						</execution>
+            <execution>
+              <goals>
+                <goal>site</goal>
+              </goals>
+              <phase>site-deploy</phase>
+            </execution>
 					</executions>
 				</plugin>
 				<plugin>
@@ -688,6 +702,15 @@
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-site-plugin</artifactId>
 					<version>3.4</version>
+          <executions>
+            <execution>
+              <goals>
+                <goal>site</goal>
+                <goal>stage</goal>
+              </goals>
+              <phase>site</phase>
+            </execution>
+          </executions>
 				</plugin>
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
@@ -710,7 +733,7 @@
             <classpathDependencyExcludes>
               <classpathDependencyExcludes>${logback-classic.artifact.name}</classpathDependencyExcludes>
             </classpathDependencyExcludes>
-						<forkCount>1</forkCount>
+						<forkCount>${surefire.forkcount}</forkCount>
 						<reuseForks>false</reuseForks>
 						<systemPropertyVariables>
 							<jmxtrans.log.dir>${project.build.directory}</jmxtrans.log.dir>
@@ -731,6 +754,9 @@
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-surefire-report-plugin</artifactId>
           <version>2.18.1</version>
+          <configuration>
+            <aggregate>true</aggregate>
+          </configuration>
         </plugin>
 				<plugin>
 					<groupId>org.codehaus.mojo</groupId>
@@ -895,10 +921,14 @@
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-javadoc-plugin</artifactId>
 			</plugin>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-source-plugin</artifactId>
-			</plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-site-plugin</artifactId>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-source-plugin</artifactId>
+      </plugin>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-surefire-plugin</artifactId>
@@ -978,6 +1008,11 @@
 					</reportSet>
 				</reportSets>
 			</plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-site-plugin</artifactId>
+        <version>3.4</version>
+      </plugin>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-surefire-report-plugin</artifactId>
