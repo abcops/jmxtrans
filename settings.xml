@@ -28,6 +28,16 @@
         <gpg.homedir>${env.HOME}/travis/</gpg.homedir>
       </properties>
     </profile>
+    <profile>
+      <id>abcops-github</id>
+      <activation>
+        <activeByDefault>true</activeByDefault>
+      </activation>
+      <properties>
+        <github.site.repositoryName>jmxtrans</github.site.repositoryName>
+        <github.site.repositoryOwner>abcops</github.site.repositoryOwner>
+      </properties>
+    </profile>
   </profiles>
 </settings>
 
