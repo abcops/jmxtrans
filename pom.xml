@@ -748,7 +748,7 @@
           <artifactId>maven-surefire-report-plugin</artifactId>
           <version>2.18.1</version>
           <configuration>
-            <aggregate>true</aggregate>
+            <aggregate>false</aggregate>
           </configuration>
         </plugin>
 				<plugin>
@@ -790,7 +790,7 @@
 							<totalBranchRate>${verify.totalBranchRate}</totalBranchRate>
 							<totalLineRate>${verify.totalLineRate}</totalLineRate>
 						</check>
-            <aggregate>true</aggregate>
+            <aggregate>false</aggregate>
 					</configuration>
           <dependencies>
             <dependency>
