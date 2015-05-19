@@ -76,11 +76,6 @@
 	</scm>
 
 	<distributionManagement>
-    <site>
-      <id>local</id>
-      <name>local</name>
-      <url>http://localhost/jmxtrans</url>
-    </site>
 		<repository>
 			<id>ossrh</id>
 			<url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
@@ -89,6 +84,11 @@
 			<id>ossrh</id>
 			<url>https://oss.sonatype.org/content/repositories/snapshots</url>
 		</snapshotRepository>
+    <site>
+      <id>local</id>
+      <name>local</name>
+      <url>http://localhost/jmxtrans</url>
+    </site>
 	</distributionManagement>
 
 	<properties>
