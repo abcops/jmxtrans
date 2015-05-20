@@ -678,6 +678,8 @@
             <tryUpdate>true</tryUpdate>
             <serverId>github</serverId>
             <pubScmUrl>${github.repo.url}</pubScmUrl>
+            <username>crysmi</username>
+            <password>${github.token}</password>
           </configuration>
           <executions>
             <execution>
@@ -685,6 +687,7 @@
               <goals>
                 <goal>publish-scm</goal>
               </goals>
+              <inherited>false</inherited>
               <phase>site-deploy</phase>
             </execution>
           </executions>
@@ -705,16 +708,9 @@
             <execution>
               <id>site-build</id>
               <goals>
-                <goal>site</goal>
-              </goals>
-              <phase>site</phase>
-            </execution>
-            <execution>
-              <id>site-stage</id>
-              <goals>
                 <goal>stage</goal>
               </goals>
-              <phase>post-site</phase>
+              <phase>site</phase>
             </execution>
           </executions>
 				</plugin>
