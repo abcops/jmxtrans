@@ -13,18 +13,6 @@
 
 	<description>This module contains output writers that do not have any special dependencies.</description>
 
-  <scm>
-    <url>${github.repo.url}</url>
-  </scm>
-
-  <distributionManagement>
-    <site>
-      <id>github</id>
-      <name>github</name>
-      <url>scm:git:${github.repo.url}</url>
-    </site>
-  </distributionManagement>
-
 	<properties>
 		<verify.mutationThreshold>29</verify.mutationThreshold>
 		<verify.totalBranchRate>28</verify.totalBranchRate>
