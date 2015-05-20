@@ -687,8 +687,8 @@
               <goals>
                 <goal>publish-scm</goal>
               </goals>
-              <inherited>false</inherited>
               <phase>site-deploy</phase>
+              <inherited>false</inherited>
             </execution>
           </executions>
         </plugin>
