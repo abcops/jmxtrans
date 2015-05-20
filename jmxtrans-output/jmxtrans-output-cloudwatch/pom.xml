@@ -13,6 +13,18 @@
 
 	<description>This module contains output writers based on CloudWatch (AWS).</description>
 
+  <scm>
+    <url>${github.repo.url}</url>
+  </scm>
+
+  <distributionManagement>
+    <site>
+      <id>github</id>
+      <name>github</name>
+      <url>scm:git:${github.repo.url}</url>
+    </site>
+  </distributionManagement>
+
 	<properties>
 		<verify.mutationThreshold>62</verify.mutationThreshold>
 		<verify.totalBranchRate>50</verify.totalBranchRate>

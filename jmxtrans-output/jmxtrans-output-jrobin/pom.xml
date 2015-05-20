@@ -13,6 +13,18 @@
 
 	<description>This module contains output writers that depends on the jrobin library.</description>
 
+  <scm>
+    <url>${github.repo.url}</url>
+  </scm>
+
+  <distributionManagement>
+    <site>
+      <id>github</id>
+      <name>github</name>
+      <url>scm:git:${github.repo.url}</url>
+    </site>
+  </distributionManagement>
+
 	<properties>
 		<verify.mutationThreshold>0</verify.mutationThreshold>
 		<verify.totalBranchRate>0</verify.totalBranchRate>

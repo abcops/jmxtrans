@@ -34,19 +34,16 @@
 		<module>jmxtrans-output-velocity</module>
 	</modules>
 
-	<build>
-		<plugins>
-			<plugin>
-				<groupId>com.github.github</groupId>
-				<artifactId>site-maven-plugin</artifactId>
-				<configuration>
-					<merge>true</merge>
-					<message>Creating site for ${project.name}
-						${project.version}</message>
-					<path>${project.artifactId}</path>
-				</configuration>
-			</plugin>
-		</plugins>
-	</build>
+  <scm>
+    <url>${github.repo.url}</url>
+  </scm>
+
+  <distributionManagement>
+    <site>
+      <id>github</id>
+      <name>github</name>
+      <url>scm:git:${github.repo.url}</url>
+    </site>
+  </distributionManagement>
 
 </project>

@@ -13,6 +13,18 @@
 
 	<description>This module contains most of the core logic of JmxTrans.</description>
 
+  <scm>
+    <url>${github.repo.url}</url>
+  </scm>
+
+  <distributionManagement>
+    <site>
+      <id>github</id>
+      <name>github</name>
+      <url>scm:git:${github.repo.url}</url>
+    </site>
+  </distributionManagement>
+
 	<properties>
 		<verify.mutationThreshold>43</verify.mutationThreshold>
 		<verify.totalBranchRate>46</verify.totalBranchRate>
@@ -124,16 +136,6 @@
 
 	<build>
 		<plugins>
-			<plugin>
-				<groupId>com.github.github</groupId>
-				<artifactId>site-maven-plugin</artifactId>
-				<configuration>
-					<merge>true</merge>
-					<message>Creating site for ${project.name}
-						${project.version}</message>
-					<path>${project.artifactId}</path>
-				</configuration>
-			</plugin>
 			<plugin>
 				<groupId>net.ju-n.maven.plugins</groupId>
 				<artifactId>checksum-maven-plugin</artifactId>

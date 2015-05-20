@@ -13,6 +13,18 @@
 
 	<description>This module contains output writers that use slf4j.</description>
 
+  <scm>
+    <url>${github.repo.url}</url>
+  </scm>
+
+  <distributionManagement>
+    <site>
+      <id>github</id>
+      <name>github</name>
+      <url>scm:git:${github.repo.url}</url>
+    </site>
+  </distributionManagement>
+
 	<properties>
     <logback-classic.artifact.name>ch.qos.logback:logback-classic-nosuchdep</logback-classic.artifact.name>
 		<verify.mutationThreshold>29</verify.mutationThreshold>

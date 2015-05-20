@@ -13,6 +13,18 @@
 
 	<description>This module contains dependencies on the projects chosen slf4j logging implementation.</description>
 
+  <scm>
+    <url>${github.repo.url}</url>
+  </scm>
+
+  <distributionManagement>
+    <site>
+      <id>github</id>
+      <name>github</name>
+      <url>scm:git:${github.repo.url}</url>
+    </site>
+  </distributionManagement>
+
 	<dependencies>
 		<dependency>
 			<groupId>ch.qos.logback</groupId>
