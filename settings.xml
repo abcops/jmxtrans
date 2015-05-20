@@ -34,8 +34,7 @@
         <activeByDefault>true</activeByDefault>
       </activation>
       <properties>
-        <github.site.repositoryName>jmxtrans</github.site.repositoryName>
-        <github.site.repositoryOwner>abcops</github.site.repositoryOwner>
+	<scm.url>scm:git:https://github.com/abcops/jmxtrans.git</scm.url>
       </properties>
     </profile>
   </profiles>
