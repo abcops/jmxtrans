@@ -104,7 +104,7 @@
 		-->
 		<checkstyle.max.allowed.violations>0</checkstyle.max.allowed.violations>
     <cobertura.logbackVersion>1.1.2</cobertura.logbackVersion>
-    <github.repo.url>https://github.com/jmxtrans/jmxtrans.git</github.repo.url>
+    <github.repo.url>scm:git:https://github.com/jmxtrans/jmxtrans.git</github.repo.url>
 		<!-- some versions used by multiple dependencies -->
 		<jackson.version>2.5.1</jackson.version>
 		<jsw.dir>${project.build.directory}/generated-resources/appassembler/jsw/${package.daemon.name}</jsw.dir>
@@ -678,8 +678,6 @@
             <tryUpdate>true</tryUpdate>
             <serverId>github</serverId>
             <pubScmUrl>${github.repo.url}</pubScmUrl>
-            <username>crysmi</username>
-            <password>${github.token}</password>
           </configuration>
           <executions>
             <execution>
