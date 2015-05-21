@@ -678,6 +678,7 @@
             <tryUpdate>true</tryUpdate>
             <serverId>github</serverId>
             <pubScmUrl>${github.repo.url}</pubScmUrl>
+            <password>${env.GITHUB_TOKEN}</password>
           </configuration>
           <executions>
             <execution>
