@@ -91,7 +91,7 @@
     </site>-->
     <site>
       <id>github</id>
-      <url>https://github.com/jmxtrans/jmxtrans</url>
+      <url>scm:git:https://github.com/jmxtrans/jmxtrans</url>
     </site>
 	</distributionManagement>
 
