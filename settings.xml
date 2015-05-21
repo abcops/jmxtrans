@@ -5,6 +5,7 @@
   <servers>
     <server>
       <id>github</id>
+      <username>travis</username>
       <password>${env.GITHUB_TOKEN}</password>
     </server>
     <server>
@@ -34,7 +35,7 @@
         <activeByDefault>true</activeByDefault>
       </activation>
       <properties>
-	<scm.url>scm:git:https://github.com/abcops/jmxtrans.git</scm.url>
+        <scmpublish.pubScmUrl>scm:git:https://github.com/abcops/jmxtrans.git</scmpublish.pubScmUrl>
       </properties>
     </profile>
   </profiles>
