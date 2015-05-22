@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
 	<parent>
@@ -84,30 +85,25 @@
 			<id>ossrh</id>
 			<url>https://oss.sonatype.org/content/repositories/snapshots</url>
 		</snapshotRepository>
-    <!--<site>
-      <id>local</id>
-      <name>local</name>
-      <url>file://${project.build.directory}/jmxtrans-site-dir</url>
-    </site>-->
-    <site>
-      <id>github</id>
-      <url>scm:git:https://github.com/jmxtrans/jmxtrans</url>
-    </site>
+		<!--<site> <id>local</id> <name>local</name> <url>file://${project.build.directory}/jmxtrans-site-dir</url> 
+			</site> -->
+		<site>
+			<id>github</id>
+			<url>scm:git:https://github.com/jmxtrans/jmxtrans</url>
+		</site>
 	</distributionManagement>
 
 	<properties>
-		<!--
-			Maximum number of checkstyle violations allowed. Build will fail
-			if there are more than this number of violations. Feel free to
-			increase this number if you have a reason. The goal is not to be
-			dogmatic, but to provide consistency in the code.
-		-->
+		<!-- Maximum number of checkstyle violations allowed. Build will fail if 
+			there are more than this number of violations. Feel free to increase this 
+			number if you have a reason. The goal is not to be dogmatic, but to provide 
+			consistency in the code. -->
 		<checkstyle.max.allowed.violations>0</checkstyle.max.allowed.violations>
-    <cobertura.logbackVersion>1.1.2</cobertura.logbackVersion>
+		<cobertura.logbackVersion>1.1.2</cobertura.logbackVersion>
 		<!-- some versions used by multiple dependencies -->
 		<jackson.version>2.5.1</jackson.version>
 		<jsw.dir>${project.build.directory}/generated-resources/appassembler/jsw/${package.daemon.name}</jsw.dir>
-    <logback-classic.artifact.name>ch.qos.logback:logback-classic</logback-classic.artifact.name>
+		<logback-classic.artifact.name>ch.qos.logback:logback-classic</logback-classic.artifact.name>
 		<main.class>com.googlecode.jmxtrans.JmxTransformer</main.class>
 		<maven.build.timestamp.format>yyMMdd_HHmm</maven.build.timestamp.format>
 		<outputwriters.log4j.jarpath>/ext/slf4j-log4j12-1.7.12.jar.local</outputwriters.log4j.jarpath>
@@ -119,7 +115,7 @@
 		<packageBuildTimeStamp>${maven.build.timestamp}</packageBuildTimeStamp>
 		<pitest.verbose>false</pitest.verbose>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <surefire.forkcount>1.0C</surefire.forkcount>
+		<surefire.forkcount>1.0C</surefire.forkcount>
 		<verify.mutationThreshold>100</verify.mutationThreshold>
 		<verify.totalBranchRate>100</verify.totalBranchRate>
 		<verify.totalLineRate>100</verify.totalLineRate>
@@ -351,49 +347,39 @@
 				<scope>provided</scope>
 			</dependency>
 			<dependency>
-				<!--
-					There is no compile time dependency on acplt. There might be a runtime dependency that I did not
-					identify yet, so let's keep it for the moment. After further analysis, we might be able to remove it.
-				-->
+				<!-- There is no compile time dependency on acplt. There might be a runtime 
+					dependency that I did not identify yet, so let's keep it for the moment. 
+					After further analysis, we might be able to remove it. -->
 				<groupId>org.acplt</groupId>
 				<artifactId>oncrpc</artifactId>
 				<version>1.0.7</version>
 				<scope>runtime</scope>
 			</dependency>
 			<dependency>
-				<!--
-					AWS CloudWatch needs a recent version of http client.
-				-->
+				<!-- AWS CloudWatch needs a recent version of http client. -->
 				<groupId>org.apache.httpcomponents</groupId>
 				<artifactId>httpclient</artifactId>
 				<version>4.3.6</version>
 				<scope>runtime</scope>
 			</dependency>
-				<!--
+			<!-- <dependency> There is no compile time dependency on jgit. There might 
+				be a runtime dependency that I did not identify yet, so let's keep it for 
+				the moment. After further analysis, we might be able to remove it. <groupId>org.eclipse.jgit</groupId> 
+				<artifactId>org.eclipse.jgit</artifactId> <version>3.7.0.201502260915-r</version> 
+				<scope>runtime</scope> </dependency> -->
 			<dependency>
-					There is no compile time dependency on jgit. There might be a runtime dependency that I did not
-					identify yet, so let's keep it for the moment. After further analysis, we might be able to remove it.
-
-				<groupId>org.eclipse.jgit</groupId>
-				<artifactId>org.eclipse.jgit</artifactId>
-				<version>3.7.0.201502260915-r</version>
-				<scope>runtime</scope>
-			</dependency>-->
-			<dependency>
-				<!--
-					There is no compile time dependency on jboss remoting. There might be a runtime dependency that I did not
-					identify yet, so let's keep it for the moment. After further analysis, we might be able to remove it.
-				-->
+				<!-- There is no compile time dependency on jboss remoting. There might 
+					be a runtime dependency that I did not identify yet, so let's keep it for 
+					the moment. After further analysis, we might be able to remove it. -->
 				<groupId>org.jboss.remoting3</groupId>
 				<artifactId>remoting-jmx</artifactId>
 				<version>1.0.1.Final</version>
 				<scope>runtime</scope>
 			</dependency>
 			<dependency>
-				<!--
-					There is no compile time dependency on jboss remoting. There might be a runtime dependency that I did not
-					identify yet, so let's keep it for the moment. After further analysis, we might be able to remove it.
-				-->
+				<!-- There is no compile time dependency on jboss remoting. There might 
+					be a runtime dependency that I did not identify yet, so let's keep it for 
+					the moment. After further analysis, we might be able to remove it. -->
 				<groupId>org.jboss.remotingjmx</groupId>
 				<artifactId>remoting-jmx</artifactId>
 				<version>2.0.1.CR1</version>
@@ -514,7 +500,8 @@
 						</interfacesMarkingLiveCode>
 						<skipSendingUsageStatistics>false</skipSendingUsageStatistics>
 						<skipUpdateCheck>true</skipUpdateCheck>
-						<usageStatisticsComment>JmxTrans - https://github.com/jmxtrans/jmxtrans</usageStatisticsComment>
+						<usageStatisticsComment>JmxTrans -
+							https://github.com/jmxtrans/jmxtrans</usageStatisticsComment>
 					</configuration>
 				</plugin>
 				<plugin>
@@ -560,6 +547,7 @@
 							<id>checkstyle-check</id>
 							<goals>
 								<goal>check</goal>
+								<goal>checkstyle-aggregate</goal>
 							</goals>
 							<phase>verify</phase>
 						</execution>
@@ -609,8 +597,9 @@
 							<phase>test-compile</phase>
 							<configuration>
 								<rules>
-									<dependencyConvergence/>
-									<NoPackageCyclesRule implementation="de.andrena.tools.nopackagecycles.NoPackageCyclesRule"></NoPackageCyclesRule>
+									<dependencyConvergence />
+									<NoPackageCyclesRule
+										implementation="de.andrena.tools.nopackagecycles.NoPackageCyclesRule"></NoPackageCyclesRule>
 								</rules>
 							</configuration>
 						</execution>
@@ -668,39 +657,39 @@
 					<artifactId>maven-resources-plugin</artifactId>
 					<version>2.7</version>
 				</plugin>
-        <plugin>
-          <groupId>org.apache.maven.plugins</groupId>
-          <artifactId>maven-scm-publish-plugin</artifactId>
-          <version>1.1</version>
-          <configuration>
-            <scmBranch>gh-pages</scmBranch>
-            <tryUpdate>true</tryUpdate>
-            <serverId>github</serverId>
-          </configuration>
-          <dependencies>
-            <dependency>
-              <groupId>org.apache.maven.scm</groupId>
-              <artifactId>maven-scm-api</artifactId>
-              <version>[1.9.4]</version>
-            </dependency>
-            <dependency>
-              <groupId>org.apache.maven.scm</groupId>
-              <artifactId>maven-scm-provider-gitexe</artifactId>
-              <version>[1.9.4]</version>
-              <!-- required in order to hide password value in command logging on travis -->
-            </dependency>
-          </dependencies>
-          <executions>
-            <execution>
-              <id>stage-deploy</id>
-              <goals>
-                <goal>publish-scm</goal>
-              </goals>
-              <phase>site-deploy</phase>
-              <inherited>false</inherited>
-            </execution>
-          </executions>
-        </plugin>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-scm-publish-plugin</artifactId>
+					<version>1.1</version>
+					<configuration>
+						<scmBranch>gh-pages</scmBranch>
+						<tryUpdate>true</tryUpdate>
+						<serverId>github</serverId>
+					</configuration>
+					<dependencies>
+						<dependency>
+							<groupId>org.apache.maven.scm</groupId>
+							<artifactId>maven-scm-api</artifactId>
+							<version>[1.9.4]</version>
+						</dependency>
+						<dependency>
+							<groupId>org.apache.maven.scm</groupId>
+							<artifactId>maven-scm-provider-gitexe</artifactId>
+							<version>[1.9.4]</version>
+							<!-- required in order to hide password value in command logging on 
+								travis -->
+						</dependency>
+					</dependencies>
+					<executions>
+						<execution>
+							<id>stage-deploy</id>
+							<goals>
+								<goal>publish-scm</goal>
+							</goals>
+							<phase>site-deploy</phase>
+						</execution>
+					</executions>
+				</plugin>
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-shade-plugin</artifactId>
@@ -710,18 +699,32 @@
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-site-plugin</artifactId>
 					<version>3.4</version>
-          <configuration>
-            <skipDeploy>true</skipDeploy>
-          </configuration>
-          <executions>
-            <execution>
-              <id>site-build</id>
-              <goals>
-                <goal>stage</goal>
-              </goals>
-              <phase>site</phase>
-            </execution>
-          </executions>
+					<configuration>
+						<skipDeploy>true</skipDeploy>
+					</configuration>
+					<executions>
+						<execution>
+							<id>site-clean</id>
+							<goals>
+								<goal>clean</goal>
+							</goals>
+							<phase>clean</phase>
+						</execution>
+						<execution>
+							<id>site-build</id>
+							<goals>
+								<goal>site</goal>
+							</goals>
+							<phase>site</phase>
+						</execution>
+						<execution>
+							<id>site-build</id>
+							<goals>
+								<goal>stage</goal>
+							</goals>
+							<phase>site</phase>
+						</execution>
+					</executions>
 				</plugin>
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
@@ -741,9 +744,9 @@
 					<artifactId>maven-surefire-plugin</artifactId>
 					<version>2.18.1</version>
 					<configuration>
-            <classpathDependencyExcludes>
-              <classpathDependencyExcludes>${logback-classic.artifact.name}</classpathDependencyExcludes>
-            </classpathDependencyExcludes>
+						<classpathDependencyExcludes>
+							<classpathDependencyExcludes>${logback-classic.artifact.name}</classpathDependencyExcludes>
+						</classpathDependencyExcludes>
 						<forkCount>${surefire.forkcount}</forkCount>
 						<reuseForks>false</reuseForks>
 						<systemPropertyVariables>
@@ -761,14 +764,14 @@
 						</includes>
 					</configuration>
 				</plugin>
-        <plugin>
-          <groupId>org.apache.maven.plugins</groupId>
-          <artifactId>maven-surefire-report-plugin</artifactId>
-          <version>2.18.1</version>
-          <configuration>
-            <aggregate>true</aggregate>
-          </configuration>
-        </plugin>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-surefire-report-plugin</artifactId>
+					<version>2.18.1</version>
+					<configuration>
+						<aggregate>true</aggregate>
+					</configuration>
+				</plugin>
 				<plugin>
 					<groupId>org.codehaus.mojo</groupId>
 					<artifactId>animal-sniffer-maven-plugin</artifactId>
@@ -800,7 +803,7 @@
 					<artifactId>cobertura-maven-plugin</artifactId>
 					<version>2.7</version>
 					<configuration>
-            <aggregate>true</aggregate>
+						<aggregate>true</aggregate>
 						<check>
 							<branchRate>0</branchRate>
 							<lineRate>0</lineRate>
@@ -809,7 +812,7 @@
 							<totalBranchRate>${verify.totalBranchRate}</totalBranchRate>
 							<totalLineRate>${verify.totalLineRate}</totalLineRate>
 						</check>
-            <quiet>true</quiet>
+						<quiet>true</quiet>
 					</configuration>
 					<executions>
 						<execution>
@@ -825,6 +828,14 @@
 								<goal>check</goal>
 							</goals>
 							<phase>package</phase>
+						</execution>
+						<execution>
+							<id>package</id>
+							<goals>
+								<goal>checkstyle</goal>
+								<goal>checkstyle-aggregate</goal>
+							</goals>
+							<phase>verify</phase>
 						</execution>
 					</executions>
 				</plugin>
@@ -916,40 +927,41 @@
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-javadoc-plugin</artifactId>
 			</plugin>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-scm-publish-plugin</artifactId>
-        <version>1.1</version>
-        <configuration>
-          <scmBranch>gh-pages</scmBranch>
-          <tryUpdate>true</tryUpdate>
-          <serverId>github</serverId>
-        </configuration>
-        <dependencies>
-          <dependency>
-            <groupId>org.apache.maven.scm</groupId>
-            <artifactId>maven-scm-api</artifactId>
-            <version>[1.9.4]</version>
-          </dependency>
-          <dependency>
-            <groupId>org.apache.maven.scm</groupId>
-            <artifactId>maven-scm-provider-gitexe</artifactId>
-            <version>[1.9.4]</version>
-            <!-- required in order to hide password value in command logging on travis -->
-          </dependency>
-        </dependencies>
-      </plugin>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-site-plugin</artifactId>
-        <configuration>
-          <skipDeploy>true</skipDeploy>
-        </configuration>
-      </plugin>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-source-plugin</artifactId>
-      </plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-scm-publish-plugin</artifactId>
+				<version>1.1</version>
+				<configuration>
+					<scmBranch>gh-pages</scmBranch>
+					<tryUpdate>true</tryUpdate>
+					<serverId>github</serverId>
+				</configuration>
+				<dependencies>
+					<dependency>
+						<groupId>org.apache.maven.scm</groupId>
+						<artifactId>maven-scm-api</artifactId>
+						<version>[1.9.4]</version>
+					</dependency>
+					<dependency>
+						<groupId>org.apache.maven.scm</groupId>
+						<artifactId>maven-scm-provider-gitexe</artifactId>
+						<version>[1.9.4]</version>
+						<!-- required in order to hide password value in command logging on 
+							travis -->
+					</dependency>
+				</dependencies>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-site-plugin</artifactId>
+				<configuration>
+					<skipDeploy>true</skipDeploy>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-source-plugin</artifactId>
+			</plugin>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-surefire-plugin</artifactId>
@@ -1029,28 +1041,20 @@
 					</reportSet>
 				</reportSets>
 			</plugin>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-site-plugin</artifactId>
-        <version>3.4</version>
-      </plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-site-plugin</artifactId>
+				<version>3.4</version>
+			</plugin>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-surefire-report-plugin</artifactId>
-        <version>2.18.1</version>
+				<version>2.18.1</version>
 			</plugin>
 			<plugin>
 				<groupId>org.codehaus.mojo</groupId>
 				<artifactId>cobertura-maven-plugin</artifactId>
 				<version>2.7</version>
-				<reportSets>
-					<reportSet>
-						<reports>
-              <!-- dont do integration test. Added as of 2.7? -->
-							<report>cobertura</report>
-						</reports>
-					</reportSet>
-				</reportSets>
 			</plugin>
 			<plugin>
 				<groupId>org.codehaus.mojo</groupId>
@@ -1170,42 +1174,42 @@
 				</plugins>
 			</build>
 		</profile>
-    <profile>
-      <id>noLineCoverageFail</id>
-      <activation>
-        <activeByDefault>false</activeByDefault>
-      </activation>
-      <build>
-        <plugins>
-          <plugin>
-            <groupId>org.codehaus.mojo</groupId>
-            <artifactId>cobertura-maven-plugin</artifactId>
-            <configuration>
-              <check>
-                <haltOnFailure>false</haltOnFailure>
-              </check>
-            </configuration>
-          </plugin>
-        </plugins>
-      </build>
-    </profile>
-    <profile>
-      <id>noPITFail</id>
-      <activation>
-        <activeByDefault>false</activeByDefault>
-      </activation>
-      <build>
-        <plugins>
-          <plugin>
-            <groupId>org.pitest</groupId>
-            <artifactId>pitest-maven</artifactId>
-            <configuration>
-              <mutationThreshold>0</mutationThreshold>
-            </configuration>
-          </plugin>
-        </plugins>
-      </build>
-    </profile>
+		<profile>
+			<id>noLineCoverageFail</id>
+			<activation>
+				<activeByDefault>false</activeByDefault>
+			</activation>
+			<build>
+				<plugins>
+					<plugin>
+						<groupId>org.codehaus.mojo</groupId>
+						<artifactId>cobertura-maven-plugin</artifactId>
+						<configuration>
+							<check>
+								<haltOnFailure>false</haltOnFailure>
+							</check>
+						</configuration>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
+		<profile>
+			<id>noPITFail</id>
+			<activation>
+				<activeByDefault>false</activeByDefault>
+			</activation>
+			<build>
+				<plugins>
+					<plugin>
+						<groupId>org.pitest</groupId>
+						<artifactId>pitest-maven</artifactId>
+						<configuration>
+							<mutationThreshold>0</mutationThreshold>
+						</configuration>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
 	</profiles>
 
 </project>
