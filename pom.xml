@@ -547,6 +547,13 @@
 							<id>checkstyle-check</id>
 							<goals>
 								<goal>check</goal>
+							</goals>
+							<phase>test</phase>
+						</execution>
+						<execution>
+							<id>checkstyle-report</id>
+							<goals>
+								<goal>checkstyle</goal>
 								<goal>checkstyle-aggregate</goal>
 							</goals>
 							<phase>verify</phase>
@@ -827,13 +834,12 @@
 							<goals>
 								<goal>check</goal>
 							</goals>
-							<phase>package</phase>
+							<phase>test</phase>
 						</execution>
 						<execution>
 							<id>report</id>
 							<goals>
-								<goal>checkstyle</goal>
-								<goal>checkstyle-aggregate</goal>
+								<goal>cobertura</goal>
 							</goals>
 							<phase>verify</phase>
 						</execution>
@@ -854,6 +860,7 @@
 							<goals>
 								<goal>check</goal>
 							</goals>
+							<phase>test</phase>
 						</execution>
 					</executions>
 				</plugin>
