@@ -548,7 +548,7 @@
 							<goals>
 								<goal>check</goal>
 							</goals>
-							<phase>test</phase>
+							<phase>package</phase>
 						</execution>
 						<execution>
 							<id>checkstyle-report</id>
@@ -1142,7 +1142,7 @@
 								<goals>
 									<goal>mutationCoverage</goal>
 								</goals>
-								<phase>verify</phase>
+								<phase>package</phase>
 							</execution>
 						</executions>
 					</plugin>
