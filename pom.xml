@@ -718,7 +718,7 @@
 							<phase>site</phase>
 						</execution>
 						<execution>
-							<id>site-build</id>
+							<id>site-stage</id>
 							<goals>
 								<goal>stage</goal>
 							</goals>
