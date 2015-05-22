@@ -677,6 +677,18 @@
             <tryUpdate>true</tryUpdate>
             <serverId>github</serverId>
           </configuration>
+          <dependencies>
+            <dependency>
+              <groupId>org.apache.maven.scm</groupId>
+              <artifactId>maven-scm-api</artifactId>
+              <version>[1.9.4]</version>
+            </dependency>
+            <dependency>
+              <groupId>org.apache.maven.scm</groupId>
+              <artifactId>maven-scm-provider-gitexe</artifactId>
+              <version>[1.9.4]</version>
+            </dependency>
+          </dependencies>
           <executions>
             <execution>
               <id>stage-deploy</id>
@@ -924,6 +936,18 @@
           <tryUpdate>true</tryUpdate>
           <serverId>github</serverId>
         </configuration>
+        <dependencies>
+          <dependency>
+            <groupId>org.apache.maven.scm</groupId>
+            <artifactId>maven-scm-api</artifactId>
+            <version>[1.9.4]</version>
+          </dependency>
+          <dependency>
+            <groupId>org.apache.maven.scm</groupId>
+            <artifactId>maven-scm-provider-gitexe</artifactId>
+            <version>[1.9.4]</version>
+          </dependency>
+        </dependencies>
       </plugin>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
