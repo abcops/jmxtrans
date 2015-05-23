@@ -675,7 +675,7 @@
 						<scmBranch>gh-pages</scmBranch>
 						<tryUpdate>true</tryUpdate>
 						<serverId>github</serverId>
-						<includes>/${project.version}</includes>
+						<includes>${project.version}</includes>
 					</configuration>
 					<dependencies>
 						<dependency>
