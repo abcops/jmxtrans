@@ -115,6 +115,7 @@
 		<packageBuildTimeStamp>${maven.build.timestamp}</packageBuildTimeStamp>
 		<pitest.verbose>false</pitest.verbose>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<scmpublish.content>${project.build.directory}/staging</scmpublish.content>
 		<stagingDirectory>${project.build.directory}/staging/${project.version}</stagingDirectory>
 		<surefire.forkcount>1.0C</surefire.forkcount>
 		<topSiteURL>${project.distributionManagement.site.url}/${project.version}</topSiteURL>
@@ -674,7 +675,7 @@
 						<scmBranch>gh-pages</scmBranch>
 						<tryUpdate>true</tryUpdate>
 						<serverId>github</serverId>
-						<content>${project.build.directory}/staging</content>
+						<includes>/${project.version}</includes>
 					</configuration>
 					<dependencies>
 						<dependency>
@@ -712,29 +713,6 @@
 					<configuration>
 						<skipDeploy>true</skipDeploy>
 					</configuration>
-					<executions>
-						<execution>
-							<id>site-clean</id>
-							<goals>
-								<goal>clean</goal>
-							</goals>
-							<phase>clean</phase>
-						</execution>
-						<execution>
-							<id>site-build</id>
-							<goals>
-								<goal>site</goal>
-							</goals>
-							<phase>site</phase>
-						</execution>
-						<execution>
-							<id>site-stage</id>
-							<goals>
-								<goal>stage</goal>
-							</goals>
-							<phase>site</phase>
-						</execution>
-					</executions>
 				</plugin>
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
