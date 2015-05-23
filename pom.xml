@@ -115,8 +115,8 @@
 		<packageBuildTimeStamp>${maven.build.timestamp}</packageBuildTimeStamp>
 		<pitest.verbose>false</pitest.verbose>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<surefire.forkcount>1.0C</surefire.forkcount>
 		<stagingDirectory>${project.build.directory}/staging/${project.version}</stagingDirectory>
+		<surefire.forkcount>1.0C</surefire.forkcount>
 		<topSiteURL>${project.distributionManagement.site.url}/${project.version}</topSiteURL>
 		<verify.mutationThreshold>100</verify.mutationThreshold>
 		<verify.totalBranchRate>100</verify.totalBranchRate>
