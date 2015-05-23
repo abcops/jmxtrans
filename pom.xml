@@ -672,6 +672,8 @@
 						<scmBranch>gh-pages</scmBranch>
 						<tryUpdate>true</tryUpdate>
 						<serverId>github</serverId>
+						<topSiteURL>${project.distributionManagement.site.url}/${project.version}</topSiteURL>
+						<content>${project.build.directory}/staging</content>
 					</configuration>
 					<dependencies>
 						<dependency>
