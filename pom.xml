@@ -116,6 +116,8 @@
 		<pitest.verbose>false</pitest.verbose>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<surefire.forkcount>1.0C</surefire.forkcount>
+		<stagingDirectory>${project.build.directory}/staging/${project.version}</stagingDirectory>
+		<topSiteURL>${project.distributionManagement.site.url}/${project.version}</topSiteURL>
 		<verify.mutationThreshold>100</verify.mutationThreshold>
 		<verify.totalBranchRate>100</verify.totalBranchRate>
 		<verify.totalLineRate>100</verify.totalLineRate>
@@ -672,7 +674,6 @@
 						<scmBranch>gh-pages</scmBranch>
 						<tryUpdate>true</tryUpdate>
 						<serverId>github</serverId>
-						<topSiteURL>${project.distributionManagement.site.url}/${project.version}</topSiteURL>
 						<content>${project.build.directory}/staging</content>
 					</configuration>
 					<dependencies>
