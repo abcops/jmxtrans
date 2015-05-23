@@ -830,7 +830,14 @@
 							<phase>clean</phase>
 						</execution>
 						<execution>
-							<id>package</id>
+							<id>verify-instr</id>
+							<goals>
+								<goal>instrument</goal>
+							</goals>
+							<phase>verify</phase>
+						</execution>
+						<execution>
+							<id>package-check</id>
 							<goals>
 								<goal>check</goal>
 							</goals>
