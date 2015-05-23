@@ -819,7 +819,6 @@
 							<totalBranchRate>${verify.totalBranchRate}</totalBranchRate>
 							<totalLineRate>${verify.totalLineRate}</totalLineRate>
 						</check>
-						<quiet>true</quiet>
 					</configuration>
 					<executions>
 						<execution>
