@@ -713,6 +713,15 @@
 					<configuration>
 						<skipDeploy>true</skipDeploy>
 					</configuration>
+					<executions>
+						<execution>
+							<id>stage-site</id>
+							<goals>
+								<goal>stage</goal>
+							</goals>
+							<phase>post-site</phase>
+						</execution>
+					</executions>
 				</plugin>
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
@@ -895,33 +904,10 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-scm-publish-plugin</artifactId>
-				<version>1.1</version>
-				<configuration>
-					<scmBranch>gh-pages</scmBranch>
-					<tryUpdate>true</tryUpdate>
-					<serverId>github</serverId>
-				</configuration>
-				<dependencies>
-					<dependency>
-						<groupId>org.apache.maven.scm</groupId>
-						<artifactId>maven-scm-api</artifactId>
-						<version>[1.9.4]</version>
-					</dependency>
-					<dependency>
-						<groupId>org.apache.maven.scm</groupId>
-						<artifactId>maven-scm-provider-gitexe</artifactId>
-						<version>[1.9.4]</version>
-						<!-- required in order to hide password value in command logging on 
-							travis -->
-					</dependency>
-				</dependencies>
 			</plugin>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-site-plugin</artifactId>
-				<configuration>
-					<skipDeploy>true</skipDeploy>
-				</configuration>
 			</plugin>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
