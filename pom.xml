@@ -115,10 +115,12 @@
 		<packageBuildTimeStamp>${maven.build.timestamp}</packageBuildTimeStamp>
 		<pitest.verbose>false</pitest.verbose>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<scmpublish.content>${project.build.directory}/staging</scmpublish.content>
-		<stagingDirectory>${project.build.directory}/staging/${project.version}</stagingDirectory>
+		<scmpublish.checkoutDirectory>${jmxtrans.targetDirectory}/scmpublish-checkout</scmpublish.checkoutDirectory>
+		<scmpublish.content>${jmxtrans.stagingDirectory}</scmpublish.content>
+		<stagingDirectory>${jmxtrans.stagingDirectory}/${project.version}</stagingDirectory>
 		<surefire.forkcount>1.0C</surefire.forkcount>
-		<topSiteURL>${project.distributionManagement.site.url}/${project.version}</topSiteURL>
+		<jmxtrans.stagingDirectory>${jmxtrans.targetDirectory}/staging</jmxtrans.stagingDirectory>
+		<jmxtrans.targetDirectory>${session.executionRootDirectory}/target</jmxtrans.targetDirectory>
 		<verify.mutationThreshold>100</verify.mutationThreshold>
 		<verify.totalBranchRate>100</verify.totalBranchRate>
 		<verify.totalLineRate>100</verify.totalLineRate>
@@ -675,7 +677,7 @@
 						<scmBranch>gh-pages</scmBranch>
 						<tryUpdate>true</tryUpdate>
 						<serverId>github</serverId>
-						<includes>${project.version}</includes>
+						<skipDeletedFiles>true</skipDeletedFiles>
 					</configuration>
 					<dependencies>
 						<dependency>
