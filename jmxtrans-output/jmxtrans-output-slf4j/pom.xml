@@ -14,10 +14,10 @@
 	<description>This module contains output writers that use slf4j.</description>
 
 	<properties>
-    <logback-classic.artifact.name>ch.qos.logback:logback-classic-nosuchdep</logback-classic.artifact.name>
+    	<logback-classic.artifact.name>ch.qos.logback:logback-classic-nosuchdep</logback-classic.artifact.name>
 		<verify.mutationThreshold>29</verify.mutationThreshold>
-		<verify.totalBranchRate>28</verify.totalBranchRate>
-		<verify.totalLineRate>36</verify.totalLineRate>
+		<verify.totalBranchRate>64</verify.totalBranchRate>
+		<verify.totalLineRate>80</verify.totalLineRate>
 	</properties>
 
 	<dependencies>

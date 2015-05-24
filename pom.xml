@@ -121,6 +121,7 @@
 		<scmpublish.content>${jmxtrans.stagingDirectory}</scmpublish.content>
 		<stagingDirectory>${jmxtrans.stagingDirectory}/${project.version}</stagingDirectory>
 		<surefire.forkcount>1.0C</surefire.forkcount>
+		<verify.haltOnFailure>true</verify.haltOnFailure>
 		<verify.mutationThreshold>100</verify.mutationThreshold>
 		<verify.totalBranchRate>100</verify.totalBranchRate>
 		<verify.totalLineRate>100</verify.totalLineRate>
@@ -679,7 +680,9 @@
 						<serverId>github</serverId>
 						<skipDeletedFiles>true</skipDeletedFiles>
 						<!-- try to shortcut the delete process since we are not doing it anyway -->
-						<ignorePathsToDelete>%regex[.*]</ignorePathsToDelete>
+						<ignorePathsToDelete>
+							<ignorePathsToDelete>%regex[.*]</ignorePathsToDelete>
+						</ignorePathsToDelete>
 					</configuration>
 					<dependencies>
 						<dependency>
@@ -691,7 +694,8 @@
 							<groupId>org.apache.maven.scm</groupId>
 							<artifactId>maven-scm-provider-gitexe</artifactId>
 							<version>[1.9.4]</version>
-							<!-- required in order to hide password value in command logging on travis -->
+							<!-- required in order to hide password value in command logging on 
+								travis -->
 						</dependency>
 					</dependencies>
 					<executions>
@@ -813,26 +817,21 @@
 						<aggregate>true</aggregate>
 						<check>
 							<branchRate>0</branchRate>
+							<haltOnFailure>${verify.haltOnFailure}</haltOnFailure>
 							<lineRate>0</lineRate>
 							<packageBranchRate>0</packageBranchRate>
 							<packageLineRate>0</packageLineRate>
 							<totalBranchRate>${verify.totalBranchRate}</totalBranchRate>
 							<totalLineRate>${verify.totalLineRate}</totalLineRate>
 						</check>
-						<executions>
-							<execution>
-								<!-- otherwise cobertura.ser is broken?! -->
-								<id>clean</id>
-								<goal>clean</goal>
-								<phase>clean</phase>
-							</execution>
-						</executions>
-						<excludes>
-							<exclude>**/Test*.java</exclude>
-							<exclude>**/*Test.java</exclude>
-							<exclude>**/*TestCase.java</exclude>
-							<exclude>**/*Tests.java</exclude>
-						</excludes>
+						<instrumentation>
+							<excludes>
+								<exclude>**/Test*.java</exclude>
+								<exclude>**/*Test.java</exclude>
+								<exclude>**/*TestCase.java</exclude>
+								<exclude>**/*Tests.java</exclude>
+							</excludes>
+						</instrumentation>
 					</configuration>
 				</plugin>
 				<plugin>
@@ -947,6 +946,22 @@
 			<plugin>
 				<groupId>org.codehaus.mojo</groupId>
 				<artifactId>cobertura-maven-plugin</artifactId>
+				<executions>
+					<execution>
+						<id>clean</id>
+						<goals>
+							<goal>clean</goal>
+						</goals>
+						<phase>clean</phase>
+					</execution>
+					<execution>
+						<id>check</id>
+						<goals>
+							<goal>check</goal>
+						</goals>
+						<phase>verify</phase>
+					</execution>
+				</executions>
 			</plugin>
 			<plugin>
 				<groupId>org.codehaus.mojo</groupId>
@@ -1105,6 +1120,9 @@
 					<plugin>
 						<groupId>org.pitest</groupId>
 						<artifactId>pitest-maven</artifactId>
+						<configuration>
+							<exportLineCoverage>true</exportLineCoverage>
+						</configuration>
 						<executions>
 							<execution>
 								<id>pitest</id>
@@ -1162,40 +1180,13 @@
 			</build>
 		</profile>
 		<profile>
-			<id>noLineCoverageFail</id>
+			<id>withPitVerbose</id>
 			<activation>
 				<activeByDefault>false</activeByDefault>
 			</activation>
-			<build>
-				<plugins>
-					<plugin>
-						<groupId>org.codehaus.mojo</groupId>
-						<artifactId>cobertura-maven-plugin</artifactId>
-						<configuration>
-							<check>
-								<haltOnFailure>false</haltOnFailure>
-							</check>
-						</configuration>
-					</plugin>
-				</plugins>
-			</build>
-		</profile>
-		<profile>
-			<id>noPITFail</id>
-			<activation>
-				<activeByDefault>false</activeByDefault>
-			</activation>
-			<build>
-				<plugins>
-					<plugin>
-						<groupId>org.pitest</groupId>
-						<artifactId>pitest-maven</artifactId>
-						<configuration>
-							<mutationThreshold>0</mutationThreshold>
-						</configuration>
-					</plugin>
-				</plugins>
-			</build>
+			<properties>
+				<pitest.verbose>true</pitest.verbose>
+			</properties>
 		</profile>
 	</profiles>
 
