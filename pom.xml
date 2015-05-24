@@ -102,6 +102,8 @@
 		<cobertura.logbackVersion>1.1.2</cobertura.logbackVersion>
 		<!-- some versions used by multiple dependencies -->
 		<jackson.version>2.5.1</jackson.version>
+		<jmxtrans.stagingDirectory>${jmxtrans.targetDirectory}/staging</jmxtrans.stagingDirectory>
+		<jmxtrans.targetDirectory>${session.executionRootDirectory}/target</jmxtrans.targetDirectory>
 		<jsw.dir>${project.build.directory}/generated-resources/appassembler/jsw/${package.daemon.name}</jsw.dir>
 		<logback-classic.artifact.name>ch.qos.logback:logback-classic</logback-classic.artifact.name>
 		<main.class>com.googlecode.jmxtrans.JmxTransformer</main.class>
@@ -119,8 +121,6 @@
 		<scmpublish.content>${jmxtrans.stagingDirectory}</scmpublish.content>
 		<stagingDirectory>${jmxtrans.stagingDirectory}/${project.version}</stagingDirectory>
 		<surefire.forkcount>1.0C</surefire.forkcount>
-		<jmxtrans.stagingDirectory>${jmxtrans.targetDirectory}/staging</jmxtrans.stagingDirectory>
-		<jmxtrans.targetDirectory>${session.executionRootDirectory}/target</jmxtrans.targetDirectory>
 		<verify.mutationThreshold>100</verify.mutationThreshold>
 		<verify.totalBranchRate>100</verify.totalBranchRate>
 		<verify.totalLineRate>100</verify.totalLineRate>
