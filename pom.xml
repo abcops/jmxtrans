@@ -814,7 +814,7 @@
 					<artifactId>cobertura-maven-plugin</artifactId>
 					<version>2.7</version>
 					<configuration>
-						<aggregate>true</aggregate>
+						<aggregate>false</aggregate>
 						<check>
 							<branchRate>0</branchRate>
 							<haltOnFailure>${verify.haltOnFailure}</haltOnFailure>
