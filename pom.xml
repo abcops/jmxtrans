@@ -678,6 +678,8 @@
 						<tryUpdate>true</tryUpdate>
 						<serverId>github</serverId>
 						<skipDeletedFiles>true</skipDeletedFiles>
+						<!-- try to shortcut the delete process since we are not doing it anyway -->
+						<ignorePathsToDelete>%regex[.*]</ignorePathsToDelete>
 					</configuration>
 					<dependencies>
 						<dependency>
@@ -689,11 +691,17 @@
 							<groupId>org.apache.maven.scm</groupId>
 							<artifactId>maven-scm-provider-gitexe</artifactId>
 							<version>[1.9.4]</version>
-							<!-- required in order to hide password value in command logging on 
-								travis -->
+							<!-- required in order to hide password value in command logging on travis -->
 						</dependency>
 					</dependencies>
 					<executions>
+						<execution>
+							<id>clean</id>
+							<goals>
+								<goal>clean</goal>
+							</goals>
+							<phase>clean</phase>
+						</execution>
 						<execution>
 							<id>stage-deploy</id>
 							<goals>
@@ -811,7 +819,20 @@
 							<totalBranchRate>${verify.totalBranchRate}</totalBranchRate>
 							<totalLineRate>${verify.totalLineRate}</totalLineRate>
 						</check>
-						<forceMojoExecution>true</forceMojoExecution>
+						<executions>
+							<execution>
+								<!-- otherwise cobertura.ser is broken?! -->
+								<id>clean</id>
+								<goal>clean</goal>
+								<phase>clean</phase>
+							</execution>
+						</executions>
+						<excludes>
+							<exclude>**/Test*.java</exclude>
+							<exclude>**/*Test.java</exclude>
+							<exclude>**/*TestCase.java</exclude>
+							<exclude>**/*Tests.java</exclude>
+						</excludes>
 					</configuration>
 				</plugin>
 				<plugin>
