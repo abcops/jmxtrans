@@ -759,6 +759,7 @@
 							<classpathDependencyExcludes>${logback-classic.artifact.name}</classpathDependencyExcludes>
 						</classpathDependencyExcludes>
 						<forkCount>${surefire.forkcount}</forkCount>
+						<forkMode>always</forkMode>
 						<reuseForks>false</reuseForks>
 						<systemPropertyVariables>
 							<jmxtrans.log.dir>${project.build.directory}</jmxtrans.log.dir>
