@@ -17,7 +17,7 @@
     	<logback-classic.artifact.name>ch.qos.logback:logback-classic-nosuchdep</logback-classic.artifact.name>
 		<verify.mutationThreshold>29</verify.mutationThreshold>
 		<verify.totalBranchRate>64</verify.totalBranchRate>
-		<verify.totalLineRate>80</verify.totalLineRate>
+		<verify.totalLineRate>77</verify.totalLineRate>
 	</properties>
 
 	<dependencies>
