@@ -1,0 +1,418 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage>
+<block classname='com.googlecode.jmxtrans.model.output.GangliaWriter$Builder' method='setDmax' number='0'><tests>
+<test name='com.googlecode.jmxtrans.model.output.GangliaWriterTests.testValidationAllSettings(com.googlecode.jmxtrans.model.output.GangliaWriterTests)'/>
+</tests>
+</block>
+<block classname='com.googlecode.jmxtrans.model.output.BaseOutputWriter' method='firstNonNull' number='0'><tests>
+<test name='com.googlecode.jmxtrans.model.output.GangliaWriterTests.testValidationAllSettings(com.googlecode.jmxtrans.model.output.GangliaWriterTests)'/>
+<test name='com.googlecode.jmxtrans.model.output.GangliaWriterTests.testValidationMinimalSettings(com.googlecode.jmxtrans.model.output.GangliaWriterTests)'/>
+<test name='com.googlecode.jmxtrans.model.output.GangliaWriterTests.testValidationWithoutSettings(com.googlecode.jmxtrans.model.output.GangliaWriterTests)'/>
+</tests>
+</block>
+<block classname='com.googlecode.jmxtrans.model.output.GangliaWriter' method='computeAddressingMode' number='0'><tests>
+<test name='com.googlecode.jmxtrans.model.output.GangliaWriterTests.testValidationAllSettings(com.googlecode.jmxtrans.model.output.GangliaWriterTests)'/>
+<test name='com.googlecode.jmxtrans.model.output.GangliaWriterTests.testValidationMinimalSettings(com.googlecode.jmxtrans.model.output.GangliaWriterTests)'/>
+</tests>
+</block>
+<block classname='com.googlecode.jmxtrans.model.Query' method='builder' number='0'><tests>
+<test name='com.googlecode.jmxtrans.model.output.GangliaWriterTests.testValidationAllSettings(com.googlecode.jmxtrans.model.output.GangliaWriterTests)'/>
+<test name='com.googlecode.jmxtrans.model.output.GangliaWriterTests.testValidationMinimalSettings(com.googlecode.jmxtrans.model.output.GangliaWriterTests)'/>
+</tests>
+</block>
+<block classname='com.googlecode.jmxtrans.model.output.Settings' method='getIntSetting' number='0'><tests>
+<test name='com.googlecode.jmxtrans.model.output.GangliaWriterTests.testValidationAllSettings(com.googlecode.jmxtrans.model.output.GangliaWriterTests)'/>
+<test name='com.googlecode.jmxtrans.model.output.GangliaWriterTests.testValidationMinimalSettings(com.googlecode.jmxtrans.model.output.GangliaWriterTests)'/>
+</tests>
+</block>
+<block classname='com.googlecode.jmxtrans.model.output.GangliaWriter' method='<clinit>' number='0'><tests>
+<test name='com.googlecode.jmxtrans.model.output.GangliaWriterTests.testValidationAllSettings(com.googlecode.jmxtrans.model.output.GangliaWriterTests)'/>
+</tests>
+</block>
+<block classname='com.googlecode.jmxtrans.model.Server' method='getHost' number='4'><tests>
+<test name='com.googlecode.jmxtrans.model.output.GangliaWriterTests.testValidationAllSettings(com.googlecode.jmxtrans.model.output.GangliaWriterTests)'/>
+<test name='com.googlecode.jmxtrans.model.output.GangliaWriterTests.testValidationMinimalSettings(com.googlecode.jmxtrans.model.output.GangliaWriterTests)'/>
+</tests>
+</block>
+<block classname='com.googlecode.jmxtrans.model.Query' method='<init>' number='0'><tests>
+<test name='com.googlecode.jmxtrans.model.output.GangliaWriterTests.testValidationAllSettings(com.googlecode.jmxtrans.model.output.GangliaWriterTests)'/>
+<test name='com.googlecode.jmxtrans.model.output.GangliaWriterTests.testValidationMinimalSettings(com.googlecode.jmxtrans.model.output.GangliaWriterTests)'/>
+</tests>
+</block>
+<block classname='com.googlecode.jmxtrans.model.output.GangliaWriter$Builder' method='setV31' number='0'><tests>
+<test name='com.googlecode.jmxtrans.model.output.GangliaWriterTests.testValidationAllSettings(com.googlecode.jmxtrans.model.output.GangliaWriterTests)'/>
+</tests>
+</block>
+<block classname='com.googlecode.jmxtrans.model.output.GangliaWriter$Builder' method='setPort' number='0'><tests>
+<test name='com.googlecode.jmxtrans.model.output.GangliaWriterTests.testValidationAllSettings(com.googlecode.jmxtrans.model.output.GangliaWriterTests)'/>
+</tests>
+</block>
+<block classname='com.googlecode.jmxtrans.model.output.GangliaWriter' method='getTmax' number='0'><tests>
+<test name='com.googlecode.jmxtrans.model.output.GangliaWriterTests.testValidationAllSettings(com.googlecode.jmxtrans.model.output.GangliaWriterTests)'/>
+<test name='com.googlecode.jmxtrans.model.output.GangliaWriterTests.testValidationMinimalSettings(com.googlecode.jmxtrans.model.output.GangliaWriterTests)'/>
+</tests>
+</block>
+<block classname='com.googlecode.jmxtrans.model.Server' method='builder' number='0'><tests>
+<test name='com.googlecode.jmxtrans.model.output.GangliaWriterTests.testValidationAllSettings(com.googlecode.jmxtrans.model.output.GangliaWriterTests)'/>
+<test name='com.googlecode.jmxtrans.model.output.GangliaWriterTests.testValidationMinimalSettings(com.googlecode.jmxtrans.model.output.GangliaWriterTests)'/>
+</tests>
+</block>
+<block classname='com.googlecode.jmxtrans.model.Query$Builder' method='build' number='0'><tests>
+<test name='com.googlecode.jmxtrans.model.output.GangliaWriterTests.testValidationAllSettings(com.googlecode.jmxtrans.model.output.GangliaWriterTests)'/>
+<test name='com.googlecode.jmxtrans.model.output.GangliaWriterTests.testValidationMinimalSettings(com.googlecode.jmxtrans.model.output.GangliaWriterTests)'/>
+</tests>
+</block>
+<block classname='com.googlecode.jmxtrans.model.PropertyResolver' method='resolveProps' number='0'><tests>
+<test name='com.googlecode.jmxtrans.model.output.GangliaWriterTests.testValidationAllSettings(com.googlecode.jmxtrans.model.output.GangliaWriterTests)'/>
+<test name='com.googlecode.jmxtrans.model.output.GangliaWriterTests.testValidationMinimalSettings(com.googlecode.jmxtrans.model.output.GangliaWriterTests)'/>
+</tests>
+</block>
+<block classname='com.googlecode.jmxtrans.model.output.Settings' method='getIntegerSetting' number='0'><tests>
+<test name='com.googlecode.jmxtrans.model.output.GangliaWriterTests.testValidationAllSettings(com.googlecode.jmxtrans.model.output.GangliaWriterTests)'/>
+<test name='com.googlecode.jmxtrans.model.output.GangliaWriterTests.testValidationMinimalSettings(com.googlecode.jmxtrans.model.output.GangliaWriterTests)'/>
+</tests>
+</block>
+<block classname='com.googlecode.jmxtrans.model.output.BaseOutputWriter' method='firstNonNull' number='1'><tests>
+<test name='com.googlecode.jmxtrans.model.output.GangliaWriterTests.testValidationAllSettings(com.googlecode.jmxtrans.model.output.GangliaWriterTests)'/>
+<test name='com.googlecode.jmxtrans.model.output.GangliaWriterTests.testValidationMinimalSettings(com.googlecode.jmxtrans.model.output.GangliaWriterTests)'/>
+<test name='com.googlecode.jmxtrans.model.output.GangliaWriterTests.testValidationWithoutSettings(com.googlecode.jmxtrans.model.output.GangliaWriterTests)'/>
+</tests>
+</block>
+<block classname='com.googlecode.jmxtrans.model.output.GangliaWriterTests' method='<init>' number='0'><tests>
+<test name='com.googlecode.jmxtrans.model.output.GangliaWriterTests.testValidationAllSettings(com.googlecode.jmxtrans.model.output.GangliaWriterTests)'/>
+<test name='com.googlecode.jmxtrans.model.output.GangliaWriterTests.testValidationMinimalSettings(com.googlecode.jmxtrans.model.output.GangliaWriterTests)'/>
+<test name='com.googlecode.jmxtrans.model.output.GangliaWriterTests.testValidationWithoutSettings(com.googlecode.jmxtrans.model.output.GangliaWriterTests)'/>
+</tests>
+</block>
+<block classname='com.googlecode.jmxtrans.model.results.CPrecisionValueTransformer' method='<clinit>' number='0'><tests>
+<test name='com.googlecode.jmxtrans.model.output.GangliaWriterTests.testValidationAllSettings(com.googlecode.jmxtrans.model.output.GangliaWriterTests)'/>
+</tests>
+</block>
+<block classname='com.googlecode.jmxtrans.model.Server$Builder' method='<init>' number='0'><tests>
+<test name='com.googlecode.jmxtrans.model.output.GangliaWriterTests.testValidationAllSettings(com.googlecode.jmxtrans.model.output.GangliaWriterTests)'/>
+<test name='com.googlecode.jmxtrans.model.output.GangliaWriterTests.testValidationMinimalSettings(com.googlecode.jmxtrans.model.output.GangliaWriterTests)'/>
+</tests>
+</block>
+<block classname='com.googlecode.jmxtrans.model.Server' method='getHost' number='3'><tests>
+<test name='com.googlecode.jmxtrans.model.output.GangliaWriterTests.testValidationAllSettings(com.googlecode.jmxtrans.model.output.GangliaWriterTests)'/>
+<test name='com.googlecode.jmxtrans.model.output.GangliaWriterTests.testValidationMinimalSettings(com.googlecode.jmxtrans.model.output.GangliaWriterTests)'/>
+</tests>
+</block>
+<block classname='com.googlecode.jmxtrans.model.output.BaseOutputWriter' method='<init>' number='0'><tests>
+<test name='com.googlecode.jmxtrans.model.output.GangliaWriterTests.testValidationAllSettings(com.googlecode.jmxtrans.model.output.GangliaWriterTests)'/>
+<test name='com.googlecode.jmxtrans.model.output.GangliaWriterTests.testValidationMinimalSettings(com.googlecode.jmxtrans.model.output.GangliaWriterTests)'/>
+<test name='com.googlecode.jmxtrans.model.output.GangliaWriterTests.testValidationWithoutSettings(com.googlecode.jmxtrans.model.output.GangliaWriterTests)'/>
+</tests>
+</block>
+<block classname='com.googlecode.jmxtrans.model.output.GangliaWriter' method='getTtl' number='0'><tests>
+<test name='com.googlecode.jmxtrans.model.output.GangliaWriterTests.testValidationAllSettings(com.googlecode.jmxtrans.model.output.GangliaWriterTests)'/>
+<test name='com.googlecode.jmxtrans.model.output.GangliaWriterTests.testValidationMinimalSettings(com.googlecode.jmxtrans.model.output.GangliaWriterTests)'/>
+</tests>
+</block>
+<block classname='com.googlecode.jmxtrans.model.output.GangliaWriter' method='getAddressingMode' number='0'><tests>
+<test name='com.googlecode.jmxtrans.model.output.GangliaWriterTests.testValidationAllSettings(com.googlecode.jmxtrans.model.output.GangliaWriterTests)'/>
+<test name='com.googlecode.jmxtrans.model.output.GangliaWriterTests.testValidationMinimalSettings(com.googlecode.jmxtrans.model.output.GangliaWriterTests)'/>
+</tests>
+</block>
+<block classname='com.googlecode.jmxtrans.model.output.GangliaWriter$Builder' method='setSlope' number='0'><tests>
+<test name='com.googlecode.jmxtrans.model.output.GangliaWriterTests.testValidationAllSettings(com.googlecode.jmxtrans.model.output.GangliaWriterTests)'/>
+</tests>
+</block>
+<block classname='com.googlecode.jmxtrans.model.output.GangliaWriter' method='getGroupName' number='0'><tests>
+<test name='com.googlecode.jmxtrans.model.output.GangliaWriterTests.testValidationAllSettings(com.googlecode.jmxtrans.model.output.GangliaWriterTests)'/>
+<test name='com.googlecode.jmxtrans.model.output.GangliaWriterTests.testValidationMinimalSettings(com.googlecode.jmxtrans.model.output.GangliaWriterTests)'/>
+</tests>
+</block>
+<block classname='com.googlecode.jmxtrans.model.output.GangliaWriter$Builder' method='<init>' number='0'><tests>
+<test name='com.googlecode.jmxtrans.model.output.GangliaWriterTests.testValidationAllSettings(com.googlecode.jmxtrans.model.output.GangliaWriterTests)'/>
+<test name='com.googlecode.jmxtrans.model.output.GangliaWriterTests.testValidationMinimalSettings(com.googlecode.jmxtrans.model.output.GangliaWriterTests)'/>
+<test name='com.googlecode.jmxtrans.model.output.GangliaWriterTests.testValidationWithoutSettings(com.googlecode.jmxtrans.model.output.GangliaWriterTests)'/>
+</tests>
+</block>
+<block classname='com.googlecode.jmxtrans.model.output.BaseOutputWriter' method='getSettings' number='0'><tests>
+<test name='com.googlecode.jmxtrans.model.output.GangliaWriterTests.testValidationAllSettings(com.googlecode.jmxtrans.model.output.GangliaWriterTests)'/>
+<test name='com.googlecode.jmxtrans.model.output.GangliaWriterTests.testValidationMinimalSettings(com.googlecode.jmxtrans.model.output.GangliaWriterTests)'/>
+<test name='com.googlecode.jmxtrans.model.output.GangliaWriterTests.testValidationWithoutSettings(com.googlecode.jmxtrans.model.output.GangliaWriterTests)'/>
+</tests>
+</block>
+<block classname='com.googlecode.jmxtrans.model.output.GangliaWriterTests' method='testValidationAllSettings' number='0'><tests>
+<test name='com.googlecode.jmxtrans.model.output.GangliaWriterTests.testValidationAllSettings(com.googlecode.jmxtrans.model.output.GangliaWriterTests)'/>
+</tests>
+</block>
+<block classname='com.googlecode.jmxtrans.model.output.Settings' method='getBooleanSetting' number='0'><tests>
+<test name='com.googlecode.jmxtrans.model.output.GangliaWriterTests.testValidationAllSettings(com.googlecode.jmxtrans.model.output.GangliaWriterTests)'/>
+<test name='com.googlecode.jmxtrans.model.output.GangliaWriterTests.testValidationMinimalSettings(com.googlecode.jmxtrans.model.output.GangliaWriterTests)'/>
+<test name='com.googlecode.jmxtrans.model.output.GangliaWriterTests.testValidationWithoutSettings(com.googlecode.jmxtrans.model.output.GangliaWriterTests)'/>
+</tests>
+</block>
+<block classname='com.googlecode.jmxtrans.model.output.GangliaWriter$Builder' method='setGroupName' number='0'><tests>
+<test name='com.googlecode.jmxtrans.model.output.GangliaWriterTests.testValidationAllSettings(com.googlecode.jmxtrans.model.output.GangliaWriterTests)'/>
+</tests>
+</block>
+<block classname='com.googlecode.jmxtrans.model.output.BaseOutputWriter' method='firstNonNull' number='5'><tests>
+<test name='com.googlecode.jmxtrans.model.output.GangliaWriterTests.testValidationAllSettings(com.googlecode.jmxtrans.model.output.GangliaWriterTests)'/>
+<test name='com.googlecode.jmxtrans.model.output.GangliaWriterTests.testValidationMinimalSettings(com.googlecode.jmxtrans.model.output.GangliaWriterTests)'/>
+<test name='com.googlecode.jmxtrans.model.output.GangliaWriterTests.testValidationWithoutSettings(com.googlecode.jmxtrans.model.output.GangliaWriterTests)'/>
+</tests>
+</block>
+<block classname='com.googlecode.jmxtrans.model.Query$Builder' method='<init>' number='0'><tests>
+<test name='com.googlecode.jmxtrans.model.output.GangliaWriterTests.testValidationAllSettings(com.googlecode.jmxtrans.model.output.GangliaWriterTests)'/>
+<test name='com.googlecode.jmxtrans.model.output.GangliaWriterTests.testValidationMinimalSettings(com.googlecode.jmxtrans.model.output.GangliaWriterTests)'/>
+</tests>
+</block>
+<block classname='com.googlecode.jmxtrans.model.Server$Builder' method='setHost' number='0'><tests>
+<test name='com.googlecode.jmxtrans.model.output.GangliaWriterTests.testValidationAllSettings(com.googlecode.jmxtrans.model.output.GangliaWriterTests)'/>
+<test name='com.googlecode.jmxtrans.model.output.GangliaWriterTests.testValidationMinimalSettings(com.googlecode.jmxtrans.model.output.GangliaWriterTests)'/>
+</tests>
+</block>
+<block classname='com.googlecode.jmxtrans.model.output.GangliaWriter$Builder' method='setAddressingMode' number='0'><tests>
+<test name='com.googlecode.jmxtrans.model.output.GangliaWriterTests.testValidationAllSettings(com.googlecode.jmxtrans.model.output.GangliaWriterTests)'/>
+</tests>
+</block>
+<block classname='com.googlecode.jmxtrans.model.output.Settings' method='getIntSetting' number='5'><tests>
+<test name='com.googlecode.jmxtrans.model.output.GangliaWriterTests.testValidationAllSettings(com.googlecode.jmxtrans.model.output.GangliaWriterTests)'/>
+<test name='com.googlecode.jmxtrans.model.output.GangliaWriterTests.testValidationMinimalSettings(com.googlecode.jmxtrans.model.output.GangliaWriterTests)'/>
+</tests>
+</block>
+<block classname='com.googlecode.jmxtrans.model.PropertyResolver' method='resolveList' number='0'><tests>
+<test name='com.googlecode.jmxtrans.model.output.GangliaWriterTests.testValidationAllSettings(com.googlecode.jmxtrans.model.output.GangliaWriterTests)'/>
+<test name='com.googlecode.jmxtrans.model.output.GangliaWriterTests.testValidationMinimalSettings(com.googlecode.jmxtrans.model.output.GangliaWriterTests)'/>
+</tests>
+</block>
+<block classname='com.googlecode.jmxtrans.model.PropertyResolver' method='resolveProps' number='1'><tests>
+<test name='com.googlecode.jmxtrans.model.output.GangliaWriterTests.testValidationAllSettings(com.googlecode.jmxtrans.model.output.GangliaWriterTests)'/>
+<test name='com.googlecode.jmxtrans.model.output.GangliaWriterTests.testValidationMinimalSettings(com.googlecode.jmxtrans.model.output.GangliaWriterTests)'/>
+</tests>
+</block>
+<block classname='com.googlecode.jmxtrans.model.output.Settings' method='getIntegerSetting' number='1'><tests>
+<test name='com.googlecode.jmxtrans.model.output.GangliaWriterTests.testValidationAllSettings(com.googlecode.jmxtrans.model.output.GangliaWriterTests)'/>
+<test name='com.googlecode.jmxtrans.model.output.GangliaWriterTests.testValidationMinimalSettings(com.googlecode.jmxtrans.model.output.GangliaWriterTests)'/>
+</tests>
+</block>
+<block classname='com.googlecode.jmxtrans.model.output.GangliaWriter$Builder' method='setHost' number='0'><tests>
+<test name='com.googlecode.jmxtrans.model.output.GangliaWriterTests.testValidationAllSettings(com.googlecode.jmxtrans.model.output.GangliaWriterTests)'/>
+<test name='com.googlecode.jmxtrans.model.output.GangliaWriterTests.testValidationMinimalSettings(com.googlecode.jmxtrans.model.output.GangliaWriterTests)'/>
+</tests>
+</block>
+<block classname='com.googlecode.jmxtrans.model.output.GangliaWriter' method='getDmax' number='0'><tests>
+<test name='com.googlecode.jmxtrans.model.output.GangliaWriterTests.testValidationAllSettings(com.googlecode.jmxtrans.model.output.GangliaWriterTests)'/>
+<test name='com.googlecode.jmxtrans.model.output.GangliaWriterTests.testValidationMinimalSettings(com.googlecode.jmxtrans.model.output.GangliaWriterTests)'/>
+</tests>
+</block>
+<block classname='com.googlecode.jmxtrans.model.output.BaseOutputWriter' method='<init>' number='3'><tests>
+<test name='com.googlecode.jmxtrans.model.output.GangliaWriterTests.testValidationAllSettings(com.googlecode.jmxtrans.model.output.GangliaWriterTests)'/>
+<test name='com.googlecode.jmxtrans.model.output.GangliaWriterTests.testValidationMinimalSettings(com.googlecode.jmxtrans.model.output.GangliaWriterTests)'/>
+<test name='com.googlecode.jmxtrans.model.output.GangliaWriterTests.testValidationWithoutSettings(com.googlecode.jmxtrans.model.output.GangliaWriterTests)'/>
+</tests>
+</block>
+<block classname='com.googlecode.jmxtrans.model.output.GangliaWriter' method='getSpoofedHostName' number='4'><tests>
+<test name='com.googlecode.jmxtrans.model.output.GangliaWriterTests.testValidationAllSettings(com.googlecode.jmxtrans.model.output.GangliaWriterTests)'/>
+<test name='com.googlecode.jmxtrans.model.output.GangliaWriterTests.testValidationMinimalSettings(com.googlecode.jmxtrans.model.output.GangliaWriterTests)'/>
+</tests>
+</block>
+<block classname='com.googlecode.jmxtrans.model.output.GangliaWriter$Builder' method='setTmax' number='0'><tests>
+<test name='com.googlecode.jmxtrans.model.output.GangliaWriterTests.testValidationAllSettings(com.googlecode.jmxtrans.model.output.GangliaWriterTests)'/>
+</tests>
+</block>
+<block classname='com.googlecode.jmxtrans.model.PropertyResolver$PropertyResolverFunc' method='<init>' number='0'><tests>
+<test name='com.googlecode.jmxtrans.model.output.GangliaWriterTests.testValidationAllSettings(com.googlecode.jmxtrans.model.output.GangliaWriterTests)'/>
+</tests>
+</block>
+<block classname='com.googlecode.jmxtrans.model.output.GangliaWriter' method='getSpoofedHostName' number='0'><tests>
+<test name='com.googlecode.jmxtrans.model.output.GangliaWriterTests.testValidationAllSettings(com.googlecode.jmxtrans.model.output.GangliaWriterTests)'/>
+<test name='com.googlecode.jmxtrans.model.output.GangliaWriterTests.testValidationMinimalSettings(com.googlecode.jmxtrans.model.output.GangliaWriterTests)'/>
+</tests>
+</block>
+<block classname='com.googlecode.jmxtrans.model.Query$Builder' method='setObj' number='0'><tests>
+<test name='com.googlecode.jmxtrans.model.output.GangliaWriterTests.testValidationAllSettings(com.googlecode.jmxtrans.model.output.GangliaWriterTests)'/>
+<test name='com.googlecode.jmxtrans.model.output.GangliaWriterTests.testValidationMinimalSettings(com.googlecode.jmxtrans.model.output.GangliaWriterTests)'/>
+</tests>
+</block>
+<block classname='com.googlecode.jmxtrans.model.PropertyResolver$PropertyResolverFunc' method='<init>' number='0'><tests>
+<test name='com.googlecode.jmxtrans.model.output.GangliaWriterTests.testValidationAllSettings(com.googlecode.jmxtrans.model.output.GangliaWriterTests)'/>
+</tests>
+</block>
+<block classname='com.googlecode.jmxtrans.model.Server' method='getAlias' number='0'><tests>
+<test name='com.googlecode.jmxtrans.model.output.GangliaWriterTests.testValidationAllSettings(com.googlecode.jmxtrans.model.output.GangliaWriterTests)'/>
+<test name='com.googlecode.jmxtrans.model.output.GangliaWriterTests.testValidationMinimalSettings(com.googlecode.jmxtrans.model.output.GangliaWriterTests)'/>
+</tests>
+</block>
+<block classname='com.googlecode.jmxtrans.model.output.GangliaWriter' method='builder' number='0'><tests>
+<test name='com.googlecode.jmxtrans.model.output.GangliaWriterTests.testValidationAllSettings(com.googlecode.jmxtrans.model.output.GangliaWriterTests)'/>
+<test name='com.googlecode.jmxtrans.model.output.GangliaWriterTests.testValidationMinimalSettings(com.googlecode.jmxtrans.model.output.GangliaWriterTests)'/>
+<test name='com.googlecode.jmxtrans.model.output.GangliaWriterTests.testValidationWithoutSettings(com.googlecode.jmxtrans.model.output.GangliaWriterTests)'/>
+</tests>
+</block>
+<block classname='com.googlecode.jmxtrans.model.output.GangliaWriter' method='getUnits' number='0'><tests>
+<test name='com.googlecode.jmxtrans.model.output.GangliaWriterTests.testValidationAllSettings(com.googlecode.jmxtrans.model.output.GangliaWriterTests)'/>
+<test name='com.googlecode.jmxtrans.model.output.GangliaWriterTests.testValidationMinimalSettings(com.googlecode.jmxtrans.model.output.GangliaWriterTests)'/>
+</tests>
+</block>
+<block classname='com.googlecode.jmxtrans.model.Server' method='getHost' number='0'><tests>
+<test name='com.googlecode.jmxtrans.model.output.GangliaWriterTests.testValidationAllSettings(com.googlecode.jmxtrans.model.output.GangliaWriterTests)'/>
+<test name='com.googlecode.jmxtrans.model.output.GangliaWriterTests.testValidationMinimalSettings(com.googlecode.jmxtrans.model.output.GangliaWriterTests)'/>
+</tests>
+</block>
+<block classname='com.googlecode.jmxtrans.model.results.CPrecisionValueTransformer' method='<init>' number='0'><tests>
+<test name='com.googlecode.jmxtrans.model.output.GangliaWriterTests.testValidationAllSettings(com.googlecode.jmxtrans.model.output.GangliaWriterTests)'/>
+<test name='com.googlecode.jmxtrans.model.output.GangliaWriterTests.testValidationMinimalSettings(com.googlecode.jmxtrans.model.output.GangliaWriterTests)'/>
+<test name='com.googlecode.jmxtrans.model.output.GangliaWriterTests.testValidationWithoutSettings(com.googlecode.jmxtrans.model.output.GangliaWriterTests)'/>
+</tests>
+</block>
+<block classname='com.googlecode.jmxtrans.model.Server' method='<init>' number='0'><tests>
+<test name='com.googlecode.jmxtrans.model.output.GangliaWriterTests.testValidationAllSettings(com.googlecode.jmxtrans.model.output.GangliaWriterTests)'/>
+<test name='com.googlecode.jmxtrans.model.output.GangliaWriterTests.testValidationMinimalSettings(com.googlecode.jmxtrans.model.output.GangliaWriterTests)'/>
+</tests>
+</block>
+<block classname='com.googlecode.jmxtrans.model.PropertyResolver' method='resolveProps' number='2'><tests>
+<test name='com.googlecode.jmxtrans.model.output.GangliaWriterTests.testValidationAllSettings(com.googlecode.jmxtrans.model.output.GangliaWriterTests)'/>
+<test name='com.googlecode.jmxtrans.model.output.GangliaWriterTests.testValidationMinimalSettings(com.googlecode.jmxtrans.model.output.GangliaWriterTests)'/>
+</tests>
+</block>
+<block classname='com.googlecode.jmxtrans.model.Server$Builder' method='<init>' number='0'><tests>
+<test name='com.googlecode.jmxtrans.model.output.GangliaWriterTests.testValidationAllSettings(com.googlecode.jmxtrans.model.output.GangliaWriterTests)'/>
+<test name='com.googlecode.jmxtrans.model.output.GangliaWriterTests.testValidationMinimalSettings(com.googlecode.jmxtrans.model.output.GangliaWriterTests)'/>
+</tests>
+</block>
+<block classname='com.googlecode.jmxtrans.model.output.GangliaWriter$Builder' method='<init>' number='0'><tests>
+<test name='com.googlecode.jmxtrans.model.output.GangliaWriterTests.testValidationAllSettings(com.googlecode.jmxtrans.model.output.GangliaWriterTests)'/>
+<test name='com.googlecode.jmxtrans.model.output.GangliaWriterTests.testValidationMinimalSettings(com.googlecode.jmxtrans.model.output.GangliaWriterTests)'/>
+<test name='com.googlecode.jmxtrans.model.output.GangliaWriterTests.testValidationWithoutSettings(com.googlecode.jmxtrans.model.output.GangliaWriterTests)'/>
+</tests>
+</block>
+<block classname='com.googlecode.jmxtrans.model.output.GangliaWriter$Builder' method='setTtl' number='0'><tests>
+<test name='com.googlecode.jmxtrans.model.output.GangliaWriterTests.testValidationAllSettings(com.googlecode.jmxtrans.model.output.GangliaWriterTests)'/>
+</tests>
+</block>
+<block classname='com.googlecode.jmxtrans.model.output.BaseOutputWriter' method='firstNonNull' number='2'><tests>
+<test name='com.googlecode.jmxtrans.model.output.GangliaWriterTests.testValidationAllSettings(com.googlecode.jmxtrans.model.output.GangliaWriterTests)'/>
+<test name='com.googlecode.jmxtrans.model.output.GangliaWriterTests.testValidationMinimalSettings(com.googlecode.jmxtrans.model.output.GangliaWriterTests)'/>
+<test name='com.googlecode.jmxtrans.model.output.GangliaWriterTests.testValidationWithoutSettings(com.googlecode.jmxtrans.model.output.GangliaWriterTests)'/>
+</tests>
+</block>
+<block classname='com.googlecode.jmxtrans.model.output.GangliaWriter' method='<init>' number='0'><tests>
+<test name='com.googlecode.jmxtrans.model.output.GangliaWriterTests.testValidationAllSettings(com.googlecode.jmxtrans.model.output.GangliaWriterTests)'/>
+<test name='com.googlecode.jmxtrans.model.output.GangliaWriterTests.testValidationMinimalSettings(com.googlecode.jmxtrans.model.output.GangliaWriterTests)'/>
+<test name='com.googlecode.jmxtrans.model.output.GangliaWriterTests.testValidationWithoutSettings(com.googlecode.jmxtrans.model.output.GangliaWriterTests)'/>
+</tests>
+</block>
+<block classname='com.googlecode.jmxtrans.model.Server$Builder' method='setPort' number='0'><tests>
+<test name='com.googlecode.jmxtrans.model.output.GangliaWriterTests.testValidationAllSettings(com.googlecode.jmxtrans.model.output.GangliaWriterTests)'/>
+<test name='com.googlecode.jmxtrans.model.output.GangliaWriterTests.testValidationMinimalSettings(com.googlecode.jmxtrans.model.output.GangliaWriterTests)'/>
+</tests>
+</block>
+<block classname='com.googlecode.jmxtrans.model.output.Settings' method='getBooleanSetting' number='1'><tests>
+<test name='com.googlecode.jmxtrans.model.output.GangliaWriterTests.testValidationAllSettings(com.googlecode.jmxtrans.model.output.GangliaWriterTests)'/>
+<test name='com.googlecode.jmxtrans.model.output.GangliaWriterTests.testValidationMinimalSettings(com.googlecode.jmxtrans.model.output.GangliaWriterTests)'/>
+<test name='com.googlecode.jmxtrans.model.output.GangliaWriterTests.testValidationWithoutSettings(com.googlecode.jmxtrans.model.output.GangliaWriterTests)'/>
+</tests>
+</block>
+<block classname='com.googlecode.jmxtrans.model.output.BaseOutputWriter' method='<init>' number='2'><tests>
+<test name='com.googlecode.jmxtrans.model.output.GangliaWriterTests.testValidationAllSettings(com.googlecode.jmxtrans.model.output.GangliaWriterTests)'/>
+<test name='com.googlecode.jmxtrans.model.output.GangliaWriterTests.testValidationMinimalSettings(com.googlecode.jmxtrans.model.output.GangliaWriterTests)'/>
+<test name='com.googlecode.jmxtrans.model.output.GangliaWriterTests.testValidationWithoutSettings(com.googlecode.jmxtrans.model.output.GangliaWriterTests)'/>
+</tests>
+</block>
+<block classname='com.googlecode.jmxtrans.model.Query$Builder' method='<init>' number='0'><tests>
+<test name='com.googlecode.jmxtrans.model.output.GangliaWriterTests.testValidationAllSettings(com.googlecode.jmxtrans.model.output.GangliaWriterTests)'/>
+<test name='com.googlecode.jmxtrans.model.output.GangliaWriterTests.testValidationMinimalSettings(com.googlecode.jmxtrans.model.output.GangliaWriterTests)'/>
+</tests>
+</block>
+<block classname='com.googlecode.jmxtrans.model.Server$Builder' method='build' number='0'><tests>
+<test name='com.googlecode.jmxtrans.model.output.GangliaWriterTests.testValidationAllSettings(com.googlecode.jmxtrans.model.output.GangliaWriterTests)'/>
+<test name='com.googlecode.jmxtrans.model.output.GangliaWriterTests.testValidationMinimalSettings(com.googlecode.jmxtrans.model.output.GangliaWriterTests)'/>
+</tests>
+</block>
+<block classname='com.googlecode.jmxtrans.model.output.GangliaWriter$Builder' method='setUnits' number='0'><tests>
+<test name='com.googlecode.jmxtrans.model.output.GangliaWriterTests.testValidationAllSettings(com.googlecode.jmxtrans.model.output.GangliaWriterTests)'/>
+</tests>
+</block>
+<block classname='com.googlecode.jmxtrans.model.output.GangliaWriter' method='getHost' number='0'><tests>
+<test name='com.googlecode.jmxtrans.model.output.GangliaWriterTests.testValidationAllSettings(com.googlecode.jmxtrans.model.output.GangliaWriterTests)'/>
+<test name='com.googlecode.jmxtrans.model.output.GangliaWriterTests.testValidationMinimalSettings(com.googlecode.jmxtrans.model.output.GangliaWriterTests)'/>
+</tests>
+</block>
+<block classname='com.googlecode.jmxtrans.model.PropertyResolver' method='<clinit>' number='0'><tests>
+<test name='com.googlecode.jmxtrans.model.output.GangliaWriterTests.testValidationAllSettings(com.googlecode.jmxtrans.model.output.GangliaWriterTests)'/>
+</tests>
+</block>
+<block classname='com.googlecode.jmxtrans.model.output.GangliaWriter' method='isV31' number='0'><tests>
+<test name='com.googlecode.jmxtrans.model.output.GangliaWriterTests.testValidationAllSettings(com.googlecode.jmxtrans.model.output.GangliaWriterTests)'/>
+<test name='com.googlecode.jmxtrans.model.output.GangliaWriterTests.testValidationMinimalSettings(com.googlecode.jmxtrans.model.output.GangliaWriterTests)'/>
+</tests>
+</block>
+<block classname='com.googlecode.jmxtrans.model.PropertyResolver$ObjectPropertyResolverFunc' method='<init>' number='0'><tests>
+<test name='com.googlecode.jmxtrans.model.output.GangliaWriterTests.testValidationAllSettings(com.googlecode.jmxtrans.model.output.GangliaWriterTests)'/>
+</tests>
+</block>
+<block classname='com.googlecode.jmxtrans.model.output.GangliaWriter' method='validateSetup' number='0'><tests>
+<test name='com.googlecode.jmxtrans.model.output.GangliaWriterTests.testValidationAllSettings(com.googlecode.jmxtrans.model.output.GangliaWriterTests)'/>
+<test name='com.googlecode.jmxtrans.model.output.GangliaWriterTests.testValidationMinimalSettings(com.googlecode.jmxtrans.model.output.GangliaWriterTests)'/>
+</tests>
+</block>
+<block classname='com.googlecode.jmxtrans.model.PropertyResolver$ObjectPropertyResolverFunc' method='<init>' number='0'><tests>
+<test name='com.googlecode.jmxtrans.model.output.GangliaWriterTests.testValidationAllSettings(com.googlecode.jmxtrans.model.output.GangliaWriterTests)'/>
+</tests>
+</block>
+<block classname='com.googlecode.jmxtrans.model.output.GangliaWriter' method='getPort' number='0'><tests>
+<test name='com.googlecode.jmxtrans.model.output.GangliaWriterTests.testValidationAllSettings(com.googlecode.jmxtrans.model.output.GangliaWriterTests)'/>
+<test name='com.googlecode.jmxtrans.model.output.GangliaWriterTests.testValidationMinimalSettings(com.googlecode.jmxtrans.model.output.GangliaWriterTests)'/>
+</tests>
+</block>
+<block classname='com.googlecode.jmxtrans.model.PropertyResolver' method='resolveProps' number='3'><tests>
+<test name='com.googlecode.jmxtrans.model.output.GangliaWriterTests.testValidationAllSettings(com.googlecode.jmxtrans.model.output.GangliaWriterTests)'/>
+<test name='com.googlecode.jmxtrans.model.output.GangliaWriterTests.testValidationMinimalSettings(com.googlecode.jmxtrans.model.output.GangliaWriterTests)'/>
+</tests>
+</block>
+<block classname='com.googlecode.jmxtrans.model.results.IdentityValueTransformer' method='<init>' number='0'><tests>
+<test name='com.googlecode.jmxtrans.model.output.GangliaWriterTests.testValidationAllSettings(com.googlecode.jmxtrans.model.output.GangliaWriterTests)'/>
+<test name='com.googlecode.jmxtrans.model.output.GangliaWriterTests.testValidationMinimalSettings(com.googlecode.jmxtrans.model.output.GangliaWriterTests)'/>
+<test name='com.googlecode.jmxtrans.model.output.GangliaWriterTests.testValidationWithoutSettings(com.googlecode.jmxtrans.model.output.GangliaWriterTests)'/>
+</tests>
+</block>
+<block classname='com.googlecode.jmxtrans.model.output.BaseOutputWriter' method='firstNonNull' number='3'><tests>
+<test name='com.googlecode.jmxtrans.model.output.GangliaWriterTests.testValidationAllSettings(com.googlecode.jmxtrans.model.output.GangliaWriterTests)'/>
+<test name='com.googlecode.jmxtrans.model.output.GangliaWriterTests.testValidationMinimalSettings(com.googlecode.jmxtrans.model.output.GangliaWriterTests)'/>
+<test name='com.googlecode.jmxtrans.model.output.GangliaWriterTests.testValidationWithoutSettings(com.googlecode.jmxtrans.model.output.GangliaWriterTests)'/>
+</tests>
+</block>
+<block classname='com.googlecode.jmxtrans.model.output.Settings' method='getBooleanSetting' number='0'><tests>
+<test name='com.googlecode.jmxtrans.model.output.GangliaWriterTests.testValidationAllSettings(com.googlecode.jmxtrans.model.output.GangliaWriterTests)'/>
+<test name='com.googlecode.jmxtrans.model.output.GangliaWriterTests.testValidationMinimalSettings(com.googlecode.jmxtrans.model.output.GangliaWriterTests)'/>
+<test name='com.googlecode.jmxtrans.model.output.GangliaWriterTests.testValidationWithoutSettings(com.googlecode.jmxtrans.model.output.GangliaWriterTests)'/>
+</tests>
+</block>
+<block classname='com.googlecode.jmxtrans.model.PropertyResolver' method='resolveMap' number='0'><tests>
+<test name='com.googlecode.jmxtrans.model.output.GangliaWriterTests.testValidationAllSettings(com.googlecode.jmxtrans.model.output.GangliaWriterTests)'/>
+<test name='com.googlecode.jmxtrans.model.output.GangliaWriterTests.testValidationMinimalSettings(com.googlecode.jmxtrans.model.output.GangliaWriterTests)'/>
+<test name='com.googlecode.jmxtrans.model.output.GangliaWriterTests.testValidationWithoutSettings(com.googlecode.jmxtrans.model.output.GangliaWriterTests)'/>
+</tests>
+</block>
+<block classname='com.googlecode.jmxtrans.model.output.GangliaWriter' method='getSlope' number='0'><tests>
+<test name='com.googlecode.jmxtrans.model.output.GangliaWriterTests.testValidationAllSettings(com.googlecode.jmxtrans.model.output.GangliaWriterTests)'/>
+<test name='com.googlecode.jmxtrans.model.output.GangliaWriterTests.testValidationMinimalSettings(com.googlecode.jmxtrans.model.output.GangliaWriterTests)'/>
+</tests>
+</block>
+<block classname='com.googlecode.jmxtrans.model.output.GangliaWriter$Builder' method='build' number='0'><tests>
+<test name='com.googlecode.jmxtrans.model.output.GangliaWriterTests.testValidationAllSettings(com.googlecode.jmxtrans.model.output.GangliaWriterTests)'/>
+<test name='com.googlecode.jmxtrans.model.output.GangliaWriterTests.testValidationMinimalSettings(com.googlecode.jmxtrans.model.output.GangliaWriterTests)'/>
+<test name='com.googlecode.jmxtrans.model.output.GangliaWriterTests.testValidationWithoutSettings(com.googlecode.jmxtrans.model.output.GangliaWriterTests)'/>
+</tests>
+</block>
+<block classname='com.googlecode.jmxtrans.model.output.BaseOutputWriter' method='firstNonNull' number='4'><tests>
+<test name='com.googlecode.jmxtrans.model.output.GangliaWriterTests.testValidationMinimalSettings(com.googlecode.jmxtrans.model.output.GangliaWriterTests)'/>
+</tests>
+</block>
+<block classname='com.googlecode.jmxtrans.model.output.GangliaWriterTests' method='testValidationMinimalSettings' number='0'><tests>
+<test name='com.googlecode.jmxtrans.model.output.GangliaWriterTests.testValidationMinimalSettings(com.googlecode.jmxtrans.model.output.GangliaWriterTests)'/>
+</tests>
+</block>
+<block classname='com.googlecode.jmxtrans.model.output.GangliaWriter' method='computeAddressingMode' number='1'><tests>
+<test name='com.googlecode.jmxtrans.model.output.GangliaWriterTests.testValidationMinimalSettings(com.googlecode.jmxtrans.model.output.GangliaWriterTests)'/>
+</tests>
+</block>
+<block classname='com.googlecode.jmxtrans.model.output.GangliaWriterTests' method='testValidationWithoutSettings' number='0'><tests>
+<test name='com.googlecode.jmxtrans.model.output.GangliaWriterTests.testValidationWithoutSettings(com.googlecode.jmxtrans.model.output.GangliaWriterTests)'/>
+</tests>
+</block>
+</coverage>
