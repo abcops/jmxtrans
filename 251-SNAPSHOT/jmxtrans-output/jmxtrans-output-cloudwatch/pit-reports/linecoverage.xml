@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage>
+<block classname='com.googlecode.jmxtrans.model.output.CloudWatchWriter' method='internalWrite' number='3'><tests>
+<test name='com.googlecode.jmxtrans.model.output.CloudWatchWriterTests.testValidationWithoutSettings(com.googlecode.jmxtrans.model.output.CloudWatchWriterTests)'/>
+</tests>
+</block>
+<block classname='com.googlecode.jmxtrans.model.output.BaseOutputWriter' method='firstNonNull' number='0'><tests>
+<test name='com.googlecode.jmxtrans.model.output.CloudWatchWriterTests.testValidationWithoutSettings(com.googlecode.jmxtrans.model.output.CloudWatchWriterTests)'/>
+</tests>
+</block>
+<block classname='com.googlecode.jmxtrans.model.output.CloudWatchWriter' method='internalWrite' number='7'><tests>
+<test name='com.googlecode.jmxtrans.model.output.CloudWatchWriterTests.testValidationWithoutSettings(com.googlecode.jmxtrans.model.output.CloudWatchWriterTests)'/>
+</tests>
+</block>
+<block classname='com.googlecode.jmxtrans.model.output.BaseOutputWriter' method='doWrite' number='0'><tests>
+<test name='com.googlecode.jmxtrans.model.output.CloudWatchWriterTests.testValidationWithoutSettings(com.googlecode.jmxtrans.model.output.CloudWatchWriterTests)'/>
+</tests>
+</block>
+<block classname='com.googlecode.jmxtrans.model.Query' method='builder' number='0'><tests>
+<test name='com.googlecode.jmxtrans.model.output.CloudWatchWriterTests.testValidationWithoutSettings(com.googlecode.jmxtrans.model.output.CloudWatchWriterTests)'/>
+</tests>
+</block>
+<block classname='com.googlecode.jmxtrans.model.Result' method='getEpoch' number='0'><tests>
+<test name='com.googlecode.jmxtrans.model.output.CloudWatchWriterTests.testValidationWithoutSettings(com.googlecode.jmxtrans.model.output.CloudWatchWriterTests)'/>
+</tests>
+</block>
+<block classname='com.googlecode.jmxtrans.model.Result' method='<init>' number='0'><tests>
+<test name='com.googlecode.jmxtrans.model.output.CloudWatchWriterTests.testValidationWithoutSettings(com.googlecode.jmxtrans.model.output.CloudWatchWriterTests)'/>
+</tests>
+</block>
+<block classname='com.googlecode.jmxtrans.model.Result' method='getAttributeName' number='0'><tests>
+<test name='com.googlecode.jmxtrans.model.output.CloudWatchWriterTests.testValidationWithoutSettings(com.googlecode.jmxtrans.model.output.CloudWatchWriterTests)'/>
+</tests>
+</block>
+<block classname='com.googlecode.jmxtrans.model.Query' method='<init>' number='0'><tests>
+<test name='com.googlecode.jmxtrans.model.output.CloudWatchWriterTests.testValidationWithoutSettings(com.googlecode.jmxtrans.model.output.CloudWatchWriterTests)'/>
+</tests>
+</block>
+<block classname='com.googlecode.jmxtrans.model.Result' method='getTypeName' number='0'><tests>
+<test name='com.googlecode.jmxtrans.model.output.CloudWatchWriterTests.testValidationWithoutSettings(com.googlecode.jmxtrans.model.output.CloudWatchWriterTests)'/>
+</tests>
+</block>
+<block classname='com.googlecode.jmxtrans.model.output.BaseOutputWriter$ResultValuesTransformer' method='<init>' number='0'><tests>
+<test name='com.googlecode.jmxtrans.model.output.CloudWatchWriterTests.testValidationWithoutSettings(com.googlecode.jmxtrans.model.output.CloudWatchWriterTests)'/>
+</tests>
+</block>
+<block classname='com.googlecode.jmxtrans.model.Server' method='builder' number='0'><tests>
+<test name='com.googlecode.jmxtrans.model.output.CloudWatchWriterTests.testValidationWithoutSettings(com.googlecode.jmxtrans.model.output.CloudWatchWriterTests)'/>
+</tests>
+</block>
+<block classname='com.googlecode.jmxtrans.model.Query$Builder' method='build' number='0'><tests>
+<test name='com.googlecode.jmxtrans.model.output.CloudWatchWriterTests.testValidationWithoutSettings(com.googlecode.jmxtrans.model.output.CloudWatchWriterTests)'/>
+</tests>
+</block>
+<block classname='com.googlecode.jmxtrans.model.output.CloudWatchWriter' method='processResult' number='2'><tests>
+<test name='com.googlecode.jmxtrans.model.output.CloudWatchWriterTests.testValidationWithoutSettings(com.googlecode.jmxtrans.model.output.CloudWatchWriterTests)'/>
+</tests>
+</block>
+<block classname='com.googlecode.jmxtrans.model.PropertyResolver' method='resolveProps' number='0'><tests>
+<test name='com.googlecode.jmxtrans.model.output.CloudWatchWriterTests.testValidationWithoutSettings(com.googlecode.jmxtrans.model.output.CloudWatchWriterTests)'/>
+</tests>
+</block>
+<block classname='com.googlecode.jmxtrans.model.output.CloudWatchWriter$Builder' method='build' number='0'><tests>
+<test name='com.googlecode.jmxtrans.model.output.CloudWatchWriterTests.testValidationWithoutSettings(com.googlecode.jmxtrans.model.output.CloudWatchWriterTests)'/>
+</tests>
+</block>
+<block classname='com.googlecode.jmxtrans.model.output.BaseOutputWriter' method='firstNonNull' number='1'><tests>
+<test name='com.googlecode.jmxtrans.model.output.CloudWatchWriterTests.testValidationWithoutSettings(com.googlecode.jmxtrans.model.output.CloudWatchWriterTests)'/>
+</tests>
+</block>
+<block classname='com.googlecode.jmxtrans.model.output.CloudWatchWriter' method='internalWrite' number='2'><tests>
+<test name='com.googlecode.jmxtrans.model.output.CloudWatchWriterTests.testValidationWithoutSettings(com.googlecode.jmxtrans.model.output.CloudWatchWriterTests)'/>
+</tests>
+</block>
+<block classname='com.googlecode.jmxtrans.model.Server$Builder' method='<init>' number='0'><tests>
+<test name='com.googlecode.jmxtrans.model.output.CloudWatchWriterTests.testValidationWithoutSettings(com.googlecode.jmxtrans.model.output.CloudWatchWriterTests)'/>
+</tests>
+</block>
+<block classname='com.googlecode.jmxtrans.model.Result' method='getClassName' number='0'><tests>
+<test name='com.googlecode.jmxtrans.model.output.CloudWatchWriterTests.testValidationWithoutSettings(com.googlecode.jmxtrans.model.output.CloudWatchWriterTests)'/>
+</tests>
+</block>
+<block classname='com.googlecode.jmxtrans.model.output.CloudWatchWriterTests' method='<init>' number='0'><tests>
+<test name='com.googlecode.jmxtrans.model.output.CloudWatchWriterTests.testValidationWithoutSettings(com.googlecode.jmxtrans.model.output.CloudWatchWriterTests)'/>
+</tests>
+</block>
+<block classname='com.googlecode.jmxtrans.model.output.BaseOutputWriter' method='<init>' number='0'><tests>
+<test name='com.googlecode.jmxtrans.model.output.CloudWatchWriterTests.testValidationWithoutSettings(com.googlecode.jmxtrans.model.output.CloudWatchWriterTests)'/>
+</tests>
+</block>
+<block classname='com.googlecode.jmxtrans.model.output.BaseOutputWriter$ResultValuesTransformer' method='apply' number='0'><tests>
+<test name='com.googlecode.jmxtrans.model.output.CloudWatchWriterTests.testValidationWithoutSettings(com.googlecode.jmxtrans.model.output.CloudWatchWriterTests)'/>
+</tests>
+</block>
+<block classname='com.googlecode.jmxtrans.model.Result' method='getKeyAlias' number='0'><tests>
+<test name='com.googlecode.jmxtrans.model.output.CloudWatchWriterTests.testValidationWithoutSettings(com.googlecode.jmxtrans.model.output.CloudWatchWriterTests)'/>
+</tests>
+</block>
+<block classname='com.googlecode.jmxtrans.model.output.CloudWatchWriter' method='<init>' number='2'><tests>
+<test name='com.googlecode.jmxtrans.model.output.CloudWatchWriterTests.testValidationWithoutSettings(com.googlecode.jmxtrans.model.output.CloudWatchWriterTests)'/>
+</tests>
+</block>
+<block classname='com.googlecode.jmxtrans.util.ObjectToDouble' method='apply' number='2'><tests>
+<test name='com.googlecode.jmxtrans.model.output.CloudWatchWriterTests.testValidationWithoutSettings(com.googlecode.jmxtrans.model.output.CloudWatchWriterTests)'/>
+</tests>
+</block>
+<block classname='com.googlecode.jmxtrans.model.output.BaseOutputWriter' method='getSettings' number='0'><tests>
+<test name='com.googlecode.jmxtrans.model.output.CloudWatchWriterTests.testValidationWithoutSettings(com.googlecode.jmxtrans.model.output.CloudWatchWriterTests)'/>
+</tests>
+</block>
+<block classname='com.googlecode.jmxtrans.model.output.Settings' method='getBooleanSetting' number='0'><tests>
+<test name='com.googlecode.jmxtrans.model.output.CloudWatchWriterTests.testValidationWithoutSettings(com.googlecode.jmxtrans.model.output.CloudWatchWriterTests)'/>
+</tests>
+</block>
+<block classname='com.googlecode.jmxtrans.model.Query$Builder' method='<init>' number='0'><tests>
+<test name='com.googlecode.jmxtrans.model.output.CloudWatchWriterTests.testValidationWithoutSettings(com.googlecode.jmxtrans.model.output.CloudWatchWriterTests)'/>
+</tests>
+</block>
+<block classname='com.googlecode.jmxtrans.model.output.BaseOutputWriter' method='firstNonNull' number='5'><tests>
+<test name='com.googlecode.jmxtrans.model.output.CloudWatchWriterTests.testValidationWithoutSettings(com.googlecode.jmxtrans.model.output.CloudWatchWriterTests)'/>
+</tests>
+</block>
+<block classname='com.googlecode.jmxtrans.model.Server$Builder' method='setHost' number='0'><tests>
+<test name='com.googlecode.jmxtrans.model.output.CloudWatchWriterTests.testValidationWithoutSettings(com.googlecode.jmxtrans.model.output.CloudWatchWriterTests)'/>
+</tests>
+</block>
+<block classname='com.googlecode.jmxtrans.model.output.CloudWatchWriter$Builder' method='<init>' number='0'><tests>
+<test name='com.googlecode.jmxtrans.model.output.CloudWatchWriterTests.testValidationWithoutSettings(com.googlecode.jmxtrans.model.output.CloudWatchWriterTests)'/>
+</tests>
+</block>
+<block classname='com.googlecode.jmxtrans.model.Result' method='getObjDomain' number='0'><tests>
+<test name='com.googlecode.jmxtrans.model.output.CloudWatchWriterTests.testValidationWithoutSettings(com.googlecode.jmxtrans.model.output.CloudWatchWriterTests)'/>
+</tests>
+</block>
+<block classname='com.googlecode.jmxtrans.model.PropertyResolver' method='resolveList' number='0'><tests>
+<test name='com.googlecode.jmxtrans.model.output.CloudWatchWriterTests.testValidationWithoutSettings(com.googlecode.jmxtrans.model.output.CloudWatchWriterTests)'/>
+</tests>
+</block>
+<block classname='com.googlecode.jmxtrans.model.output.CloudWatchWriterTests' method='createServerQueryAndResult' number='0'><tests>
+<test name='com.googlecode.jmxtrans.model.output.CloudWatchWriterTests.testValidationWithoutSettings(com.googlecode.jmxtrans.model.output.CloudWatchWriterTests)'/>
+</tests>
+</block>
+<block classname='com.googlecode.jmxtrans.model.output.BaseOutputWriter$ResultValuesTransformer' method='<init>' number='0'><tests>
+<test name='com.googlecode.jmxtrans.model.output.CloudWatchWriterTests.testValidationWithoutSettings(com.googlecode.jmxtrans.model.output.CloudWatchWriterTests)'/>
+</tests>
+</block>
+<block classname='com.googlecode.jmxtrans.model.PropertyResolver' method='resolveProps' number='1'><tests>
+<test name='com.googlecode.jmxtrans.model.output.CloudWatchWriterTests.testValidationWithoutSettings(com.googlecode.jmxtrans.model.output.CloudWatchWriterTests)'/>
+</tests>
+</block>
+<block classname='com.googlecode.jmxtrans.model.output.CloudWatchWriter' method='processResult' number='3'><tests>
+<test name='com.googlecode.jmxtrans.model.output.CloudWatchWriterTests.testValidationWithoutSettings(com.googlecode.jmxtrans.model.output.CloudWatchWriterTests)'/>
+</tests>
+</block>
+<block classname='com.googlecode.jmxtrans.model.output.CloudWatchWriter' method='internalWrite' number='1'><tests>
+<test name='com.googlecode.jmxtrans.model.output.CloudWatchWriterTests.testValidationWithoutSettings(com.googlecode.jmxtrans.model.output.CloudWatchWriterTests)'/>
+</tests>
+</block>
+<block classname='com.googlecode.jmxtrans.model.output.BaseOutputWriter' method='<init>' number='3'><tests>
+<test name='com.googlecode.jmxtrans.model.output.CloudWatchWriterTests.testValidationWithoutSettings(com.googlecode.jmxtrans.model.output.CloudWatchWriterTests)'/>
+</tests>
+</block>
+<block classname='com.googlecode.jmxtrans.model.PropertyResolver$PropertyResolverFunc' method='<init>' number='0'><tests>
+<test name='com.googlecode.jmxtrans.model.output.CloudWatchWriterTests.testValidationWithoutSettings(com.googlecode.jmxtrans.model.output.CloudWatchWriterTests)'/>
+</tests>
+</block>
+<block classname='com.googlecode.jmxtrans.model.Query$Builder' method='setObj' number='0'><tests>
+<test name='com.googlecode.jmxtrans.model.output.CloudWatchWriterTests.testValidationWithoutSettings(com.googlecode.jmxtrans.model.output.CloudWatchWriterTests)'/>
+</tests>
+</block>
+<block classname='com.googlecode.jmxtrans.model.PropertyResolver$PropertyResolverFunc' method='<init>' number='0'><tests>
+<test name='com.googlecode.jmxtrans.model.output.CloudWatchWriterTests.testValidationWithoutSettings(com.googlecode.jmxtrans.model.output.CloudWatchWriterTests)'/>
+</tests>
+</block>
+<block classname='com.googlecode.jmxtrans.model.output.CloudWatchWriterTests' method='createCloudWatchWriter' number='0'><tests>
+<test name='com.googlecode.jmxtrans.model.output.CloudWatchWriterTests.testValidationWithoutSettings(com.googlecode.jmxtrans.model.output.CloudWatchWriterTests)'/>
+</tests>
+</block>
+<block classname='com.googlecode.jmxtrans.model.output.CloudWatchWriter' method='<clinit>' number='0'><tests>
+<test name='com.googlecode.jmxtrans.model.output.CloudWatchWriterTests.testValidationWithoutSettings(com.googlecode.jmxtrans.model.output.CloudWatchWriterTests)'/>
+</tests>
+</block>
+<block classname='com.googlecode.jmxtrans.model.output.CloudWatchWriter' method='internalWrite' number='5'><tests>
+<test name='com.googlecode.jmxtrans.model.output.CloudWatchWriterTests.testValidationWithoutSettings(com.googlecode.jmxtrans.model.output.CloudWatchWriterTests)'/>
+</tests>
+</block>
+<block classname='com.googlecode.jmxtrans.model.Server' method='<init>' number='0'><tests>
+<test name='com.googlecode.jmxtrans.model.output.CloudWatchWriterTests.testValidationWithoutSettings(com.googlecode.jmxtrans.model.output.CloudWatchWriterTests)'/>
+</tests>
+</block>
+<block classname='com.googlecode.jmxtrans.model.PropertyResolver' method='resolveProps' number='2'><tests>
+<test name='com.googlecode.jmxtrans.model.output.CloudWatchWriterTests.testValidationWithoutSettings(com.googlecode.jmxtrans.model.output.CloudWatchWriterTests)'/>
+</tests>
+</block>
+<block classname='com.googlecode.jmxtrans.model.results.IdentityValueTransformer' method='apply' number='0'><tests>
+<test name='com.googlecode.jmxtrans.model.output.CloudWatchWriterTests.testValidationWithoutSettings(com.googlecode.jmxtrans.model.output.CloudWatchWriterTests)'/>
+</tests>
+</block>
+<block classname='com.googlecode.jmxtrans.util.ObjectToDouble' method='apply' number='3'><tests>
+<test name='com.googlecode.jmxtrans.model.output.CloudWatchWriterTests.testValidationWithoutSettings(com.googlecode.jmxtrans.model.output.CloudWatchWriterTests)'/>
+</tests>
+</block>
+<block classname='com.googlecode.jmxtrans.model.Server$Builder' method='<init>' number='0'><tests>
+<test name='com.googlecode.jmxtrans.model.output.CloudWatchWriterTests.testValidationWithoutSettings(com.googlecode.jmxtrans.model.output.CloudWatchWriterTests)'/>
+</tests>
+</block>
+<block classname='com.googlecode.jmxtrans.model.output.CloudWatchWriter' method='internalWrite' number='9'><tests>
+<test name='com.googlecode.jmxtrans.model.output.CloudWatchWriterTests.testValidationWithoutSettings(com.googlecode.jmxtrans.model.output.CloudWatchWriterTests)'/>
+</tests>
+</block>
+<block classname='com.googlecode.jmxtrans.model.output.BaseOutputWriter' method='firstNonNull' number='2'><tests>
+<test name='com.googlecode.jmxtrans.model.output.CloudWatchWriterTests.testValidationWithoutSettings(com.googlecode.jmxtrans.model.output.CloudWatchWriterTests)'/>
+</tests>
+</block>
+<block classname='com.googlecode.jmxtrans.model.output.CloudWatchWriter' method='processResult' number='0'><tests>
+<test name='com.googlecode.jmxtrans.model.output.CloudWatchWriterTests.testValidationWithoutSettings(com.googlecode.jmxtrans.model.output.CloudWatchWriterTests)'/>
+</tests>
+</block>
+<block classname='com.googlecode.jmxtrans.model.Result' method='getValues' number='0'><tests>
+<test name='com.googlecode.jmxtrans.model.output.CloudWatchWriterTests.testValidationWithoutSettings(com.googlecode.jmxtrans.model.output.CloudWatchWriterTests)'/>
+</tests>
+</block>
+<block classname='com.googlecode.jmxtrans.model.Server$Builder' method='setPort' number='0'><tests>
+<test name='com.googlecode.jmxtrans.model.output.CloudWatchWriterTests.testValidationWithoutSettings(com.googlecode.jmxtrans.model.output.CloudWatchWriterTests)'/>
+</tests>
+</block>
+<block classname='com.googlecode.jmxtrans.model.output.Settings' method='getBooleanSetting' number='1'><tests>
+<test name='com.googlecode.jmxtrans.model.output.CloudWatchWriterTests.testValidationWithoutSettings(com.googlecode.jmxtrans.model.output.CloudWatchWriterTests)'/>
+</tests>
+</block>
+<block classname='com.googlecode.jmxtrans.model.output.CloudWatchWriter' method='builder' number='0'><tests>
+<test name='com.googlecode.jmxtrans.model.output.CloudWatchWriterTests.testValidationWithoutSettings(com.googlecode.jmxtrans.model.output.CloudWatchWriterTests)'/>
+</tests>
+</block>
+<block classname='com.googlecode.jmxtrans.model.Server$Builder' method='build' number='0'><tests>
+<test name='com.googlecode.jmxtrans.model.output.CloudWatchWriterTests.testValidationWithoutSettings(com.googlecode.jmxtrans.model.output.CloudWatchWriterTests)'/>
+</tests>
+</block>
+<block classname='com.googlecode.jmxtrans.model.Query$Builder' method='<init>' number='0'><tests>
+<test name='com.googlecode.jmxtrans.model.output.CloudWatchWriterTests.testValidationWithoutSettings(com.googlecode.jmxtrans.model.output.CloudWatchWriterTests)'/>
+</tests>
+</block>
+<block classname='com.googlecode.jmxtrans.model.output.BaseOutputWriter' method='<init>' number='2'><tests>
+<test name='com.googlecode.jmxtrans.model.output.CloudWatchWriterTests.testValidationWithoutSettings(com.googlecode.jmxtrans.model.output.CloudWatchWriterTests)'/>
+</tests>
+</block>
+<block classname='com.googlecode.jmxtrans.model.output.CloudWatchWriter' method='internalWrite' number='0'><tests>
+<test name='com.googlecode.jmxtrans.model.output.CloudWatchWriterTests.testValidationWithoutSettings(com.googlecode.jmxtrans.model.output.CloudWatchWriterTests)'/>
+</tests>
+</block>
+<block classname='com.googlecode.jmxtrans.model.PropertyResolver' method='<clinit>' number='0'><tests>
+<test name='com.googlecode.jmxtrans.model.output.CloudWatchWriterTests.testValidationWithoutSettings(com.googlecode.jmxtrans.model.output.CloudWatchWriterTests)'/>
+</tests>
+</block>
+<block classname='com.googlecode.jmxtrans.model.output.CloudWatchWriter$Builder' method='setNamespace' number='0'><tests>
+<test name='com.googlecode.jmxtrans.model.output.CloudWatchWriterTests.testValidationWithoutSettings(com.googlecode.jmxtrans.model.output.CloudWatchWriterTests)'/>
+</tests>
+</block>
+<block classname='com.googlecode.jmxtrans.model.PropertyResolver$ObjectPropertyResolverFunc' method='<init>' number='0'><tests>
+<test name='com.googlecode.jmxtrans.model.output.CloudWatchWriterTests.testValidationWithoutSettings(com.googlecode.jmxtrans.model.output.CloudWatchWriterTests)'/>
+</tests>
+</block>
+<block classname='com.googlecode.jmxtrans.model.PropertyResolver$ObjectPropertyResolverFunc' method='<init>' number='0'><tests>
+<test name='com.googlecode.jmxtrans.model.output.CloudWatchWriterTests.testValidationWithoutSettings(com.googlecode.jmxtrans.model.output.CloudWatchWriterTests)'/>
+</tests>
+</block>
+<block classname='com.googlecode.jmxtrans.model.output.CloudWatchWriter' method='internalWrite' number='4'><tests>
+<test name='com.googlecode.jmxtrans.model.output.CloudWatchWriterTests.testValidationWithoutSettings(com.googlecode.jmxtrans.model.output.CloudWatchWriterTests)'/>
+</tests>
+</block>
+<block classname='com.googlecode.jmxtrans.model.output.BaseOutputWriter$ResultValuesTransformer' method='apply' number='2'><tests>
+<test name='com.googlecode.jmxtrans.model.output.CloudWatchWriterTests.testValidationWithoutSettings(com.googlecode.jmxtrans.model.output.CloudWatchWriterTests)'/>
+</tests>
+</block>
+<block classname='com.googlecode.jmxtrans.model.output.CloudWatchWriterTests' method='testValidationWithoutSettings' number='0'><tests>
+<test name='com.googlecode.jmxtrans.model.output.CloudWatchWriterTests.testValidationWithoutSettings(com.googlecode.jmxtrans.model.output.CloudWatchWriterTests)'/>
+</tests>
+</block>
+<block classname='com.googlecode.jmxtrans.model.output.CloudWatchWriter' method='setCloudWatchClient' number='0'><tests>
+<test name='com.googlecode.jmxtrans.model.output.CloudWatchWriterTests.testValidationWithoutSettings(com.googlecode.jmxtrans.model.output.CloudWatchWriterTests)'/>
+</tests>
+</block>
+<block classname='com.googlecode.jmxtrans.util.ObjectToDouble' method='apply' number='0'><tests>
+<test name='com.googlecode.jmxtrans.model.output.CloudWatchWriterTests.testValidationWithoutSettings(com.googlecode.jmxtrans.model.output.CloudWatchWriterTests)'/>
+</tests>
+</block>
+<block classname='com.googlecode.jmxtrans.model.PropertyResolver' method='resolveProps' number='3'><tests>
+<test name='com.googlecode.jmxtrans.model.output.CloudWatchWriterTests.testValidationWithoutSettings(com.googlecode.jmxtrans.model.output.CloudWatchWriterTests)'/>
+</tests>
+</block>
+<block classname='com.googlecode.jmxtrans.model.results.IdentityValueTransformer' method='<init>' number='0'><tests>
+<test name='com.googlecode.jmxtrans.model.output.CloudWatchWriterTests.testValidationWithoutSettings(com.googlecode.jmxtrans.model.output.CloudWatchWriterTests)'/>
+</tests>
+</block>
+<block classname='com.googlecode.jmxtrans.model.output.CloudWatchWriter' method='internalWrite' number='8'><tests>
+<test name='com.googlecode.jmxtrans.model.output.CloudWatchWriterTests.testValidationWithoutSettings(com.googlecode.jmxtrans.model.output.CloudWatchWriterTests)'/>
+</tests>
+</block>
+<block classname='com.googlecode.jmxtrans.model.output.BaseOutputWriter' method='firstNonNull' number='3'><tests>
+<test name='com.googlecode.jmxtrans.model.output.CloudWatchWriterTests.testValidationWithoutSettings(com.googlecode.jmxtrans.model.output.CloudWatchWriterTests)'/>
+</tests>
+</block>
+<block classname='com.googlecode.jmxtrans.model.output.Settings' method='getBooleanSetting' number='0'><tests>
+<test name='com.googlecode.jmxtrans.model.output.CloudWatchWriterTests.testValidationWithoutSettings(com.googlecode.jmxtrans.model.output.CloudWatchWriterTests)'/>
+</tests>
+</block>
+<block classname='com.googlecode.jmxtrans.model.PropertyResolver' method='resolveMap' number='0'><tests>
+<test name='com.googlecode.jmxtrans.model.output.CloudWatchWriterTests.testValidationWithoutSettings(com.googlecode.jmxtrans.model.output.CloudWatchWriterTests)'/>
+</tests>
+</block>
+<block classname='com.googlecode.jmxtrans.util.ObjectToDouble' method='<init>' number='0'><tests>
+<test name='com.googlecode.jmxtrans.model.output.CloudWatchWriterTests.testValidationWithoutSettings(com.googlecode.jmxtrans.model.output.CloudWatchWriterTests)'/>
+</tests>
+</block>
+<block classname='com.googlecode.jmxtrans.model.output.CloudWatchWriter' method='<init>' number='0'><tests>
+<test name='com.googlecode.jmxtrans.model.output.CloudWatchWriterTests.testValidationWithoutSettings(com.googlecode.jmxtrans.model.output.CloudWatchWriterTests)'/>
+</tests>
+</block>
+<block classname='com.googlecode.jmxtrans.model.output.CloudWatchWriter$Builder' method='<init>' number='0'><tests>
+<test name='com.googlecode.jmxtrans.model.output.CloudWatchWriterTests.testValidationWithoutSettings(com.googlecode.jmxtrans.model.output.CloudWatchWriterTests)'/>
+</tests>
+</block>
+</coverage>
