@@ -1,0 +1,502 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage>
+<block classname='com.googlecode.jmxtrans.classloader.ClassLoadingTests' method='classCannotBeAccessedIfJarIsNotLoaded' number='0'><tests>
+<test name='com.googlecode.jmxtrans.classloader.ClassLoadingTests.classCannotBeAccessedIfJarIsNotLoaded(com.googlecode.jmxtrans.classloader.ClassLoadingTests)'/>
+</tests>
+</block>
+<block classname='com.googlecode.jmxtrans.classloader.ClassLoadingTests' method='<init>' number='0'><tests>
+<test name='com.googlecode.jmxtrans.classloader.ClassLoadingTests.classCannotBeAccessedIfJarIsNotLoaded(com.googlecode.jmxtrans.classloader.ClassLoadingTests)'/>
+<test name='com.googlecode.jmxtrans.classloader.ClassLoadingTests.loadingNonExistingFileThrowsException(com.googlecode.jmxtrans.classloader.ClassLoadingTests)'/>
+</tests>
+</block>
+<block classname='com.googlecode.jmxtrans.classloader.ClassLoaderEnricher' method='add' number='0'><tests>
+<test name='com.googlecode.jmxtrans.classloader.ClassLoadingTests.loadingNonExistingFileThrowsException(com.googlecode.jmxtrans.classloader.ClassLoadingTests)'/>
+</tests>
+</block>
+<block classname='com.googlecode.jmxtrans.classloader.ClassLoaderEnricher' method='<init>' number='0'><tests>
+<test name='com.googlecode.jmxtrans.classloader.ClassLoadingTests.loadingNonExistingFileThrowsException(com.googlecode.jmxtrans.classloader.ClassLoadingTests)'/>
+</tests>
+</block>
+<block classname='com.googlecode.jmxtrans.classloader.ClassLoadingTests' method='loadingNonExistingFileThrowsException' number='0'><tests>
+<test name='com.googlecode.jmxtrans.classloader.ClassLoadingTests.loadingNonExistingFileThrowsException(com.googlecode.jmxtrans.classloader.ClassLoadingTests)'/>
+</tests>
+</block>
+<block classname='com.googlecode.jmxtrans.classloader.ClassLoaderEnricher' method='add' number='1'><tests>
+<test name='com.googlecode.jmxtrans.classloader.ClassLoadingTests.loadingNonExistingFileThrowsException(com.googlecode.jmxtrans.classloader.ClassLoadingTests)'/>
+</tests>
+</block>
+<block classname='com.googlecode.jmxtrans.util.NumberUtils' method='isNumeric' number='3'><tests>
+<test name='com.googlecode.jmxtrans.util.NumberUtilsTest.testIsNumeric(com.googlecode.jmxtrans.util.NumberUtilsTest)'/>
+</tests>
+</block>
+<block classname='com.googlecode.jmxtrans.util.NumberUtilsTest' method='<init>' number='0'><tests>
+<test name='com.googlecode.jmxtrans.util.NumberUtilsTest.testIsNumeric(com.googlecode.jmxtrans.util.NumberUtilsTest)'/>
+</tests>
+</block>
+<block classname='com.googlecode.jmxtrans.util.NumberUtils' method='isNumeric' number='2'><tests>
+<test name='com.googlecode.jmxtrans.util.NumberUtilsTest.testIsNumeric(com.googlecode.jmxtrans.util.NumberUtilsTest)'/>
+</tests>
+</block>
+<block classname='com.googlecode.jmxtrans.util.NumberUtils' method='isNumeric' number='1'><tests>
+<test name='com.googlecode.jmxtrans.util.NumberUtilsTest.testIsNumeric(com.googlecode.jmxtrans.util.NumberUtilsTest)'/>
+</tests>
+</block>
+<block classname='com.googlecode.jmxtrans.util.NumberUtils' method='isNumeric' number='4'><tests>
+<test name='com.googlecode.jmxtrans.util.NumberUtilsTest.testIsNumeric(com.googlecode.jmxtrans.util.NumberUtilsTest)'/>
+</tests>
+</block>
+<block classname='com.googlecode.jmxtrans.util.NumberUtilsTest' method='testIsNumeric' number='0'><tests>
+<test name='com.googlecode.jmxtrans.util.NumberUtilsTest.testIsNumeric(com.googlecode.jmxtrans.util.NumberUtilsTest)'/>
+</tests>
+</block>
+<block classname='com.googlecode.jmxtrans.util.NumberUtils' method='<clinit>' number='0'><tests>
+<test name='com.googlecode.jmxtrans.util.NumberUtilsTest.testIsNumeric(com.googlecode.jmxtrans.util.NumberUtilsTest)'/>
+</tests>
+</block>
+<block classname='com.googlecode.jmxtrans.util.NumberUtils' method='isNumeric' number='0'><tests>
+<test name='com.googlecode.jmxtrans.util.NumberUtilsTest.testIsNumeric(com.googlecode.jmxtrans.util.NumberUtilsTest)'/>
+</tests>
+</block>
+<block classname='com.googlecode.jmxtrans.util.NumberUtils' method='isNumeric' number='1'><tests>
+<test name='com.googlecode.jmxtrans.util.NumberUtilsTest.testIsNumeric(com.googlecode.jmxtrans.util.NumberUtilsTest)'/>
+</tests>
+</block>
+<block classname='com.googlecode.jmxtrans.util.NumberUtils' method='isNumeric' number='0'><tests>
+<test name='com.googlecode.jmxtrans.util.NumberUtilsTest.testIsNumeric(com.googlecode.jmxtrans.util.NumberUtilsTest)'/>
+</tests>
+</block>
+<block classname='com.googlecode.jmxtrans.util.NumberUtils' method='isNumeric' number='5'><tests>
+<test name='com.googlecode.jmxtrans.util.NumberUtilsTest.testIsNumeric(com.googlecode.jmxtrans.util.NumberUtilsTest)'/>
+</tests>
+</block>
+<block classname='com.googlecode.jmxtrans.util.NumberUtils' method='isNumeric' number='4'><tests>
+<test name='com.googlecode.jmxtrans.util.NumberUtilsTest.testIsNumeric(com.googlecode.jmxtrans.util.NumberUtilsTest)'/>
+</tests>
+</block>
+<block classname='com.googlecode.jmxtrans.util.NumberUtils' method='isNumeric' number='2'><tests>
+<test name='com.googlecode.jmxtrans.util.NumberUtilsTest.testIsNumeric(com.googlecode.jmxtrans.util.NumberUtilsTest)'/>
+</tests>
+</block>
+<block classname='com.googlecode.jmxtrans.util.NumberUtils' method='isNumeric' number='5'><tests>
+<test name='com.googlecode.jmxtrans.util.NumberUtilsTest.testIsNumeric(com.googlecode.jmxtrans.util.NumberUtilsTest)'/>
+</tests>
+</block>
+<block classname='com.googlecode.jmxtrans.util.NumberUtils' method='isNumeric' number='3'><tests>
+<test name='com.googlecode.jmxtrans.util.NumberUtilsTest.testIsNumeric(com.googlecode.jmxtrans.util.NumberUtilsTest)'/>
+</tests>
+</block>
+<block classname='com.googlecode.jmxtrans.util.ObjectToDoubleTest' method='doubleReturnedAsItself' number='0'><tests>
+<test name='com.googlecode.jmxtrans.util.ObjectToDoubleTest.doubleReturnedAsItself(com.googlecode.jmxtrans.util.ObjectToDoubleTest)'/>
+</tests>
+</block>
+<block classname='com.googlecode.jmxtrans.util.ObjectToDouble' method='apply' number='1'><tests>
+<test name='com.googlecode.jmxtrans.util.ObjectToDoubleTest.doubleReturnedAsItself(com.googlecode.jmxtrans.util.ObjectToDoubleTest)'/>
+</tests>
+</block>
+<block classname='com.googlecode.jmxtrans.util.ObjectToDouble' method='apply' number='0'><tests>
+<test name='com.googlecode.jmxtrans.util.ObjectToDoubleTest.doubleReturnedAsItself(com.googlecode.jmxtrans.util.ObjectToDoubleTest)'/>
+<test name='com.googlecode.jmxtrans.util.ObjectToDoubleTest.integerIsConvertedToDouble(com.googlecode.jmxtrans.util.ObjectToDoubleTest)'/>
+<test name='com.googlecode.jmxtrans.util.ObjectToDoubleTest.stringIsNotConverted(com.googlecode.jmxtrans.util.ObjectToDoubleTest)'/>
+</tests>
+</block>
+<block classname='com.googlecode.jmxtrans.util.ObjectToDoubleTest' method='<init>' number='0'><tests>
+<test name='com.googlecode.jmxtrans.util.ObjectToDoubleTest.doubleReturnedAsItself(com.googlecode.jmxtrans.util.ObjectToDoubleTest)'/>
+<test name='com.googlecode.jmxtrans.util.ObjectToDoubleTest.integerIsConvertedToDouble(com.googlecode.jmxtrans.util.ObjectToDoubleTest)'/>
+<test name='com.googlecode.jmxtrans.util.ObjectToDoubleTest.stringIsNotConverted(com.googlecode.jmxtrans.util.ObjectToDoubleTest)'/>
+</tests>
+</block>
+<block classname='com.googlecode.jmxtrans.util.ObjectToDouble' method='<init>' number='0'><tests>
+<test name='com.googlecode.jmxtrans.util.ObjectToDoubleTest.doubleReturnedAsItself(com.googlecode.jmxtrans.util.ObjectToDoubleTest)'/>
+<test name='com.googlecode.jmxtrans.util.ObjectToDoubleTest.integerIsConvertedToDouble(com.googlecode.jmxtrans.util.ObjectToDoubleTest)'/>
+<test name='com.googlecode.jmxtrans.util.ObjectToDoubleTest.stringIsNotConverted(com.googlecode.jmxtrans.util.ObjectToDoubleTest)'/>
+</tests>
+</block>
+<block classname='com.googlecode.jmxtrans.util.ObjectToDouble' method='apply' number='2'><tests>
+<test name='com.googlecode.jmxtrans.util.ObjectToDoubleTest.integerIsConvertedToDouble(com.googlecode.jmxtrans.util.ObjectToDoubleTest)'/>
+<test name='com.googlecode.jmxtrans.util.ObjectToDoubleTest.stringIsNotConverted(com.googlecode.jmxtrans.util.ObjectToDoubleTest)'/>
+</tests>
+</block>
+<block classname='com.googlecode.jmxtrans.util.ObjectToDoubleTest' method='integerIsConvertedToDouble' number='0'><tests>
+<test name='com.googlecode.jmxtrans.util.ObjectToDoubleTest.integerIsConvertedToDouble(com.googlecode.jmxtrans.util.ObjectToDoubleTest)'/>
+</tests>
+</block>
+<block classname='com.googlecode.jmxtrans.util.ObjectToDouble' method='apply' number='3'><tests>
+<test name='com.googlecode.jmxtrans.util.ObjectToDoubleTest.integerIsConvertedToDouble(com.googlecode.jmxtrans.util.ObjectToDoubleTest)'/>
+</tests>
+</block>
+<block classname='com.googlecode.jmxtrans.util.ObjectToDoubleTest' method='stringIsNotConverted' number='0'><tests>
+<test name='com.googlecode.jmxtrans.util.ObjectToDoubleTest.stringIsNotConverted(com.googlecode.jmxtrans.util.ObjectToDoubleTest)'/>
+</tests>
+</block>
+<block classname='com.googlecode.jmxtrans.util.ObjectToDouble' method='apply' number='4'><tests>
+<test name='com.googlecode.jmxtrans.util.ObjectToDoubleTest.stringIsNotConverted(com.googlecode.jmxtrans.util.ObjectToDoubleTest)'/>
+</tests>
+</block>
+<block classname='com.googlecode.jmxtrans.util.WatchDirTest$MockWatchedCallback$$EnhancerByMockitoWithCGLIB$$34bdc472' method='CGLIB$BIND_CALLBACKS' number='2'><tests>
+<test name='com.googlecode.jmxtrans.util.WatchDirTest.createdFileIsDetected(com.googlecode.jmxtrans.util.WatchDirTest)'/>
+<test name='com.googlecode.jmxtrans.util.WatchDirTest.deletedFileIsDetected(com.googlecode.jmxtrans.util.WatchDirTest)'/>
+<test name='com.googlecode.jmxtrans.util.WatchDirTest.modifiedFileIsDetected(com.googlecode.jmxtrans.util.WatchDirTest)'/>
+</tests>
+</block>
+<block classname='com.googlecode.jmxtrans.util.WatchDirTest$MockWatchedCallback' method='<init>' number='0'><tests>
+<test name='com.googlecode.jmxtrans.util.WatchDirTest.createdFileIsDetected(com.googlecode.jmxtrans.util.WatchDirTest)'/>
+<test name='com.googlecode.jmxtrans.util.WatchDirTest.deletedFileIsDetected(com.googlecode.jmxtrans.util.WatchDirTest)'/>
+<test name='com.googlecode.jmxtrans.util.WatchDirTest.modifiedFileIsDetected(com.googlecode.jmxtrans.util.WatchDirTest)'/>
+<test name='com.googlecode.jmxtrans.util.WatchDirTest.watchingFileIsNotPossible(com.googlecode.jmxtrans.util.WatchDirTest)'/>
+</tests>
+</block>
+<block classname='com.googlecode.jmxtrans.util.WatchDirTest$MockWatchedCallback$$EnhancerByMockitoWithCGLIB$$34bdc472' method='equals' number='2'><tests>
+<test name='com.googlecode.jmxtrans.util.WatchDirTest.createdFileIsDetected(com.googlecode.jmxtrans.util.WatchDirTest)'/>
+<test name='com.googlecode.jmxtrans.util.WatchDirTest.deletedFileIsDetected(com.googlecode.jmxtrans.util.WatchDirTest)'/>
+<test name='com.googlecode.jmxtrans.util.WatchDirTest.modifiedFileIsDetected(com.googlecode.jmxtrans.util.WatchDirTest)'/>
+</tests>
+</block>
+<block classname='com.googlecode.jmxtrans.util.WatchDir' method='<init>' number='0'><tests>
+<test name='com.googlecode.jmxtrans.util.WatchDirTest.createdFileIsDetected(com.googlecode.jmxtrans.util.WatchDirTest)'/>
+<test name='com.googlecode.jmxtrans.util.WatchDirTest.deletedFileIsDetected(com.googlecode.jmxtrans.util.WatchDirTest)'/>
+<test name='com.googlecode.jmxtrans.util.WatchDirTest.modifiedFileIsDetected(com.googlecode.jmxtrans.util.WatchDirTest)'/>
+<test name='com.googlecode.jmxtrans.util.WatchDirTest.watchingFileIsNotPossible(com.googlecode.jmxtrans.util.WatchDirTest)'/>
+</tests>
+</block>
+<block classname='com.googlecode.jmxtrans.util.WatchDirTest' method='<init>' number='0'><tests>
+<test name='com.googlecode.jmxtrans.util.WatchDirTest.createdFileIsDetected(com.googlecode.jmxtrans.util.WatchDirTest)'/>
+<test name='com.googlecode.jmxtrans.util.WatchDirTest.deletedFileIsDetected(com.googlecode.jmxtrans.util.WatchDirTest)'/>
+<test name='com.googlecode.jmxtrans.util.WatchDirTest.modifiedFileIsDetected(com.googlecode.jmxtrans.util.WatchDirTest)'/>
+<test name='com.googlecode.jmxtrans.util.WatchDirTest.watchingFileIsNotPossible(com.googlecode.jmxtrans.util.WatchDirTest)'/>
+</tests>
+</block>
+<block classname='com.googlecode.jmxtrans.util.WatchDirTest' method='destroyWatchedDir' number='0'><tests>
+<test name='com.googlecode.jmxtrans.util.WatchDirTest.createdFileIsDetected(com.googlecode.jmxtrans.util.WatchDirTest)'/>
+<test name='com.googlecode.jmxtrans.util.WatchDirTest.deletedFileIsDetected(com.googlecode.jmxtrans.util.WatchDirTest)'/>
+<test name='com.googlecode.jmxtrans.util.WatchDirTest.modifiedFileIsDetected(com.googlecode.jmxtrans.util.WatchDirTest)'/>
+<test name='com.googlecode.jmxtrans.util.WatchDirTest.watchingFileIsNotPossible(com.googlecode.jmxtrans.util.WatchDirTest)'/>
+</tests>
+</block>
+<block classname='com.googlecode.jmxtrans.util.WatchDirTest$MockWatchedCallback$$EnhancerByMockitoWithCGLIB$$34bdc472$$FastClassByMockitoWithCGLIB$$9395b86c' method='invoke' number='22'><tests>
+<test name='com.googlecode.jmxtrans.util.WatchDirTest.createdFileIsDetected(com.googlecode.jmxtrans.util.WatchDirTest)'/>
+<test name='com.googlecode.jmxtrans.util.WatchDirTest.deletedFileIsDetected(com.googlecode.jmxtrans.util.WatchDirTest)'/>
+<test name='com.googlecode.jmxtrans.util.WatchDirTest.modifiedFileIsDetected(com.googlecode.jmxtrans.util.WatchDirTest)'/>
+<test name='com.googlecode.jmxtrans.util.WatchDirTest.watchingFileIsNotPossible(com.googlecode.jmxtrans.util.WatchDirTest)'/>
+</tests>
+</block>
+<block classname='com.googlecode.jmxtrans.util.WatchDirTest$MockWatchedCallback$$EnhancerByMockitoWithCGLIB$$34bdc472$$FastClassByMockitoWithCGLIB$$9395b86c' method='invoke' number='0'><tests>
+<test name='com.googlecode.jmxtrans.util.WatchDirTest.createdFileIsDetected(com.googlecode.jmxtrans.util.WatchDirTest)'/>
+<test name='com.googlecode.jmxtrans.util.WatchDirTest.deletedFileIsDetected(com.googlecode.jmxtrans.util.WatchDirTest)'/>
+<test name='com.googlecode.jmxtrans.util.WatchDirTest.modifiedFileIsDetected(com.googlecode.jmxtrans.util.WatchDirTest)'/>
+<test name='com.googlecode.jmxtrans.util.WatchDirTest.watchingFileIsNotPossible(com.googlecode.jmxtrans.util.WatchDirTest)'/>
+</tests>
+</block>
+<block classname='com.googlecode.jmxtrans.util.WatchDirTest$MockWatchedCallback$$EnhancerByMockitoWithCGLIB$$34bdc472$$FastClassByMockitoWithCGLIB$$9395b86c' method='getIndex' number='20'><tests>
+<test name='com.googlecode.jmxtrans.util.WatchDirTest.createdFileIsDetected(com.googlecode.jmxtrans.util.WatchDirTest)'/>
+</tests>
+</block>
+<block classname='com.googlecode.jmxtrans.util.WatchDirTest$MockWatchedCallback$$EnhancerByMockitoWithCGLIB$$34bdc472' method='<clinit>' number='0'><tests>
+<test name='com.googlecode.jmxtrans.util.WatchDirTest.createdFileIsDetected(com.googlecode.jmxtrans.util.WatchDirTest)'/>
+</tests>
+</block>
+<block classname='com.googlecode.jmxtrans.util.WatchDirTest$MockWatchedCallback$$EnhancerByMockitoWithCGLIB$$34bdc472' method='getCallback' number='4'><tests>
+<test name='com.googlecode.jmxtrans.util.WatchDirTest.createdFileIsDetected(com.googlecode.jmxtrans.util.WatchDirTest)'/>
+<test name='com.googlecode.jmxtrans.util.WatchDirTest.deletedFileIsDetected(com.googlecode.jmxtrans.util.WatchDirTest)'/>
+<test name='com.googlecode.jmxtrans.util.WatchDirTest.modifiedFileIsDetected(com.googlecode.jmxtrans.util.WatchDirTest)'/>
+</tests>
+</block>
+<block classname='com.googlecode.jmxtrans.util.WatchDirTest$MockWatchedCallback$$EnhancerByMockitoWithCGLIB$$34bdc472' method='equals' number='3'><tests>
+<test name='com.googlecode.jmxtrans.util.WatchDirTest.createdFileIsDetected(com.googlecode.jmxtrans.util.WatchDirTest)'/>
+<test name='com.googlecode.jmxtrans.util.WatchDirTest.deletedFileIsDetected(com.googlecode.jmxtrans.util.WatchDirTest)'/>
+<test name='com.googlecode.jmxtrans.util.WatchDirTest.modifiedFileIsDetected(com.googlecode.jmxtrans.util.WatchDirTest)'/>
+</tests>
+</block>
+<block classname='com.googlecode.jmxtrans.util.WatchDirTest$MockWatchedCallback$$EnhancerByMockitoWithCGLIB$$34bdc472' method='fileAdded' number='3'><tests>
+<test name='com.googlecode.jmxtrans.util.WatchDirTest.createdFileIsDetected(com.googlecode.jmxtrans.util.WatchDirTest)'/>
+<test name='com.googlecode.jmxtrans.util.WatchDirTest.deletedFileIsDetected(com.googlecode.jmxtrans.util.WatchDirTest)'/>
+<test name='com.googlecode.jmxtrans.util.WatchDirTest.modifiedFileIsDetected(com.googlecode.jmxtrans.util.WatchDirTest)'/>
+<test name='com.googlecode.jmxtrans.util.WatchDirTest.watchingFileIsNotPossible(com.googlecode.jmxtrans.util.WatchDirTest)'/>
+</tests>
+</block>
+<block classname='com.googlecode.jmxtrans.util.WatchDirTest$MockWatchedCallback$$EnhancerByMockitoWithCGLIB$$34bdc472' method='getCallback' number='0'><tests>
+<test name='com.googlecode.jmxtrans.util.WatchDirTest.createdFileIsDetected(com.googlecode.jmxtrans.util.WatchDirTest)'/>
+<test name='com.googlecode.jmxtrans.util.WatchDirTest.deletedFileIsDetected(com.googlecode.jmxtrans.util.WatchDirTest)'/>
+<test name='com.googlecode.jmxtrans.util.WatchDirTest.modifiedFileIsDetected(com.googlecode.jmxtrans.util.WatchDirTest)'/>
+</tests>
+</block>
+<block classname='com.googlecode.jmxtrans.util.WatchDirTest$MockWatchedCallback$$EnhancerByMockitoWithCGLIB$$34bdc472' method='CGLIB$STATICHOOK1' number='0'><tests>
+<test name='com.googlecode.jmxtrans.util.WatchDirTest.createdFileIsDetected(com.googlecode.jmxtrans.util.WatchDirTest)'/>
+</tests>
+</block>
+<block classname='com.googlecode.jmxtrans.util.WatchDirTest' method='createWatchedDir' number='0'><tests>
+<test name='com.googlecode.jmxtrans.util.WatchDirTest.createdFileIsDetected(com.googlecode.jmxtrans.util.WatchDirTest)'/>
+<test name='com.googlecode.jmxtrans.util.WatchDirTest.deletedFileIsDetected(com.googlecode.jmxtrans.util.WatchDirTest)'/>
+<test name='com.googlecode.jmxtrans.util.WatchDirTest.modifiedFileIsDetected(com.googlecode.jmxtrans.util.WatchDirTest)'/>
+<test name='com.googlecode.jmxtrans.util.WatchDirTest.watchingFileIsNotPossible(com.googlecode.jmxtrans.util.WatchDirTest)'/>
+</tests>
+</block>
+<block classname='com.googlecode.jmxtrans.util.WatchDirTest$MockWatchedCallback$$EnhancerByMockitoWithCGLIB$$34bdc472$$FastClassByMockitoWithCGLIB$$9395b86c' method='getIndex' number='0'><tests>
+<test name='com.googlecode.jmxtrans.util.WatchDirTest.createdFileIsDetected(com.googlecode.jmxtrans.util.WatchDirTest)'/>
+<test name='com.googlecode.jmxtrans.util.WatchDirTest.deletedFileIsDetected(com.googlecode.jmxtrans.util.WatchDirTest)'/>
+<test name='com.googlecode.jmxtrans.util.WatchDirTest.modifiedFileIsDetected(com.googlecode.jmxtrans.util.WatchDirTest)'/>
+</tests>
+</block>
+<block classname='com.googlecode.jmxtrans.util.WatchDirTest$MockWatchedCallback$$FastClassByMockitoWithCGLIB$$c6ef0581' method='getIndex' number='15'><tests>
+<test name='com.googlecode.jmxtrans.util.WatchDirTest.createdFileIsDetected(com.googlecode.jmxtrans.util.WatchDirTest)'/>
+</tests>
+</block>
+<block classname='com.googlecode.jmxtrans.util.WatchDirTest$MockWatchedCallback$$EnhancerByMockitoWithCGLIB$$34bdc472' method='CGLIB$BIND_CALLBACKS' number='0'><tests>
+<test name='com.googlecode.jmxtrans.util.WatchDirTest.createdFileIsDetected(com.googlecode.jmxtrans.util.WatchDirTest)'/>
+<test name='com.googlecode.jmxtrans.util.WatchDirTest.deletedFileIsDetected(com.googlecode.jmxtrans.util.WatchDirTest)'/>
+<test name='com.googlecode.jmxtrans.util.WatchDirTest.modifiedFileIsDetected(com.googlecode.jmxtrans.util.WatchDirTest)'/>
+</tests>
+</block>
+<block classname='com.googlecode.jmxtrans.util.WatchDirTest$MockWatchedCallback$$EnhancerByMockitoWithCGLIB$$34bdc472' method='equals' number='5'><tests>
+<test name='com.googlecode.jmxtrans.util.WatchDirTest.createdFileIsDetected(com.googlecode.jmxtrans.util.WatchDirTest)'/>
+<test name='com.googlecode.jmxtrans.util.WatchDirTest.deletedFileIsDetected(com.googlecode.jmxtrans.util.WatchDirTest)'/>
+<test name='com.googlecode.jmxtrans.util.WatchDirTest.modifiedFileIsDetected(com.googlecode.jmxtrans.util.WatchDirTest)'/>
+</tests>
+</block>
+<block classname='com.googlecode.jmxtrans.util.WatchDirTest$MockWatchedCallback$$EnhancerByMockitoWithCGLIB$$34bdc472' method='CGLIB$BIND_CALLBACKS' number='1'><tests>
+<test name='com.googlecode.jmxtrans.util.WatchDirTest.createdFileIsDetected(com.googlecode.jmxtrans.util.WatchDirTest)'/>
+<test name='com.googlecode.jmxtrans.util.WatchDirTest.deletedFileIsDetected(com.googlecode.jmxtrans.util.WatchDirTest)'/>
+<test name='com.googlecode.jmxtrans.util.WatchDirTest.modifiedFileIsDetected(com.googlecode.jmxtrans.util.WatchDirTest)'/>
+</tests>
+</block>
+<block classname='com.googlecode.jmxtrans.util.WatchDirTest$MockWatchedCallback$$EnhancerByMockitoWithCGLIB$$34bdc472' method='setCallbacks' number='0'><tests>
+<test name='com.googlecode.jmxtrans.util.WatchDirTest.createdFileIsDetected(com.googlecode.jmxtrans.util.WatchDirTest)'/>
+<test name='com.googlecode.jmxtrans.util.WatchDirTest.deletedFileIsDetected(com.googlecode.jmxtrans.util.WatchDirTest)'/>
+<test name='com.googlecode.jmxtrans.util.WatchDirTest.modifiedFileIsDetected(com.googlecode.jmxtrans.util.WatchDirTest)'/>
+<test name='com.googlecode.jmxtrans.util.WatchDirTest.watchingFileIsNotPossible(com.googlecode.jmxtrans.util.WatchDirTest)'/>
+</tests>
+</block>
+<block classname='com.googlecode.jmxtrans.util.WatchDirTest$MockWatchedCallback$$EnhancerByMockitoWithCGLIB$$34bdc472' method='CGLIB$BIND_CALLBACKS' number='3'><tests>
+<test name='com.googlecode.jmxtrans.util.WatchDirTest.createdFileIsDetected(com.googlecode.jmxtrans.util.WatchDirTest)'/>
+<test name='com.googlecode.jmxtrans.util.WatchDirTest.deletedFileIsDetected(com.googlecode.jmxtrans.util.WatchDirTest)'/>
+<test name='com.googlecode.jmxtrans.util.WatchDirTest.modifiedFileIsDetected(com.googlecode.jmxtrans.util.WatchDirTest)'/>
+</tests>
+</block>
+<block classname='com.googlecode.jmxtrans.util.WatchDir' method='stopService' number='0'><tests>
+<test name='com.googlecode.jmxtrans.util.WatchDirTest.createdFileIsDetected(com.googlecode.jmxtrans.util.WatchDirTest)'/>
+<test name='com.googlecode.jmxtrans.util.WatchDirTest.deletedFileIsDetected(com.googlecode.jmxtrans.util.WatchDirTest)'/>
+<test name='com.googlecode.jmxtrans.util.WatchDirTest.modifiedFileIsDetected(com.googlecode.jmxtrans.util.WatchDirTest)'/>
+<test name='com.googlecode.jmxtrans.util.WatchDirTest.watchingFileIsNotPossible(com.googlecode.jmxtrans.util.WatchDirTest)'/>
+</tests>
+</block>
+<block classname='com.googlecode.jmxtrans.util.WatchDirTest$MockWatchedCallback$$EnhancerByMockitoWithCGLIB$$34bdc472' method='CGLIB$fileAdded$0' number='0'><tests>
+<test name='com.googlecode.jmxtrans.util.WatchDirTest.createdFileIsDetected(com.googlecode.jmxtrans.util.WatchDirTest)'/>
+<test name='com.googlecode.jmxtrans.util.WatchDirTest.deletedFileIsDetected(com.googlecode.jmxtrans.util.WatchDirTest)'/>
+<test name='com.googlecode.jmxtrans.util.WatchDirTest.modifiedFileIsDetected(com.googlecode.jmxtrans.util.WatchDirTest)'/>
+<test name='com.googlecode.jmxtrans.util.WatchDirTest.watchingFileIsNotPossible(com.googlecode.jmxtrans.util.WatchDirTest)'/>
+</tests>
+</block>
+<block classname='com.googlecode.jmxtrans.util.WatchDirTest$MockWatchedCallback$$FastClassByMockitoWithCGLIB$$c6ef0581' method='<init>' number='0'><tests>
+<test name='com.googlecode.jmxtrans.util.WatchDirTest.createdFileIsDetected(com.googlecode.jmxtrans.util.WatchDirTest)'/>
+<test name='com.googlecode.jmxtrans.util.WatchDirTest.deletedFileIsDetected(com.googlecode.jmxtrans.util.WatchDirTest)'/>
+<test name='com.googlecode.jmxtrans.util.WatchDirTest.modifiedFileIsDetected(com.googlecode.jmxtrans.util.WatchDirTest)'/>
+</tests>
+</block>
+<block classname='com.googlecode.jmxtrans.util.WatchDirTest$MockWatchedCallback$$EnhancerByMockitoWithCGLIB$$34bdc472' method='CGLIB$BIND_CALLBACKS' number='5'><tests>
+<test name='com.googlecode.jmxtrans.util.WatchDirTest.createdFileIsDetected(com.googlecode.jmxtrans.util.WatchDirTest)'/>
+<test name='com.googlecode.jmxtrans.util.WatchDirTest.deletedFileIsDetected(com.googlecode.jmxtrans.util.WatchDirTest)'/>
+<test name='com.googlecode.jmxtrans.util.WatchDirTest.modifiedFileIsDetected(com.googlecode.jmxtrans.util.WatchDirTest)'/>
+</tests>
+</block>
+<block classname='com.googlecode.jmxtrans.util.WatchDir' method='<clinit>' number='0'><tests>
+<test name='com.googlecode.jmxtrans.util.WatchDirTest.createdFileIsDetected(com.googlecode.jmxtrans.util.WatchDirTest)'/>
+</tests>
+</block>
+<block classname='com.googlecode.jmxtrans.util.WatchDirTest$MockWatchedCallback$$FastClassByMockitoWithCGLIB$$c6ef0581' method='getIndex' number='0'><tests>
+<test name='com.googlecode.jmxtrans.util.WatchDirTest.createdFileIsDetected(com.googlecode.jmxtrans.util.WatchDirTest)'/>
+<test name='com.googlecode.jmxtrans.util.WatchDirTest.deletedFileIsDetected(com.googlecode.jmxtrans.util.WatchDirTest)'/>
+<test name='com.googlecode.jmxtrans.util.WatchDirTest.modifiedFileIsDetected(com.googlecode.jmxtrans.util.WatchDirTest)'/>
+</tests>
+</block>
+<block classname='com.googlecode.jmxtrans.util.WatchDirTest$MockWatchedCallback$$EnhancerByMockitoWithCGLIB$$34bdc472' method='equals' number='6'><tests>
+<test name='com.googlecode.jmxtrans.util.WatchDirTest.createdFileIsDetected(com.googlecode.jmxtrans.util.WatchDirTest)'/>
+<test name='com.googlecode.jmxtrans.util.WatchDirTest.deletedFileIsDetected(com.googlecode.jmxtrans.util.WatchDirTest)'/>
+<test name='com.googlecode.jmxtrans.util.WatchDirTest.modifiedFileIsDetected(com.googlecode.jmxtrans.util.WatchDirTest)'/>
+</tests>
+</block>
+<block classname='com.googlecode.jmxtrans.util.WatchDirTest$MockWatchedCallback$$EnhancerByMockitoWithCGLIB$$34bdc472$$FastClassByMockitoWithCGLIB$$9395b86c' method='getIndex' number='19'><tests>
+<test name='com.googlecode.jmxtrans.util.WatchDirTest.createdFileIsDetected(com.googlecode.jmxtrans.util.WatchDirTest)'/>
+</tests>
+</block>
+<block classname='com.googlecode.jmxtrans.util.WatchDirTest' method='createdFileIsDetected' number='0'><tests>
+<test name='com.googlecode.jmxtrans.util.WatchDirTest.createdFileIsDetected(com.googlecode.jmxtrans.util.WatchDirTest)'/>
+</tests>
+</block>
+<block classname='com.googlecode.jmxtrans.util.WatchDirTest$MockWatchedCallback$$EnhancerByMockitoWithCGLIB$$34bdc472' method='fileAdded' number='0'><tests>
+<test name='com.googlecode.jmxtrans.util.WatchDirTest.createdFileIsDetected(com.googlecode.jmxtrans.util.WatchDirTest)'/>
+<test name='com.googlecode.jmxtrans.util.WatchDirTest.deletedFileIsDetected(com.googlecode.jmxtrans.util.WatchDirTest)'/>
+<test name='com.googlecode.jmxtrans.util.WatchDirTest.modifiedFileIsDetected(com.googlecode.jmxtrans.util.WatchDirTest)'/>
+<test name='com.googlecode.jmxtrans.util.WatchDirTest.watchingFileIsNotPossible(com.googlecode.jmxtrans.util.WatchDirTest)'/>
+</tests>
+</block>
+<block classname='com.googlecode.jmxtrans.util.WatchDirTest$MockWatchedCallback$$EnhancerByMockitoWithCGLIB$$34bdc472$$FastClassByMockitoWithCGLIB$$9395b86c' method='<init>' number='0'><tests>
+<test name='com.googlecode.jmxtrans.util.WatchDirTest.createdFileIsDetected(com.googlecode.jmxtrans.util.WatchDirTest)'/>
+<test name='com.googlecode.jmxtrans.util.WatchDirTest.deletedFileIsDetected(com.googlecode.jmxtrans.util.WatchDirTest)'/>
+<test name='com.googlecode.jmxtrans.util.WatchDirTest.modifiedFileIsDetected(com.googlecode.jmxtrans.util.WatchDirTest)'/>
+</tests>
+</block>
+<block classname='com.googlecode.jmxtrans.util.WatchDirTest$MockWatchedCallback$$EnhancerByMockitoWithCGLIB$$34bdc472' method='equals' number='0'><tests>
+<test name='com.googlecode.jmxtrans.util.WatchDirTest.createdFileIsDetected(com.googlecode.jmxtrans.util.WatchDirTest)'/>
+<test name='com.googlecode.jmxtrans.util.WatchDirTest.deletedFileIsDetected(com.googlecode.jmxtrans.util.WatchDirTest)'/>
+<test name='com.googlecode.jmxtrans.util.WatchDirTest.modifiedFileIsDetected(com.googlecode.jmxtrans.util.WatchDirTest)'/>
+</tests>
+</block>
+<block classname='com.googlecode.jmxtrans.util.WatchDirTest' method='waitForFileOperation' number='0'><tests>
+<test name='com.googlecode.jmxtrans.util.WatchDirTest.createdFileIsDetected(com.googlecode.jmxtrans.util.WatchDirTest)'/>
+<test name='com.googlecode.jmxtrans.util.WatchDirTest.deletedFileIsDetected(com.googlecode.jmxtrans.util.WatchDirTest)'/>
+<test name='com.googlecode.jmxtrans.util.WatchDirTest.modifiedFileIsDetected(com.googlecode.jmxtrans.util.WatchDirTest)'/>
+</tests>
+</block>
+<block classname='com.googlecode.jmxtrans.util.WatchDirTest$MockWatchedCallback$$FastClassByMockitoWithCGLIB$$c6ef0581' method='getIndex' number='16'><tests>
+<test name='com.googlecode.jmxtrans.util.WatchDirTest.createdFileIsDetected(com.googlecode.jmxtrans.util.WatchDirTest)'/>
+</tests>
+</block>
+<block classname='com.googlecode.jmxtrans.util.WatchDirTest$MockWatchedCallback' method='fileAdded' number='0'><tests>
+<test name='com.googlecode.jmxtrans.util.WatchDirTest.createdFileIsDetected(com.googlecode.jmxtrans.util.WatchDirTest)'/>
+<test name='com.googlecode.jmxtrans.util.WatchDirTest.deletedFileIsDetected(com.googlecode.jmxtrans.util.WatchDirTest)'/>
+<test name='com.googlecode.jmxtrans.util.WatchDirTest.modifiedFileIsDetected(com.googlecode.jmxtrans.util.WatchDirTest)'/>
+<test name='com.googlecode.jmxtrans.util.WatchDirTest.watchingFileIsNotPossible(com.googlecode.jmxtrans.util.WatchDirTest)'/>
+</tests>
+</block>
+<block classname='com.googlecode.jmxtrans.util.WatchDirTest$MockWatchedCallback$$EnhancerByMockitoWithCGLIB$$34bdc472' method='getCallback' number='1'><tests>
+<test name='com.googlecode.jmxtrans.util.WatchDirTest.createdFileIsDetected(com.googlecode.jmxtrans.util.WatchDirTest)'/>
+<test name='com.googlecode.jmxtrans.util.WatchDirTest.deletedFileIsDetected(com.googlecode.jmxtrans.util.WatchDirTest)'/>
+<test name='com.googlecode.jmxtrans.util.WatchDirTest.modifiedFileIsDetected(com.googlecode.jmxtrans.util.WatchDirTest)'/>
+</tests>
+</block>
+<block classname='com.googlecode.jmxtrans.util.WatchDirTest$MockWatchedCallback$$EnhancerByMockitoWithCGLIB$$34bdc472' method='fileAdded' number='2'><tests>
+<test name='com.googlecode.jmxtrans.util.WatchDirTest.createdFileIsDetected(com.googlecode.jmxtrans.util.WatchDirTest)'/>
+<test name='com.googlecode.jmxtrans.util.WatchDirTest.deletedFileIsDetected(com.googlecode.jmxtrans.util.WatchDirTest)'/>
+<test name='com.googlecode.jmxtrans.util.WatchDirTest.modifiedFileIsDetected(com.googlecode.jmxtrans.util.WatchDirTest)'/>
+<test name='com.googlecode.jmxtrans.util.WatchDirTest.watchingFileIsNotPossible(com.googlecode.jmxtrans.util.WatchDirTest)'/>
+</tests>
+</block>
+<block classname='com.googlecode.jmxtrans.util.WatchDirTest$MockWatchedCallback' method='fileAdded' number='2'><tests>
+<test name='com.googlecode.jmxtrans.util.WatchDirTest.createdFileIsDetected(com.googlecode.jmxtrans.util.WatchDirTest)'/>
+<test name='com.googlecode.jmxtrans.util.WatchDirTest.deletedFileIsDetected(com.googlecode.jmxtrans.util.WatchDirTest)'/>
+<test name='com.googlecode.jmxtrans.util.WatchDirTest.modifiedFileIsDetected(com.googlecode.jmxtrans.util.WatchDirTest)'/>
+<test name='com.googlecode.jmxtrans.util.WatchDirTest.watchingFileIsNotPossible(com.googlecode.jmxtrans.util.WatchDirTest)'/>
+</tests>
+</block>
+<block classname='com.googlecode.jmxtrans.util.WatchDirTest' method='waitForFileOperation' number='2'><tests>
+<test name='com.googlecode.jmxtrans.util.WatchDirTest.createdFileIsDetected(com.googlecode.jmxtrans.util.WatchDirTest)'/>
+<test name='com.googlecode.jmxtrans.util.WatchDirTest.deletedFileIsDetected(com.googlecode.jmxtrans.util.WatchDirTest)'/>
+<test name='com.googlecode.jmxtrans.util.WatchDirTest.modifiedFileIsDetected(com.googlecode.jmxtrans.util.WatchDirTest)'/>
+</tests>
+</block>
+<block classname='com.googlecode.jmxtrans.util.WatchDirTest$MockWatchedCallback' method='fileDeleted' number='2'><tests>
+<test name='com.googlecode.jmxtrans.util.WatchDirTest.deletedFileIsDetected(com.googlecode.jmxtrans.util.WatchDirTest)'/>
+</tests>
+</block>
+<block classname='com.googlecode.jmxtrans.util.WatchDirTest$MockWatchedCallback$$EnhancerByMockitoWithCGLIB$$34bdc472' method='CGLIB$fileDeleted$1' number='0'><tests>
+<test name='com.googlecode.jmxtrans.util.WatchDirTest.deletedFileIsDetected(com.googlecode.jmxtrans.util.WatchDirTest)'/>
+</tests>
+</block>
+<block classname='com.googlecode.jmxtrans.util.WatchDirTest$MockWatchedCallback$$FastClassByMockitoWithCGLIB$$c6ef0581' method='getIndex' number='2'><tests>
+<test name='com.googlecode.jmxtrans.util.WatchDirTest.deletedFileIsDetected(com.googlecode.jmxtrans.util.WatchDirTest)'/>
+</tests>
+</block>
+<block classname='com.googlecode.jmxtrans.util.WatchDirTest$MockWatchedCallback$$EnhancerByMockitoWithCGLIB$$34bdc472' method='fileDeleted' number='3'><tests>
+<test name='com.googlecode.jmxtrans.util.WatchDirTest.deletedFileIsDetected(com.googlecode.jmxtrans.util.WatchDirTest)'/>
+</tests>
+</block>
+<block classname='com.googlecode.jmxtrans.util.WatchDirTest$MockWatchedCallback' method='fileDeleted' number='0'><tests>
+<test name='com.googlecode.jmxtrans.util.WatchDirTest.deletedFileIsDetected(com.googlecode.jmxtrans.util.WatchDirTest)'/>
+</tests>
+</block>
+<block classname='com.googlecode.jmxtrans.util.WatchDirTest$MockWatchedCallback$$EnhancerByMockitoWithCGLIB$$34bdc472$$FastClassByMockitoWithCGLIB$$9395b86c' method='getIndex' number='32'><tests>
+<test name='com.googlecode.jmxtrans.util.WatchDirTest.deletedFileIsDetected(com.googlecode.jmxtrans.util.WatchDirTest)'/>
+</tests>
+</block>
+<block classname='com.googlecode.jmxtrans.util.WatchDirTest' method='deletedFileIsDetected' number='0'><tests>
+<test name='com.googlecode.jmxtrans.util.WatchDirTest.deletedFileIsDetected(com.googlecode.jmxtrans.util.WatchDirTest)'/>
+</tests>
+</block>
+<block classname='com.googlecode.jmxtrans.util.WatchDirTest$MockWatchedCallback$$EnhancerByMockitoWithCGLIB$$34bdc472' method='fileDeleted' number='0'><tests>
+<test name='com.googlecode.jmxtrans.util.WatchDirTest.deletedFileIsDetected(com.googlecode.jmxtrans.util.WatchDirTest)'/>
+</tests>
+</block>
+<block classname='com.googlecode.jmxtrans.util.WatchDirTest$MockWatchedCallback$$EnhancerByMockitoWithCGLIB$$34bdc472$$FastClassByMockitoWithCGLIB$$9395b86c' method='invoke' number='23'><tests>
+<test name='com.googlecode.jmxtrans.util.WatchDirTest.deletedFileIsDetected(com.googlecode.jmxtrans.util.WatchDirTest)'/>
+</tests>
+</block>
+<block classname='com.googlecode.jmxtrans.util.WatchDirTest$MockWatchedCallback$$FastClassByMockitoWithCGLIB$$c6ef0581' method='getIndex' number='1'><tests>
+<test name='com.googlecode.jmxtrans.util.WatchDirTest.deletedFileIsDetected(com.googlecode.jmxtrans.util.WatchDirTest)'/>
+</tests>
+</block>
+<block classname='com.googlecode.jmxtrans.util.WatchDirTest$MockWatchedCallback$$EnhancerByMockitoWithCGLIB$$34bdc472' method='fileDeleted' number='2'><tests>
+<test name='com.googlecode.jmxtrans.util.WatchDirTest.deletedFileIsDetected(com.googlecode.jmxtrans.util.WatchDirTest)'/>
+</tests>
+</block>
+<block classname='com.googlecode.jmxtrans.util.WatchDirTest$MockWatchedCallback$$EnhancerByMockitoWithCGLIB$$34bdc472$$FastClassByMockitoWithCGLIB$$9395b86c' method='getIndex' number='31'><tests>
+<test name='com.googlecode.jmxtrans.util.WatchDirTest.deletedFileIsDetected(com.googlecode.jmxtrans.util.WatchDirTest)'/>
+</tests>
+</block>
+<block classname='com.googlecode.jmxtrans.util.WatchDirTest$MockWatchedCallback$$EnhancerByMockitoWithCGLIB$$34bdc472' method='CGLIB$fileModified$2' number='0'><tests>
+<test name='com.googlecode.jmxtrans.util.WatchDirTest.modifiedFileIsDetected(com.googlecode.jmxtrans.util.WatchDirTest)'/>
+</tests>
+</block>
+<block classname='com.googlecode.jmxtrans.util.WatchDirTest$MockWatchedCallback$$EnhancerByMockitoWithCGLIB$$34bdc472$$FastClassByMockitoWithCGLIB$$9395b86c' method='invoke' number='24'><tests>
+<test name='com.googlecode.jmxtrans.util.WatchDirTest.modifiedFileIsDetected(com.googlecode.jmxtrans.util.WatchDirTest)'/>
+</tests>
+</block>
+<block classname='com.googlecode.jmxtrans.util.WatchDirTest$MockWatchedCallback$$EnhancerByMockitoWithCGLIB$$34bdc472$$FastClassByMockitoWithCGLIB$$9395b86c' method='getIndex' number='30'><tests>
+<test name='com.googlecode.jmxtrans.util.WatchDirTest.modifiedFileIsDetected(com.googlecode.jmxtrans.util.WatchDirTest)'/>
+</tests>
+</block>
+<block classname='com.googlecode.jmxtrans.util.WatchDirTest$MockWatchedCallback$$EnhancerByMockitoWithCGLIB$$34bdc472' method='fileModified' number='2'><tests>
+<test name='com.googlecode.jmxtrans.util.WatchDirTest.modifiedFileIsDetected(com.googlecode.jmxtrans.util.WatchDirTest)'/>
+</tests>
+</block>
+<block classname='com.googlecode.jmxtrans.util.WatchDirTest$MockWatchedCallback$$FastClassByMockitoWithCGLIB$$c6ef0581' method='getIndex' number='4'><tests>
+<test name='com.googlecode.jmxtrans.util.WatchDirTest.modifiedFileIsDetected(com.googlecode.jmxtrans.util.WatchDirTest)'/>
+</tests>
+</block>
+<block classname='com.googlecode.jmxtrans.util.WatchDirTest' method='modifyFile' number='5'><tests>
+<test name='com.googlecode.jmxtrans.util.WatchDirTest.modifiedFileIsDetected(com.googlecode.jmxtrans.util.WatchDirTest)'/>
+</tests>
+</block>
+<block classname='com.googlecode.jmxtrans.util.WatchDirTest' method='modifiedFileIsDetected' number='0'><tests>
+<test name='com.googlecode.jmxtrans.util.WatchDirTest.modifiedFileIsDetected(com.googlecode.jmxtrans.util.WatchDirTest)'/>
+</tests>
+</block>
+<block classname='com.googlecode.jmxtrans.util.WatchDirTest$MockWatchedCallback' method='fileModified' number='0'><tests>
+<test name='com.googlecode.jmxtrans.util.WatchDirTest.modifiedFileIsDetected(com.googlecode.jmxtrans.util.WatchDirTest)'/>
+</tests>
+</block>
+<block classname='com.googlecode.jmxtrans.util.WatchDirTest$MockWatchedCallback$$EnhancerByMockitoWithCGLIB$$34bdc472$$FastClassByMockitoWithCGLIB$$9395b86c' method='getIndex' number='29'><tests>
+<test name='com.googlecode.jmxtrans.util.WatchDirTest.modifiedFileIsDetected(com.googlecode.jmxtrans.util.WatchDirTest)'/>
+</tests>
+</block>
+<block classname='com.googlecode.jmxtrans.util.WatchDirTest$MockWatchedCallback$$EnhancerByMockitoWithCGLIB$$34bdc472' method='fileModified' number='3'><tests>
+<test name='com.googlecode.jmxtrans.util.WatchDirTest.modifiedFileIsDetected(com.googlecode.jmxtrans.util.WatchDirTest)'/>
+</tests>
+</block>
+<block classname='com.googlecode.jmxtrans.util.WatchDirTest$MockWatchedCallback' method='fileModified' number='2'><tests>
+<test name='com.googlecode.jmxtrans.util.WatchDirTest.modifiedFileIsDetected(com.googlecode.jmxtrans.util.WatchDirTest)'/>
+</tests>
+</block>
+<block classname='com.googlecode.jmxtrans.util.WatchDirTest$MockWatchedCallback$$FastClassByMockitoWithCGLIB$$c6ef0581' method='getIndex' number='3'><tests>
+<test name='com.googlecode.jmxtrans.util.WatchDirTest.modifiedFileIsDetected(com.googlecode.jmxtrans.util.WatchDirTest)'/>
+</tests>
+</block>
+<block classname='com.googlecode.jmxtrans.util.WatchDirTest' method='modifyFile' number='1'><tests>
+<test name='com.googlecode.jmxtrans.util.WatchDirTest.modifiedFileIsDetected(com.googlecode.jmxtrans.util.WatchDirTest)'/>
+</tests>
+</block>
+<block classname='com.googlecode.jmxtrans.util.WatchDirTest$MockWatchedCallback$$EnhancerByMockitoWithCGLIB$$34bdc472' method='fileModified' number='0'><tests>
+<test name='com.googlecode.jmxtrans.util.WatchDirTest.modifiedFileIsDetected(com.googlecode.jmxtrans.util.WatchDirTest)'/>
+</tests>
+</block>
+<block classname='com.googlecode.jmxtrans.util.WatchDirTest' method='modifyFile' number='0'><tests>
+<test name='com.googlecode.jmxtrans.util.WatchDirTest.modifiedFileIsDetected(com.googlecode.jmxtrans.util.WatchDirTest)'/>
+</tests>
+</block>
+<block classname='com.googlecode.jmxtrans.util.WatchDirTest' method='watchingFileIsNotPossible' number='0'><tests>
+<test name='com.googlecode.jmxtrans.util.WatchDirTest.watchingFileIsNotPossible(com.googlecode.jmxtrans.util.WatchDirTest)'/>
+</tests>
+</block>
+<block classname='com.googlecode.jmxtrans.util.WatchDirTest' method='watchingFileIsNotPossible' number='1'><tests>
+<test name='com.googlecode.jmxtrans.util.WatchDirTest.watchingFileIsNotPossible(com.googlecode.jmxtrans.util.WatchDirTest)'/>
+</tests>
+</block>
+</coverage>
