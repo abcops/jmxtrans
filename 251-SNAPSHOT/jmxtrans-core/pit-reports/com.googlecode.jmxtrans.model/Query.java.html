@@ -1,0 +1,4320 @@
+<html>
+<head>
+<style type='text/css'>
+html, body, div, span, p, blockquote, pre {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-weight: inherit;
+	font-style: inherit;
+	font-size: 100%;
+	font-family: inherit;
+	vertical-align: baseline;
+}
+
+body{
+	line-height: 1;
+	color: black;
+	background: white;
+	margin-left: 20px;
+}
+
+.src { 
+border: 1px solid #dddddd;
+padding-top: 10px;
+padding-right: 5px;
+padding-left: 5px;
+}
+
+
+.covered {background-color: #ddffdd}
+.uncovered {background-color: #ffdddd}
+.killed {background-color: #aaffaa}
+.survived {background-color: #ffaaaa}
+.uncertain {background-color: #dde7ef}
+.run_error {background-color: #dde7ef}
+.na {background-color: #eeeeee}
+.timed_out {background-color: #dde7ef}
+.non_viable {background-color: #aaffaa}
+.memory_error {background-color: #dde7ef}
+.not_started {background-color: #dde7ef; color : red}
+.no_coverage {background-color: #ffaaaa}
+
+
+.pop {outline:none; }
+.pop strong {line-height:30px;}
+.pop {text-decoration:none;}
+.pop span { z-index:10;display:none; padding:14px 20px; margin-top:-30px; margin-left:28px; width:800px; line-height:16px; word-wrap:break-word; }
+.pop:hover span{ display:inline; position:absolute; color:#111; border:1px solid #DCA; background:#fffAF0;}
+
+.pop span { border-radius:4px; -moz-border-radius: 4px; -webkit-border-radius: 4px; -moz-box-shadow: 5px 5px 8px #CCC; -webkit-box-shadow: 5px 5px 8px #CCC; box-shadow: 5px 5px 8px #CCC; }
+</style>
+
+</head>
+<body>
+
+
+<h1>Query.java</h1>
+
+<table class="src">
+
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@75c5354_1'/>
+1
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_1'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''>package com.googlecode.jmxtrans.model;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@75c5354_2'/>
+2
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_2'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@75c5354_3'/>
+3
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_3'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''>import com.fasterxml.jackson.annotation.JsonCreator;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@75c5354_4'/>
+4
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_4'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''>import com.fasterxml.jackson.annotation.JsonProperty;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@75c5354_5'/>
+5
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_5'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''>import com.fasterxml.jackson.annotation.JsonPropertyOrder;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@75c5354_6'/>
+6
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_6'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''>import com.fasterxml.jackson.databind.annotation.JsonSerialize;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@75c5354_7'/>
+7
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_7'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''>import com.google.common.collect.ImmutableList;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@75c5354_8'/>
+8
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_8'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''>import com.google.common.collect.ImmutableSet;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@75c5354_9'/>
+9
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_9'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''>import org.apache.commons.lang.builder.EqualsBuilder;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@75c5354_10'/>
+10
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_10'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''>import org.apache.commons.lang.builder.HashCodeBuilder;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@75c5354_11'/>
+11
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_11'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@75c5354_12'/>
+12
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_12'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''>import javax.annotation.Nonnull;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@75c5354_13'/>
+13
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_13'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''>import javax.annotation.concurrent.Immutable;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@75c5354_14'/>
+14
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_14'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''>import javax.annotation.concurrent.NotThreadSafe;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@75c5354_15'/>
+15
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_15'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''>import javax.annotation.concurrent.ThreadSafe;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@75c5354_16'/>
+16
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_16'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''>import java.util.Collections;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@75c5354_17'/>
+17
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_17'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''>import java.util.List;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@75c5354_18'/>
+18
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_18'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''>import java.util.Set;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@75c5354_19'/>
+19
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_19'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@75c5354_20'/>
+20
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_20'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''>import static com.fasterxml.jackson.databind.annotation.JsonSerialize.Inclusion.NON_NULL;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@75c5354_21'/>
+21
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_21'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''>import static com.google.common.base.MoreObjects.firstNonNull;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@75c5354_22'/>
+22
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_22'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''>import static com.google.common.collect.Lists.newArrayList;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@75c5354_23'/>
+23
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_23'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''>import static com.google.common.collect.Sets.newHashSet;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@75c5354_24'/>
+24
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_24'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''>import static com.googlecode.jmxtrans.model.PropertyResolver.resolveList;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@75c5354_25'/>
+25
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_25'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''>import static java.util.Arrays.asList;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@75c5354_26'/>
+26
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_26'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@75c5354_27'/>
+27
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_27'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''>/**</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@75c5354_28'/>
+28
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_28'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''> * Represents a JMX Query to ask for obj, attr and one or more keys.</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@75c5354_29'/>
+29
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_29'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''> *</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@75c5354_30'/>
+30
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_30'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''> * @author jon</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@75c5354_31'/>
+31
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_31'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''> */</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@75c5354_32'/>
+32
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_32'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''>@JsonSerialize(include = NON_NULL)</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@75c5354_33'/>
+33
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_33'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''>@JsonPropertyOrder(value = {&#34;obj&#34;, &#34;attr&#34;, &#34;typeNames&#34;, &#34;resultAlias&#34;, &#34;keys&#34;, &#34;allowDottedKeys&#34;, &#34;outputWriters&#34;})</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@75c5354_34'/>
+34
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_34'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''>@ThreadSafe</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@75c5354_35'/>
+35
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_35'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''>@Immutable // Note that outputWriters is neither thread safe nor immutable (yet)</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@75c5354_36'/>
+36
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_36'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''>public class Query {</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@75c5354_37'/>
+37
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_37'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@75c5354_38'/>
+38
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_38'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''>&#9;private final String obj;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@75c5354_39'/>
+39
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_39'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''>&#9;private final ImmutableList&#60;String&#62; keys;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@75c5354_40'/>
+40
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_40'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''>&#9;private final ImmutableList&#60;String&#62; attr;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@75c5354_41'/>
+41
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_41'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''>&#9;private final ImmutableSet&#60;String&#62; typeNames;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@75c5354_42'/>
+42
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_42'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''>&#9;private final String resultAlias;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@75c5354_43'/>
+43
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_43'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''>&#9;private final boolean useObjDomainAsKey;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@75c5354_44'/>
+44
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_44'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''>&#9;private final boolean allowDottedKeys;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@75c5354_45'/>
+45
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_45'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''>&#9;private final ImmutableList&#60;OutputWriter&#62; outputWriters;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@75c5354_46'/>
+46
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_46'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@75c5354_47'/>
+47
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_47'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''>&#9;@JsonCreator</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@75c5354_48'/>
+48
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_48'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''>&#9;public Query(</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@75c5354_49'/>
+49
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_49'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''>&#9;&#9;&#9;@JsonProperty(&#34;obj&#34;) String obj,</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@75c5354_50'/>
+50
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_50'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''>&#9;&#9;&#9;@JsonProperty(&#34;keys&#34;) List&#60;String&#62; keys,</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@75c5354_51'/>
+51
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_51'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''>&#9;&#9;&#9;@JsonProperty(&#34;attr&#34;) List&#60;String&#62; attr,</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@75c5354_52'/>
+52
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_52'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''>&#9;&#9;&#9;@JsonProperty(&#34;typeNames&#34;) Set&#60;String&#62; typeNames,</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@75c5354_53'/>
+53
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_53'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''>&#9;&#9;&#9;@JsonProperty(&#34;resultAlias&#34;) String resultAlias,</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@75c5354_54'/>
+54
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_54'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''>&#9;&#9;&#9;@JsonProperty(&#34;useObjDomainAsKey&#34;) boolean useObjDomainAsKey,</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@75c5354_55'/>
+55
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_55'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''>&#9;&#9;&#9;@JsonProperty(&#34;allowDottedKeys&#34;) boolean allowDottedKeys,</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@75c5354_56'/>
+56
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_56'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''>&#9;&#9;&#9;@JsonProperty(&#34;outputWriters&#34;) List&#60;OutputWriter&#62; outputWriters</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@75c5354_57'/>
+57
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_57'></a>
+<span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>&#9;) {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@75c5354_58'/>
+58
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_58'></a>
+<span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>&#9;&#9;this.obj = obj;</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@75c5354_59'/>
+59
+</td>
+<td class='survived'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_59'>3</a>
+<span>
+1. <init> : removed call to java/util/Collections::emptyList &rarr; SURVIVED<br/>
+2. <init> : removed call to com/google/common/base/MoreObjects::firstNonNull &rarr; KILLED<br/>
+3. <init> : removed call to com/googlecode/jmxtrans/model/PropertyResolver::resolveList &rarr; KILLED<br/>
+
+</span>
+</td>
+<td class='covered'><pre><span  class='survived'>&#9;&#9;this.attr = resolveList(firstNonNull(attr, Collections.&#60;String&#62;emptyList()));</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@75c5354_60'/>
+60
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_60'></a>
+<span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>&#9;&#9;this.resultAlias = resultAlias;</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@75c5354_61'/>
+61
+</td>
+<td class='survived'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_61'>5</a>
+<span>
+1. <init> : Substituted 0 with 1 &rarr; SURVIVED<br/>
+2. <init> : removed call to java/lang/Boolean::valueOf &rarr; SURVIVED<br/>
+3. <init> : removed call to java/lang/Boolean::valueOf &rarr; SURVIVED<br/>
+4. <init> : removed call to java/lang/Boolean::booleanValue &rarr; SURVIVED<br/>
+5. <init> : removed call to com/google/common/base/MoreObjects::firstNonNull &rarr; KILLED<br/>
+
+</span>
+</td>
+<td class='covered'><pre><span  class='survived'>&#9;&#9;this.useObjDomainAsKey = firstNonNull(useObjDomainAsKey, false);</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@75c5354_62'/>
+62
+</td>
+<td class='survived'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_62'>3</a>
+<span>
+1. <init> : removed call to com/googlecode/jmxtrans/model/PropertyResolver::resolveList &rarr; SURVIVED<br/>
+2. <init> : removed call to java/util/Collections::emptyList &rarr; KILLED<br/>
+3. <init> : removed call to com/google/common/base/MoreObjects::firstNonNull &rarr; KILLED<br/>
+
+</span>
+</td>
+<td class='covered'><pre><span  class='survived'>&#9;&#9;this.keys = resolveList(firstNonNull(keys, Collections.&#60;String&#62;emptyList()));</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@75c5354_63'/>
+63
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_63'></a>
+<span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>&#9;&#9;this.allowDottedKeys = allowDottedKeys;</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@75c5354_64'/>
+64
+</td>
+<td class='survived'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_64'>3</a>
+<span>
+1. <init> : removed call to java/util/Collections::emptyList &rarr; SURVIVED<br/>
+2. <init> : removed call to com/google/common/base/MoreObjects::firstNonNull &rarr; KILLED<br/>
+3. <init> : removed call to com/google/common/collect/ImmutableList::copyOf &rarr; KILLED<br/>
+
+</span>
+</td>
+<td class='covered'><pre><span  class='survived'>&#9;&#9;this.outputWriters = ImmutableList.copyOf(firstNonNull(outputWriters, Collections.&#60;OutputWriter&#62;emptyList()));</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@75c5354_65'/>
+65
+</td>
+<td class='survived'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_65'>3</a>
+<span>
+1. <init> : removed call to com/google/common/collect/ImmutableSet::copyOf &rarr; SURVIVED<br/>
+2. <init> : removed call to java/util/Collections::emptySet &rarr; KILLED<br/>
+3. <init> : removed call to com/google/common/base/MoreObjects::firstNonNull &rarr; KILLED<br/>
+
+</span>
+</td>
+<td class='covered'><pre><span  class='survived'>&#9;&#9;this.typeNames = ImmutableSet.copyOf(firstNonNull(typeNames, Collections.&#60;String&#62;emptySet()));</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@75c5354_66'/>
+66
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_66'></a>
+<span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>&#9;}</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@75c5354_67'/>
+67
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_67'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@75c5354_68'/>
+68
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_68'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''>&#9;/**</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@75c5354_69'/>
+69
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_69'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''>&#9; * The JMX object representation: java.lang:type=Memory</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@75c5354_70'/>
+70
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_70'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''>&#9; */</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@75c5354_71'/>
+71
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_71'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''>&#9;public String getObj() {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@75c5354_72'/>
+72
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_72'>1</a>
+<span>
+1. getObj : mutated return of Object value for com/googlecode/jmxtrans/model/Query::getObj to ( if (x != null) null else throw new RuntimeException ) &rarr; KILLED<br/>
+
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>&#9;&#9;return obj;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@75c5354_73'/>
+73
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_73'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''>&#9;}</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@75c5354_74'/>
+74
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_74'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@75c5354_75'/>
+75
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_75'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''>&#9;/**</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@75c5354_76'/>
+76
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_76'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''>&#9; * The alias allows you to specify what you would like the results of the</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@75c5354_77'/>
+77
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_77'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''>&#9; * query to go into.</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@75c5354_78'/>
+78
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_78'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''>&#9; */</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@75c5354_79'/>
+79
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_79'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''>&#9;public String getResultAlias() {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@75c5354_80'/>
+80
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_80'>1</a>
+<span>
+1. getResultAlias : mutated return of Object value for com/googlecode/jmxtrans/model/Query::getResultAlias to ( if (x != null) null else throw new RuntimeException ) &rarr; KILLED<br/>
+
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>&#9;&#9;return resultAlias;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@75c5354_81'/>
+81
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_81'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''>&#9;}</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@75c5354_82'/>
+82
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_82'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@75c5354_83'/>
+83
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_83'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''>&#9;/**</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@75c5354_84'/>
+84
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_84'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''>&#9; * The useObjDomainAsKey property allows you to specify the use of the Domain portion of the Object Name</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@75c5354_85'/>
+85
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_85'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''>&#9; * as part of the output key instead of using the ClassName of the MBean which is the default behavior.</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@75c5354_86'/>
+86
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_86'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''>&#9; */</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@75c5354_87'/>
+87
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_87'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''>&#9;public boolean isUseObjDomainAsKey() {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@75c5354_88'/>
+88
+</td>
+<td class='survived'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_88'>1</a>
+<span>
+1. isUseObjDomainAsKey : replaced return of integer sized value with (x == 0 ? 1 : 0) &rarr; SURVIVED<br/>
+
+</span>
+</td>
+<td class='covered'><pre><span  class='survived'>&#9;&#9;return useObjDomainAsKey;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@75c5354_89'/>
+89
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_89'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''>&#9;}</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@75c5354_90'/>
+90
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_90'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@75c5354_91'/>
+91
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_91'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''>&#9;/**</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@75c5354_92'/>
+92
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_92'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''>&#9; * The list of type names used in a JMX bean string when querying with a</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@75c5354_93'/>
+93
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_93'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''>&#9; * wildcard which is used to expose the actual type name value to the key</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@75c5354_94'/>
+94
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_94'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''>&#9; * string. e.g. for this JMX name</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@75c5354_95'/>
+95
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_95'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''>&#9; * &#60;p/&#62;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@75c5354_96'/>
+96
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_96'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''>&#9; * typeName=name=PS Eden Space,type=MemoryPool</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@75c5354_97'/>
+97
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_97'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''>&#9; * &#60;p/&#62;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@75c5354_98'/>
+98
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_98'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''>&#9; * If you add a typeName(&#34;name&#34;), then it&#39;ll retrieve &#39;PS Eden Space&#39; from</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@75c5354_99'/>
+99
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_99'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''>&#9; * the string</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@75c5354_100'/>
+100
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_100'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''>&#9; */</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@75c5354_101'/>
+101
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_101'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''>&#9;public ImmutableSet&#60;String&#62; getTypeNames() {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@75c5354_102'/>
+102
+</td>
+<td class='survived'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_102'>1</a>
+<span>
+1. getTypeNames : mutated return of Object value for com/googlecode/jmxtrans/model/Query::getTypeNames to ( if (x != null) null else throw new RuntimeException ) &rarr; SURVIVED<br/>
+
+</span>
+</td>
+<td class='covered'><pre><span  class='survived'>&#9;&#9;return typeNames;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@75c5354_103'/>
+103
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_103'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''>&#9;}</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@75c5354_104'/>
+104
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_104'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@75c5354_105'/>
+105
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_105'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''>&#9;@Nonnull</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@75c5354_106'/>
+106
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_106'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''>&#9;public ImmutableList&#60;String&#62; getAttr() {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@75c5354_107'/>
+107
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_107'>1</a>
+<span>
+1. getAttr : mutated return of Object value for com/googlecode/jmxtrans/model/Query::getAttr to ( if (x != null) null else throw new RuntimeException ) &rarr; KILLED<br/>
+
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>&#9;&#9;return attr;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@75c5354_108'/>
+108
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_108'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''>&#9;}</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@75c5354_109'/>
+109
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_109'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@75c5354_110'/>
+110
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_110'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''>&#9;@Nonnull</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@75c5354_111'/>
+111
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_111'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''>&#9;public ImmutableList&#60;String&#62; getKeys() {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@75c5354_112'/>
+112
+</td>
+<td class='survived'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_112'>1</a>
+<span>
+1. getKeys : mutated return of Object value for com/googlecode/jmxtrans/model/Query::getKeys to ( if (x != null) null else throw new RuntimeException ) &rarr; SURVIVED<br/>
+
+</span>
+</td>
+<td class='covered'><pre><span  class='survived'>&#9;&#9;return keys;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@75c5354_113'/>
+113
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_113'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''>&#9;}</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@75c5354_114'/>
+114
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_114'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@75c5354_115'/>
+115
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_115'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''>&#9;public boolean isAllowDottedKeys() {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@75c5354_116'/>
+116
+</td>
+<td class='survived'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_116'>1</a>
+<span>
+1. isAllowDottedKeys : replaced return of integer sized value with (x == 0 ? 1 : 0) &rarr; SURVIVED<br/>
+
+</span>
+</td>
+<td class='covered'><pre><span  class='survived'>&#9;&#9;return allowDottedKeys;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@75c5354_117'/>
+117
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_117'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''>&#9;}</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@75c5354_118'/>
+118
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_118'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@75c5354_119'/>
+119
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_119'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''>&#9;@Nonnull</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@75c5354_120'/>
+120
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_120'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''>&#9;public ImmutableList&#60;OutputWriter&#62; getOutputWriters() {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@75c5354_121'/>
+121
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_121'>1</a>
+<span>
+1. getOutputWriters : mutated return of Object value for com/googlecode/jmxtrans/model/Query::getOutputWriters to ( if (x != null) null else throw new RuntimeException ) &rarr; KILLED<br/>
+
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>&#9;&#9;return outputWriters;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@75c5354_122'/>
+122
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_122'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''>&#9;}</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@75c5354_123'/>
+123
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_123'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@75c5354_124'/>
+124
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_124'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''>&#9;@Override</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@75c5354_125'/>
+125
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_125'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''>&#9;public String toString() {</span></pre></td></tr>
+
+
+<tr>
+<td class='uncovered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@75c5354_126'/>
+126
+</td>
+<td class='survived'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_126'>12</a>
+<span>
+1. toString : removed call to java/lang/StringBuilder::&#60;init&#62; &rarr; NO_COVERAGE<br/>
+2. toString : removed call to java/lang/StringBuilder::append &rarr; NO_COVERAGE<br/>
+3. toString : removed call to java/lang/StringBuilder::append &rarr; NO_COVERAGE<br/>
+4. toString : removed call to java/lang/StringBuilder::append &rarr; NO_COVERAGE<br/>
+5. toString : removed call to java/lang/StringBuilder::append &rarr; NO_COVERAGE<br/>
+6. toString : removed call to java/lang/StringBuilder::append &rarr; NO_COVERAGE<br/>
+7. toString : removed call to java/lang/StringBuilder::append &rarr; NO_COVERAGE<br/>
+8. toString : removed call to java/lang/StringBuilder::append &rarr; NO_COVERAGE<br/>
+9. toString : removed call to java/lang/StringBuilder::append &rarr; NO_COVERAGE<br/>
+10. toString : removed call to java/lang/StringBuilder::append &rarr; NO_COVERAGE<br/>
+11. toString : removed call to java/lang/StringBuilder::toString &rarr; NO_COVERAGE<br/>
+12. toString : mutated return of Object value for com/googlecode/jmxtrans/model/Query::toString to ( if (x != null) null else throw new RuntimeException ) &rarr; NO_COVERAGE<br/>
+
+</span>
+</td>
+<td class='uncovered'><pre><span  class='survived'>&#9;&#9;return &#34;Query [obj=&#34; + obj + &#34;, useObjDomainAsKey:&#34; + useObjDomainAsKey + </span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@75c5354_127'/>
+127
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_127'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''>&#9;&#9;&#9;&#9;&#34;, resultAlias=&#34; + resultAlias + &#34;, attr=&#34; + attr + &#34;]&#34;;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@75c5354_128'/>
+128
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_128'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''>&#9;}</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@75c5354_129'/>
+129
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_129'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@75c5354_130'/>
+130
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_130'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''>&#9;@Override</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@75c5354_131'/>
+131
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_131'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''>&#9;public boolean equals(Object o) {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@75c5354_132'/>
+132
+</td>
+<td class='survived'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_132'>3</a>
+<span>
+1. equals : removed conditional &rarr; SURVIVED<br/>
+2. equals : negated conditional &rarr; KILLED<br/>
+3. equals : removed conditional &rarr; KILLED<br/>
+
+</span>
+</td>
+<td class='covered'><pre><span  class='survived'>&#9;&#9;if (o == null) {</span></pre></td></tr>
+
+
+<tr>
+<td class='uncovered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@75c5354_133'/>
+133
+</td>
+<td class='survived'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_133'>2</a>
+<span>
+1. equals : Substituted 0 with 1 &rarr; NO_COVERAGE<br/>
+2. equals : replaced return of integer sized value with (x == 0 ? 1 : 0) &rarr; NO_COVERAGE<br/>
+
+</span>
+</td>
+<td class='uncovered'><pre><span  class='survived'>&#9;&#9;&#9;return false;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@75c5354_134'/>
+134
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_134'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''>&#9;&#9;}</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@75c5354_135'/>
+135
+</td>
+<td class='survived'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_135'>3</a>
+<span>
+1. equals : removed conditional &rarr; SURVIVED<br/>
+2. equals : negated conditional &rarr; KILLED<br/>
+3. equals : removed conditional &rarr; KILLED<br/>
+
+</span>
+</td>
+<td class='covered'><pre><span  class='survived'>&#9;&#9;if (o == this) {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@75c5354_136'/>
+136
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_136'>2</a>
+<span>
+1. equals : Substituted 1 with 0 &rarr; KILLED<br/>
+2. equals : replaced return of integer sized value with (x == 0 ? 1 : 0) &rarr; KILLED<br/>
+
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>&#9;&#9;&#9;return true;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@75c5354_137'/>
+137
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_137'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''>&#9;&#9;}</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@75c5354_138'/>
+138
+</td>
+<td class='survived'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_138'>5</a>
+<span>
+1. equals : removed conditional &rarr; SURVIVED<br/>
+2. equals : negated conditional &rarr; KILLED<br/>
+3. equals : removed call to java/lang/Object::getClass &rarr; KILLED<br/>
+4. equals : removed call to java/lang/Object::getClass &rarr; KILLED<br/>
+5. equals : removed conditional &rarr; KILLED<br/>
+
+</span>
+</td>
+<td class='covered'><pre><span  class='survived'>&#9;&#9;if (o.getClass() != this.getClass()) {</span></pre></td></tr>
+
+
+<tr>
+<td class='uncovered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@75c5354_139'/>
+139
+</td>
+<td class='survived'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_139'>2</a>
+<span>
+1. equals : Substituted 0 with 1 &rarr; NO_COVERAGE<br/>
+2. equals : replaced return of integer sized value with (x == 0 ? 1 : 0) &rarr; NO_COVERAGE<br/>
+
+</span>
+</td>
+<td class='uncovered'><pre><span  class='survived'>&#9;&#9;&#9;return false;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@75c5354_140'/>
+140
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_140'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''>&#9;&#9;}</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@75c5354_141'/>
+141
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_141'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@75c5354_142'/>
+142
+</td>
+<td class='survived'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_142'>3</a>
+<span>
+1. equals : removed conditional &rarr; SURVIVED<br/>
+2. equals : negated conditional &rarr; KILLED<br/>
+3. equals : removed conditional &rarr; KILLED<br/>
+
+</span>
+</td>
+<td class='covered'><pre><span  class='survived'>&#9;&#9;if (!(o instanceof Query)) {</span></pre></td></tr>
+
+
+<tr>
+<td class='uncovered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@75c5354_143'/>
+143
+</td>
+<td class='survived'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_143'>2</a>
+<span>
+1. equals : Substituted 0 with 1 &rarr; NO_COVERAGE<br/>
+2. equals : replaced return of integer sized value with (x == 0 ? 1 : 0) &rarr; NO_COVERAGE<br/>
+
+</span>
+</td>
+<td class='uncovered'><pre><span  class='survived'>&#9;&#9;&#9;return false;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@75c5354_144'/>
+144
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_144'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''>&#9;&#9;}</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@75c5354_145'/>
+145
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_145'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@75c5354_146'/>
+146
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_146'></a>
+<span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>&#9;&#9;Query other = (Query) o;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@75c5354_147'/>
+147
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_147'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@75c5354_148'/>
+148
+</td>
+<td class='survived'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_148'>20</a>
+<span>
+1. equals : removed call to com/googlecode/jmxtrans/model/Query::getOutputWriters &rarr; SURVIVED<br/>
+2. equals : removed call to com/googlecode/jmxtrans/model/Query::sizeOf &rarr; SURVIVED<br/>
+3. equals : removed call to com/googlecode/jmxtrans/model/Query::getOutputWriters &rarr; SURVIVED<br/>
+4. equals : removed call to com/googlecode/jmxtrans/model/Query::sizeOf &rarr; SURVIVED<br/>
+5. equals : removed call to org/apache/commons/lang/builder/EqualsBuilder::&#60;init&#62; &rarr; KILLED<br/>
+6. equals : removed call to com/googlecode/jmxtrans/model/Query::getObj &rarr; KILLED<br/>
+7. equals : removed call to com/googlecode/jmxtrans/model/Query::getObj &rarr; KILLED<br/>
+8. equals : removed call to org/apache/commons/lang/builder/EqualsBuilder::append &rarr; KILLED<br/>
+9. equals : removed call to com/googlecode/jmxtrans/model/Query::getKeys &rarr; KILLED<br/>
+10. equals : removed call to com/googlecode/jmxtrans/model/Query::getKeys &rarr; KILLED<br/>
+11. equals : removed call to org/apache/commons/lang/builder/EqualsBuilder::append &rarr; KILLED<br/>
+12. equals : removed call to com/googlecode/jmxtrans/model/Query::getAttr &rarr; KILLED<br/>
+13. equals : removed call to com/googlecode/jmxtrans/model/Query::getAttr &rarr; KILLED<br/>
+14. equals : removed call to org/apache/commons/lang/builder/EqualsBuilder::append &rarr; KILLED<br/>
+15. equals : removed call to com/googlecode/jmxtrans/model/Query::getResultAlias &rarr; KILLED<br/>
+16. equals : removed call to com/googlecode/jmxtrans/model/Query::getResultAlias &rarr; KILLED<br/>
+17. equals : removed call to org/apache/commons/lang/builder/EqualsBuilder::append &rarr; KILLED<br/>
+18. equals : removed call to org/apache/commons/lang/builder/EqualsBuilder::append &rarr; KILLED<br/>
+19. equals : removed call to org/apache/commons/lang/builder/EqualsBuilder::isEquals &rarr; KILLED<br/>
+20. equals : replaced return of integer sized value with (x == 0 ? 1 : 0) &rarr; KILLED<br/>
+
+</span>
+</td>
+<td class='covered'><pre><span  class='survived'>&#9;&#9;return new EqualsBuilder()</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@75c5354_149'/>
+149
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_149'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''>&#9;&#9;&#9;&#9;.append(this.getObj(), other.getObj())</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@75c5354_150'/>
+150
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_150'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''>&#9;&#9;&#9;&#9;.append(this.getKeys(), other.getKeys())</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@75c5354_151'/>
+151
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_151'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''>&#9;&#9;&#9;&#9;.append(this.getAttr(), other.getAttr())</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@75c5354_152'/>
+152
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_152'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''>&#9;&#9;&#9;&#9;.append(this.getResultAlias(), other.getResultAlias())</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@75c5354_153'/>
+153
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_153'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''>&#9;&#9;&#9;&#9;.append(sizeOf(this.getOutputWriters()), sizeOf(other.getOutputWriters()))</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@75c5354_154'/>
+154
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_154'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''>&#9;&#9;&#9;&#9;.isEquals();</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@75c5354_155'/>
+155
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_155'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''>&#9;}</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@75c5354_156'/>
+156
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_156'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@75c5354_157'/>
+157
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_157'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''>&#9;@Override</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@75c5354_158'/>
+158
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_158'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''>&#9;public int hashCode() {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@75c5354_159'/>
+159
+</td>
+<td class='survived'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_159'>16</a>
+<span>
+1. hashCode : removed call to com/googlecode/jmxtrans/model/Query::getObj &rarr; SURVIVED<br/>
+2. hashCode : removed call to com/googlecode/jmxtrans/model/Query::getKeys &rarr; SURVIVED<br/>
+3. hashCode : removed call to com/googlecode/jmxtrans/model/Query::getAttr &rarr; SURVIVED<br/>
+4. hashCode : removed call to com/googlecode/jmxtrans/model/Query::getResultAlias &rarr; SURVIVED<br/>
+5. hashCode : removed call to com/googlecode/jmxtrans/model/Query::getOutputWriters &rarr; SURVIVED<br/>
+6. hashCode : removed call to com/googlecode/jmxtrans/model/Query::sizeOf &rarr; SURVIVED<br/>
+7. hashCode : removed call to org/apache/commons/lang/builder/HashCodeBuilder::toHashCode &rarr; SURVIVED<br/>
+8. hashCode : replaced return of integer sized value with (x == 0 ? 1 : 0) &rarr; SURVIVED<br/>
+9. hashCode : removed call to org/apache/commons/lang/builder/HashCodeBuilder::&#60;init&#62; &rarr; KILLED<br/>
+10. hashCode : Substituted 41 with 42 &rarr; KILLED<br/>
+11. hashCode : Substituted 97 with 98 &rarr; KILLED<br/>
+12. hashCode : removed call to org/apache/commons/lang/builder/HashCodeBuilder::append &rarr; KILLED<br/>
+13. hashCode : removed call to org/apache/commons/lang/builder/HashCodeBuilder::append &rarr; KILLED<br/>
+14. hashCode : removed call to org/apache/commons/lang/builder/HashCodeBuilder::append &rarr; KILLED<br/>
+15. hashCode : removed call to org/apache/commons/lang/builder/HashCodeBuilder::append &rarr; KILLED<br/>
+16. hashCode : removed call to org/apache/commons/lang/builder/HashCodeBuilder::append &rarr; KILLED<br/>
+
+</span>
+</td>
+<td class='covered'><pre><span  class='survived'>&#9;&#9;return new HashCodeBuilder(41, 97)</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@75c5354_160'/>
+160
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_160'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''>&#9;&#9;&#9;&#9;.append(this.getObj())</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@75c5354_161'/>
+161
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_161'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''>&#9;&#9;&#9;&#9;.append(this.getKeys())</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@75c5354_162'/>
+162
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_162'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''>&#9;&#9;&#9;&#9;.append(this.getAttr())</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@75c5354_163'/>
+163
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_163'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''>&#9;&#9;&#9;&#9;.append(this.getResultAlias())</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@75c5354_164'/>
+164
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_164'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''>&#9;&#9;&#9;&#9;.append(sizeOf(this.getOutputWriters()))</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@75c5354_165'/>
+165
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_165'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''>&#9;&#9;&#9;&#9;.toHashCode();</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@75c5354_166'/>
+166
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_166'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''>&#9;}</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@75c5354_167'/>
+167
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_167'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@75c5354_168'/>
+168
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_168'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''>&#9;private static int sizeOf(List&#60;OutputWriter&#62; writers) {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@75c5354_169'/>
+169
+</td>
+<td class='survived'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_169'>3</a>
+<span>
+1. sizeOf : negated conditional &rarr; SURVIVED<br/>
+2. sizeOf : removed conditional &rarr; SURVIVED<br/>
+3. sizeOf : removed conditional &rarr; SURVIVED<br/>
+
+</span>
+</td>
+<td class='covered'><pre><span  class='survived'>&#9;&#9;if (writers == null) {</span></pre></td></tr>
+
+
+<tr>
+<td class='uncovered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@75c5354_170'/>
+170
+</td>
+<td class='survived'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_170'>2</a>
+<span>
+1. sizeOf : Substituted 0 with 1 &rarr; NO_COVERAGE<br/>
+2. sizeOf : replaced return of integer sized value with (x == 0 ? 1 : 0) &rarr; NO_COVERAGE<br/>
+
+</span>
+</td>
+<td class='uncovered'><pre><span  class='survived'>&#9;&#9;&#9;return 0;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@75c5354_171'/>
+171
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_171'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''>&#9;&#9;}</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@75c5354_172'/>
+172
+</td>
+<td class='survived'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_172'>2</a>
+<span>
+1. sizeOf : removed call to java/util/List::size &rarr; SURVIVED<br/>
+2. sizeOf : replaced return of integer sized value with (x == 0 ? 1 : 0) &rarr; SURVIVED<br/>
+
+</span>
+</td>
+<td class='covered'><pre><span  class='survived'>&#9;&#9;return writers.size();</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@75c5354_173'/>
+173
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_173'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''>&#9;}</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@75c5354_174'/>
+174
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_174'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@75c5354_175'/>
+175
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_175'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''>&#9;public static Builder builder() {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@75c5354_176'/>
+176
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_176'>2</a>
+<span>
+1. builder : removed call to com/googlecode/jmxtrans/model/Query$Builder::&#60;init&#62; &rarr; KILLED<br/>
+2. builder : mutated return of Object value for com/googlecode/jmxtrans/model/Query::builder to ( if (x != null) null else throw new RuntimeException ) &rarr; KILLED<br/>
+
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>&#9;&#9;return new Builder();</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@75c5354_177'/>
+177
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_177'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''>&#9;}</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@75c5354_178'/>
+178
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_178'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@75c5354_179'/>
+179
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_179'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''>&#9;@NotThreadSafe</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@75c5354_180'/>
+180
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_180'></a>
+<span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>&#9;public static final class Builder {</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@75c5354_181'/>
+181
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_181'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@75c5354_182'/>
+182
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_182'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''>&#9;&#9;private String obj;</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@75c5354_183'/>
+183
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_183'>1</a>
+<span>
+1. <init> : removed call to com/google/common/collect/Lists::newArrayList &rarr; KILLED<br/>
+
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>&#9;&#9;private final List&#60;String&#62; attr = newArrayList();</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@75c5354_184'/>
+184
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_184'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''>&#9;&#9;private String resultAlias;</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@75c5354_185'/>
+185
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_185'>1</a>
+<span>
+1. <init> : removed call to com/google/common/collect/Lists::newArrayList &rarr; KILLED<br/>
+
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>&#9;&#9;private final List&#60;String&#62; keys = newArrayList();</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@75c5354_186'/>
+186
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_186'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''>&#9;&#9;private boolean useObjDomainAsKey;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@75c5354_187'/>
+187
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_187'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''>&#9;&#9;private boolean allowDottedKeys;</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@75c5354_188'/>
+188
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_188'>1</a>
+<span>
+1. <init> : removed call to com/google/common/collect/Lists::newArrayList &rarr; KILLED<br/>
+
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>&#9;&#9;private final List&#60;OutputWriter&#62; outputWriters = newArrayList();</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@75c5354_189'/>
+189
+</td>
+<td class='survived'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_189'>1</a>
+<span>
+1. <init> : removed call to com/google/common/collect/Sets::newHashSet &rarr; SURVIVED<br/>
+
+</span>
+</td>
+<td class='covered'><pre><span  class='survived'>&#9;&#9;private final Set&#60;String&#62; typeNames = newHashSet();</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@75c5354_190'/>
+190
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_190'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@75c5354_191'/>
+191
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_191'></a>
+<span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>&#9;&#9;private Builder() {}</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@75c5354_192'/>
+192
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_192'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@75c5354_193'/>
+193
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_193'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''>&#9;&#9;public Builder setObj(String obj) {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@75c5354_194'/>
+194
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_194'></a>
+<span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>&#9;&#9;&#9;this.obj = obj;</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@75c5354_195'/>
+195
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_195'>1</a>
+<span>
+1. setObj : mutated return of Object value for com/googlecode/jmxtrans/model/Query$Builder::setObj to ( if (x != null) null else throw new RuntimeException ) &rarr; KILLED<br/>
+
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>&#9;&#9;&#9;return this;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@75c5354_196'/>
+196
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_196'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''>&#9;&#9;}</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@75c5354_197'/>
+197
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_197'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@75c5354_198'/>
+198
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_198'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''>&#9;&#9;public Builder addAttr(String... attr) {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@75c5354_199'/>
+199
+</td>
+<td class='survived'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_199'>2</a>
+<span>
+1. addAttr : removed call to java/util/List::addAll &rarr; SURVIVED<br/>
+2. addAttr : removed call to java/util/Arrays::asList &rarr; KILLED<br/>
+
+</span>
+</td>
+<td class='covered'><pre><span  class='survived'>&#9;&#9;&#9;this.attr.addAll(asList(attr));</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@75c5354_200'/>
+200
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_200'>1</a>
+<span>
+1. addAttr : mutated return of Object value for com/googlecode/jmxtrans/model/Query$Builder::addAttr to ( if (x != null) null else throw new RuntimeException ) &rarr; KILLED<br/>
+
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>&#9;&#9;&#9;return this;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@75c5354_201'/>
+201
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_201'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''>&#9;&#9;}</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@75c5354_202'/>
+202
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_202'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@75c5354_203'/>
+203
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_203'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''>&#9;&#9;public Builder setResultAlias(String resultAlias) {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@75c5354_204'/>
+204
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_204'></a>
+<span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>&#9;&#9;&#9;this.resultAlias = resultAlias;</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@75c5354_205'/>
+205
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_205'>1</a>
+<span>
+1. setResultAlias : mutated return of Object value for com/googlecode/jmxtrans/model/Query$Builder::setResultAlias to ( if (x != null) null else throw new RuntimeException ) &rarr; KILLED<br/>
+
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>&#9;&#9;&#9;return this;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@75c5354_206'/>
+206
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_206'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''>&#9;&#9;}</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@75c5354_207'/>
+207
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_207'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''>&#9;&#9;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@75c5354_208'/>
+208
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_208'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''>&#9;&#9;public Builder setUseObjDomainAsKey(boolean useObjDomainAsKey) {</span></pre></td></tr>
+
+
+<tr>
+<td class='uncovered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@75c5354_209'/>
+209
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_209'></a>
+<span>
+</span>
+</td>
+<td class='uncovered'><pre><span  class=''>&#9;&#9;&#9;this.useObjDomainAsKey = useObjDomainAsKey;</span></pre></td></tr>
+
+
+<tr>
+<td class='uncovered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@75c5354_210'/>
+210
+</td>
+<td class='survived'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_210'>1</a>
+<span>
+1. setUseObjDomainAsKey : mutated return of Object value for com/googlecode/jmxtrans/model/Query$Builder::setUseObjDomainAsKey to ( if (x != null) null else throw new RuntimeException ) &rarr; NO_COVERAGE<br/>
+
+</span>
+</td>
+<td class='uncovered'><pre><span  class='survived'>&#9;&#9;&#9;return this;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@75c5354_211'/>
+211
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_211'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''>&#9;&#9;}</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@75c5354_212'/>
+212
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_212'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@75c5354_213'/>
+213
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_213'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''>&#9;&#9;public Builder addKey(String keys) {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@75c5354_214'/>
+214
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_214'>4</a>
+<span>
+1. addKey : Substituted 1 with 0 &rarr; KILLED<br/>
+2. addKey : Substituted 0 with 1 &rarr; KILLED<br/>
+3. addKey : removed call to com/googlecode/jmxtrans/model/Query$Builder::addKeys &rarr; KILLED<br/>
+4. addKey : mutated return of Object value for com/googlecode/jmxtrans/model/Query$Builder::addKey to ( if (x != null) null else throw new RuntimeException ) &rarr; KILLED<br/>
+
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>&#9;&#9;&#9;return addKeys(keys);</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@75c5354_215'/>
+215
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_215'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''>&#9;&#9;}</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@75c5354_216'/>
+216
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_216'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@75c5354_217'/>
+217
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_217'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''>&#9;&#9;public Builder addKeys(String... keys) {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@75c5354_218'/>
+218
+</td>
+<td class='survived'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_218'>2</a>
+<span>
+1. addKeys : removed call to java/util/List::addAll &rarr; SURVIVED<br/>
+2. addKeys : removed call to java/util/Arrays::asList &rarr; KILLED<br/>
+
+</span>
+</td>
+<td class='covered'><pre><span  class='survived'>&#9;&#9;&#9;this.keys.addAll(asList(keys));</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@75c5354_219'/>
+219
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_219'>1</a>
+<span>
+1. addKeys : mutated return of Object value for com/googlecode/jmxtrans/model/Query$Builder::addKeys to ( if (x != null) null else throw new RuntimeException ) &rarr; KILLED<br/>
+
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>&#9;&#9;&#9;return this;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@75c5354_220'/>
+220
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_220'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''>&#9;&#9;}</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@75c5354_221'/>
+221
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_221'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@75c5354_222'/>
+222
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_222'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''>&#9;&#9;public Builder setAllowDottedKeys(boolean allowDottedKeys) {</span></pre></td></tr>
+
+
+<tr>
+<td class='uncovered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@75c5354_223'/>
+223
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_223'></a>
+<span>
+</span>
+</td>
+<td class='uncovered'><pre><span  class=''>&#9;&#9;&#9;this.allowDottedKeys = allowDottedKeys;</span></pre></td></tr>
+
+
+<tr>
+<td class='uncovered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@75c5354_224'/>
+224
+</td>
+<td class='survived'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_224'>1</a>
+<span>
+1. setAllowDottedKeys : mutated return of Object value for com/googlecode/jmxtrans/model/Query$Builder::setAllowDottedKeys to ( if (x != null) null else throw new RuntimeException ) &rarr; NO_COVERAGE<br/>
+
+</span>
+</td>
+<td class='uncovered'><pre><span  class='survived'>&#9;&#9;&#9;return this;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@75c5354_225'/>
+225
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_225'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''>&#9;&#9;}</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@75c5354_226'/>
+226
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_226'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@75c5354_227'/>
+227
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_227'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''>&#9;&#9;public Builder addOutputWriter(OutputWriter outputWriter) {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@75c5354_228'/>
+228
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_228'>4</a>
+<span>
+1. addOutputWriter : Substituted 1 with 0 &rarr; KILLED<br/>
+2. addOutputWriter : Substituted 0 with 1 &rarr; KILLED<br/>
+3. addOutputWriter : removed call to com/googlecode/jmxtrans/model/Query$Builder::addOutputWriters &rarr; KILLED<br/>
+4. addOutputWriter : mutated return of Object value for com/googlecode/jmxtrans/model/Query$Builder::addOutputWriter to ( if (x != null) null else throw new RuntimeException ) &rarr; KILLED<br/>
+
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>&#9;&#9;&#9;return addOutputWriters(outputWriter);</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@75c5354_229'/>
+229
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_229'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''>&#9;&#9;}</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@75c5354_230'/>
+230
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_230'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@75c5354_231'/>
+231
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_231'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''>&#9;&#9;public Builder addOutputWriters(OutputWriter... outputWriters) {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@75c5354_232'/>
+232
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_232'>2</a>
+<span>
+1. addOutputWriters : removed call to java/util/Arrays::asList &rarr; KILLED<br/>
+2. addOutputWriters : removed call to java/util/List::addAll &rarr; KILLED<br/>
+
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>&#9;&#9;&#9;this.outputWriters.addAll(asList(outputWriters));</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@75c5354_233'/>
+233
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_233'>1</a>
+<span>
+1. addOutputWriters : mutated return of Object value for com/googlecode/jmxtrans/model/Query$Builder::addOutputWriters to ( if (x != null) null else throw new RuntimeException ) &rarr; KILLED<br/>
+
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>&#9;&#9;&#9;return this;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@75c5354_234'/>
+234
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_234'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''>&#9;&#9;}</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@75c5354_235'/>
+235
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_235'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@75c5354_236'/>
+236
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_236'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''>&#9;&#9;public Builder setTypeNames(Set&#60;String&#62; typeNames) {</span></pre></td></tr>
+
+
+<tr>
+<td class='uncovered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@75c5354_237'/>
+237
+</td>
+<td class='survived'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_237'>1</a>
+<span>
+1. setTypeNames : removed call to java/util/Set::addAll &rarr; NO_COVERAGE<br/>
+
+</span>
+</td>
+<td class='uncovered'><pre><span  class='survived'>&#9;&#9;&#9;this.typeNames.addAll(typeNames);</span></pre></td></tr>
+
+
+<tr>
+<td class='uncovered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@75c5354_238'/>
+238
+</td>
+<td class='survived'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_238'>1</a>
+<span>
+1. setTypeNames : mutated return of Object value for com/googlecode/jmxtrans/model/Query$Builder::setTypeNames to ( if (x != null) null else throw new RuntimeException ) &rarr; NO_COVERAGE<br/>
+
+</span>
+</td>
+<td class='uncovered'><pre><span  class='survived'>&#9;&#9;&#9;return this;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@75c5354_239'/>
+239
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_239'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''>&#9;&#9;}</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@75c5354_240'/>
+240
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_240'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@75c5354_241'/>
+241
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_241'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''>&#9;&#9;public Query build() {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@75c5354_242'/>
+242
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_242'>2</a>
+<span>
+1. build : removed call to com/googlecode/jmxtrans/model/Query::&#60;init&#62; &rarr; KILLED<br/>
+2. build : mutated return of Object value for com/googlecode/jmxtrans/model/Query$Builder::build to ( if (x != null) null else throw new RuntimeException ) &rarr; KILLED<br/>
+
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>&#9;&#9;&#9;return new Query(</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@75c5354_243'/>
+243
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_243'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''>&#9;&#9;&#9;&#9;&#9;this.obj,</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@75c5354_244'/>
+244
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_244'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''>&#9;&#9;&#9;&#9;&#9;this.keys,</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@75c5354_245'/>
+245
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_245'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''>&#9;&#9;&#9;&#9;&#9;this.attr,</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@75c5354_246'/>
+246
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_246'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''>&#9;&#9;&#9;&#9;&#9;this.typeNames,</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@75c5354_247'/>
+247
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_247'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''>&#9;&#9;&#9;&#9;&#9;this.resultAlias,</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@75c5354_248'/>
+248
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_248'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''>&#9;&#9;&#9;&#9;&#9;this.useObjDomainAsKey,</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@75c5354_249'/>
+249
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_249'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''>&#9;&#9;&#9;&#9;&#9;this.allowDottedKeys,</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@75c5354_250'/>
+250
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_250'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''>&#9;&#9;&#9;&#9;&#9;this.outputWriters</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@75c5354_251'/>
+251
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_251'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''>&#9;&#9;&#9;);</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@75c5354_252'/>
+252
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_252'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''>&#9;&#9;}</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@75c5354_253'/>
+253
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_253'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@75c5354_254'/>
+254
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_254'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''>&#9;}</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@75c5354_255'/>
+255
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_255'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''>}</span></pre></td></tr>
+
+
+
+<tr><td></td><td></td><td><h2>Mutations</h2></td></tr>
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@75c5354_59'>59</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_59'/> 
+
+<p class='SURVIVED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b><init><br/><b>Killed by : </b>none</span></span> removed call to java/util/Collections::emptyList &rarr; SURVIVED</p> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b><init><br/><b>Killed by : </b>com.googlecode.jmxtrans.model.EqualsTests.testQuery2(com.googlecode.jmxtrans.model.EqualsTests)</span></span> removed call to com/google/common/base/MoreObjects::firstNonNull &rarr; KILLED</p> <p class='KILLED'><span class='pop'>3.<span><b>3</b><br/><b>Location : </b><init><br/><b>Killed by : </b>com.googlecode.jmxtrans.util.JsonUtilsTest.loadingFromFile(com.googlecode.jmxtrans.util.JsonUtilsTest)</span></span> removed call to com/googlecode/jmxtrans/model/PropertyResolver::resolveList &rarr; KILLED</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@75c5354_61'>61</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_61'/> 
+
+<p class='SURVIVED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b><init><br/><b>Killed by : </b>none</span></span> Substituted 0 with 1 &rarr; SURVIVED</p> <p class='SURVIVED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b><init><br/><b>Killed by : </b>none</span></span> removed call to java/lang/Boolean::valueOf &rarr; SURVIVED</p> <p class='SURVIVED'><span class='pop'>3.<span><b>3</b><br/><b>Location : </b><init><br/><b>Killed by : </b>none</span></span> removed call to java/lang/Boolean::valueOf &rarr; SURVIVED</p> <p class='KILLED'><span class='pop'>4.<span><b>4</b><br/><b>Location : </b><init><br/><b>Killed by : </b>com.googlecode.jmxtrans.model.EqualsTests.testQuery2(com.googlecode.jmxtrans.model.EqualsTests)</span></span> removed call to com/google/common/base/MoreObjects::firstNonNull &rarr; KILLED</p> <p class='SURVIVED'><span class='pop'>5.<span><b>5</b><br/><b>Location : </b><init><br/><b>Killed by : </b>none</span></span> removed call to java/lang/Boolean::booleanValue &rarr; SURVIVED</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@75c5354_62'>62</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_62'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b><init><br/><b>Killed by : </b>com.googlecode.jmxtrans.util.JsonUtilsTest.loadingFromFile(com.googlecode.jmxtrans.util.JsonUtilsTest)</span></span> removed call to java/util/Collections::emptyList &rarr; KILLED</p> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b><init><br/><b>Killed by : </b>com.googlecode.jmxtrans.model.EqualsTests.testQuery2(com.googlecode.jmxtrans.model.EqualsTests)</span></span> removed call to com/google/common/base/MoreObjects::firstNonNull &rarr; KILLED</p> <p class='SURVIVED'><span class='pop'>3.<span><b>3</b><br/><b>Location : </b><init><br/><b>Killed by : </b>none</span></span> removed call to com/googlecode/jmxtrans/model/PropertyResolver::resolveList &rarr; SURVIVED</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@75c5354_64'>64</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_64'/> 
+
+<p class='SURVIVED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b><init><br/><b>Killed by : </b>none</span></span> removed call to java/util/Collections::emptyList &rarr; SURVIVED</p> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b><init><br/><b>Killed by : </b>com.googlecode.jmxtrans.model.EqualsTests.testQuery2(com.googlecode.jmxtrans.model.EqualsTests)</span></span> removed call to com/google/common/base/MoreObjects::firstNonNull &rarr; KILLED</p> <p class='KILLED'><span class='pop'>3.<span><b>3</b><br/><b>Location : </b><init><br/><b>Killed by : </b>com.googlecode.jmxtrans.jmx.JmxProcessingTests.querySimpleAttribute(com.googlecode.jmxtrans.jmx.JmxProcessingTests)</span></span> removed call to com/google/common/collect/ImmutableList::copyOf &rarr; KILLED</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@75c5354_65'>65</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_65'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b><init><br/><b>Killed by : </b>com.googlecode.jmxtrans.util.JsonUtilsTest.loadingFromFile(com.googlecode.jmxtrans.util.JsonUtilsTest)</span></span> removed call to java/util/Collections::emptySet &rarr; KILLED</p> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b><init><br/><b>Killed by : </b>com.googlecode.jmxtrans.model.EqualsTests.testQuery2(com.googlecode.jmxtrans.model.EqualsTests)</span></span> removed call to com/google/common/base/MoreObjects::firstNonNull &rarr; KILLED</p> <p class='SURVIVED'><span class='pop'>3.<span><b>3</b><br/><b>Location : </b><init><br/><b>Killed by : </b>none</span></span> removed call to com/google/common/collect/ImmutableSet::copyOf &rarr; SURVIVED</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@75c5354_72'>72</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_72'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>getObj<br/><b>Killed by : </b>com.googlecode.jmxtrans.model.EqualsTests.testQuery2(com.googlecode.jmxtrans.model.EqualsTests)</span></span> mutated return of Object value for com/googlecode/jmxtrans/model/Query::getObj to ( if (x != null) null else throw new RuntimeException ) &rarr; KILLED</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@75c5354_80'>80</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_80'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>getResultAlias<br/><b>Killed by : </b>com.googlecode.jmxtrans.ConfigurationParserTest.sameServerWithTwoDifferentQueriesMergesQueries(com.googlecode.jmxtrans.ConfigurationParserTest)</span></span> mutated return of Object value for com/googlecode/jmxtrans/model/Query::getResultAlias to ( if (x != null) null else throw new RuntimeException ) &rarr; KILLED</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@75c5354_88'>88</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_88'/> 
+
+<p class='SURVIVED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>isUseObjDomainAsKey<br/><b>Killed by : </b>none</span></span> replaced return of integer sized value with (x == 0 ? 1 : 0) &rarr; SURVIVED</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@75c5354_102'>102</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_102'/> 
+
+<p class='SURVIVED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>getTypeNames<br/><b>Killed by : </b>none</span></span> mutated return of Object value for com/googlecode/jmxtrans/model/Query::getTypeNames to ( if (x != null) null else throw new RuntimeException ) &rarr; SURVIVED</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@75c5354_107'>107</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_107'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>getAttr<br/><b>Killed by : </b>com.googlecode.jmxtrans.util.JsonUtilsTest.loadingFromFile(com.googlecode.jmxtrans.util.JsonUtilsTest)</span></span> mutated return of Object value for com/googlecode/jmxtrans/model/Query::getAttr to ( if (x != null) null else throw new RuntimeException ) &rarr; KILLED</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@75c5354_112'>112</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_112'/> 
+
+<p class='SURVIVED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>getKeys<br/><b>Killed by : </b>none</span></span> mutated return of Object value for com/googlecode/jmxtrans/model/Query::getKeys to ( if (x != null) null else throw new RuntimeException ) &rarr; SURVIVED</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@75c5354_116'>116</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_116'/> 
+
+<p class='SURVIVED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>isAllowDottedKeys<br/><b>Killed by : </b>none</span></span> replaced return of integer sized value with (x == 0 ? 1 : 0) &rarr; SURVIVED</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@75c5354_121'>121</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_121'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>getOutputWriters<br/><b>Killed by : </b>com.googlecode.jmxtrans.jmx.JmxProcessingTests.querySimpleAttribute(com.googlecode.jmxtrans.jmx.JmxProcessingTests)</span></span> mutated return of Object value for com/googlecode/jmxtrans/model/Query::getOutputWriters to ( if (x != null) null else throw new RuntimeException ) &rarr; KILLED</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@75c5354_126'>126</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_126'/> 
+
+<p class='NO_COVERAGE'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>toString<br/><b>Killed by : </b>none</span></span> removed call to java/lang/StringBuilder::&#60;init&#62; &rarr; NO_COVERAGE</p> <p class='NO_COVERAGE'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>toString<br/><b>Killed by : </b>none</span></span> removed call to java/lang/StringBuilder::append &rarr; NO_COVERAGE</p> <p class='NO_COVERAGE'><span class='pop'>3.<span><b>3</b><br/><b>Location : </b>toString<br/><b>Killed by : </b>none</span></span> removed call to java/lang/StringBuilder::append &rarr; NO_COVERAGE</p> <p class='NO_COVERAGE'><span class='pop'>4.<span><b>4</b><br/><b>Location : </b>toString<br/><b>Killed by : </b>none</span></span> removed call to java/lang/StringBuilder::append &rarr; NO_COVERAGE</p> <p class='NO_COVERAGE'><span class='pop'>5.<span><b>5</b><br/><b>Location : </b>toString<br/><b>Killed by : </b>none</span></span> removed call to java/lang/StringBuilder::append &rarr; NO_COVERAGE</p> <p class='NO_COVERAGE'><span class='pop'>6.<span><b>6</b><br/><b>Location : </b>toString<br/><b>Killed by : </b>none</span></span> removed call to java/lang/StringBuilder::append &rarr; NO_COVERAGE</p> <p class='NO_COVERAGE'><span class='pop'>7.<span><b>7</b><br/><b>Location : </b>toString<br/><b>Killed by : </b>none</span></span> removed call to java/lang/StringBuilder::append &rarr; NO_COVERAGE</p> <p class='NO_COVERAGE'><span class='pop'>8.<span><b>8</b><br/><b>Location : </b>toString<br/><b>Killed by : </b>none</span></span> removed call to java/lang/StringBuilder::append &rarr; NO_COVERAGE</p> <p class='NO_COVERAGE'><span class='pop'>9.<span><b>9</b><br/><b>Location : </b>toString<br/><b>Killed by : </b>none</span></span> removed call to java/lang/StringBuilder::append &rarr; NO_COVERAGE</p> <p class='NO_COVERAGE'><span class='pop'>10.<span><b>10</b><br/><b>Location : </b>toString<br/><b>Killed by : </b>none</span></span> removed call to java/lang/StringBuilder::append &rarr; NO_COVERAGE</p> <p class='NO_COVERAGE'><span class='pop'>11.<span><b>11</b><br/><b>Location : </b>toString<br/><b>Killed by : </b>none</span></span> removed call to java/lang/StringBuilder::toString &rarr; NO_COVERAGE</p> <p class='NO_COVERAGE'><span class='pop'>12.<span><b>12</b><br/><b>Location : </b>toString<br/><b>Killed by : </b>none</span></span> mutated return of Object value for com/googlecode/jmxtrans/model/Query::toString to ( if (x != null) null else throw new RuntimeException ) &rarr; NO_COVERAGE</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@75c5354_132'>132</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_132'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>equals<br/><b>Killed by : </b>com.googlecode.jmxtrans.model.EqualsTests.testQuery(com.googlecode.jmxtrans.model.EqualsTests)</span></span> negated conditional &rarr; KILLED</p> <p class='SURVIVED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>equals<br/><b>Killed by : </b>none</span></span> removed conditional &rarr; SURVIVED</p> <p class='KILLED'><span class='pop'>3.<span><b>3</b><br/><b>Location : </b>equals<br/><b>Killed by : </b>com.googlecode.jmxtrans.model.EqualsTests.testQuery(com.googlecode.jmxtrans.model.EqualsTests)</span></span> removed conditional &rarr; KILLED</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@75c5354_133'>133</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_133'/> 
+
+<p class='NO_COVERAGE'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>equals<br/><b>Killed by : </b>none</span></span> Substituted 0 with 1 &rarr; NO_COVERAGE</p> <p class='NO_COVERAGE'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>equals<br/><b>Killed by : </b>none</span></span> replaced return of integer sized value with (x == 0 ? 1 : 0) &rarr; NO_COVERAGE</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@75c5354_135'>135</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_135'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>equals<br/><b>Killed by : </b>com.googlecode.jmxtrans.model.EqualsTests.testQuery2(com.googlecode.jmxtrans.model.EqualsTests)</span></span> negated conditional &rarr; KILLED</p> <p class='SURVIVED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>equals<br/><b>Killed by : </b>none</span></span> removed conditional &rarr; SURVIVED</p> <p class='KILLED'><span class='pop'>3.<span><b>3</b><br/><b>Location : </b>equals<br/><b>Killed by : </b>com.googlecode.jmxtrans.model.EqualsTests.testQuery2(com.googlecode.jmxtrans.model.EqualsTests)</span></span> removed conditional &rarr; KILLED</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@75c5354_136'>136</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_136'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>equals<br/><b>Killed by : </b>com.googlecode.jmxtrans.ConfigurationParserTest.testMerge(com.googlecode.jmxtrans.ConfigurationParserTest)</span></span> Substituted 1 with 0 &rarr; KILLED</p> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>equals<br/><b>Killed by : </b>com.googlecode.jmxtrans.ConfigurationParserTest.testMerge(com.googlecode.jmxtrans.ConfigurationParserTest)</span></span> replaced return of integer sized value with (x == 0 ? 1 : 0) &rarr; KILLED</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@75c5354_138'>138</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_138'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>equals<br/><b>Killed by : </b>com.googlecode.jmxtrans.model.EqualsTests.testQuery(com.googlecode.jmxtrans.model.EqualsTests)</span></span> negated conditional &rarr; KILLED</p> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>equals<br/><b>Killed by : </b>com.googlecode.jmxtrans.model.EqualsTests.testQuery(com.googlecode.jmxtrans.model.EqualsTests)</span></span> removed call to java/lang/Object::getClass &rarr; KILLED</p> <p class='KILLED'><span class='pop'>3.<span><b>3</b><br/><b>Location : </b>equals<br/><b>Killed by : </b>com.googlecode.jmxtrans.model.EqualsTests.testQuery(com.googlecode.jmxtrans.model.EqualsTests)</span></span> removed call to java/lang/Object::getClass &rarr; KILLED</p> <p class='SURVIVED'><span class='pop'>4.<span><b>4</b><br/><b>Location : </b>equals<br/><b>Killed by : </b>none</span></span> removed conditional &rarr; SURVIVED</p> <p class='KILLED'><span class='pop'>5.<span><b>5</b><br/><b>Location : </b>equals<br/><b>Killed by : </b>com.googlecode.jmxtrans.model.EqualsTests.testQuery(com.googlecode.jmxtrans.model.EqualsTests)</span></span> removed conditional &rarr; KILLED</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@75c5354_139'>139</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_139'/> 
+
+<p class='NO_COVERAGE'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>equals<br/><b>Killed by : </b>none</span></span> Substituted 0 with 1 &rarr; NO_COVERAGE</p> <p class='NO_COVERAGE'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>equals<br/><b>Killed by : </b>none</span></span> replaced return of integer sized value with (x == 0 ? 1 : 0) &rarr; NO_COVERAGE</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@75c5354_142'>142</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_142'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>equals<br/><b>Killed by : </b>com.googlecode.jmxtrans.model.EqualsTests.testQuery(com.googlecode.jmxtrans.model.EqualsTests)</span></span> negated conditional &rarr; KILLED</p> <p class='SURVIVED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>equals<br/><b>Killed by : </b>none</span></span> removed conditional &rarr; SURVIVED</p> <p class='KILLED'><span class='pop'>3.<span><b>3</b><br/><b>Location : </b>equals<br/><b>Killed by : </b>com.googlecode.jmxtrans.model.EqualsTests.testQuery(com.googlecode.jmxtrans.model.EqualsTests)</span></span> removed conditional &rarr; KILLED</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@75c5354_143'>143</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_143'/> 
+
+<p class='NO_COVERAGE'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>equals<br/><b>Killed by : </b>none</span></span> Substituted 0 with 1 &rarr; NO_COVERAGE</p> <p class='NO_COVERAGE'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>equals<br/><b>Killed by : </b>none</span></span> replaced return of integer sized value with (x == 0 ? 1 : 0) &rarr; NO_COVERAGE</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@75c5354_148'>148</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_148'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>equals<br/><b>Killed by : </b>com.googlecode.jmxtrans.model.EqualsTests.testQuery2(com.googlecode.jmxtrans.model.EqualsTests)</span></span> removed call to org/apache/commons/lang/builder/EqualsBuilder::&#60;init&#62; &rarr; KILLED</p> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>equals<br/><b>Killed by : </b>com.googlecode.jmxtrans.model.EqualsTests.testQuery(com.googlecode.jmxtrans.model.EqualsTests)</span></span> removed call to com/googlecode/jmxtrans/model/Query::getObj &rarr; KILLED</p> <p class='KILLED'><span class='pop'>3.<span><b>3</b><br/><b>Location : </b>equals<br/><b>Killed by : </b>com.googlecode.jmxtrans.model.EqualsTests.testQuery(com.googlecode.jmxtrans.model.EqualsTests)</span></span> removed call to com/googlecode/jmxtrans/model/Query::getObj &rarr; KILLED</p> <p class='KILLED'><span class='pop'>4.<span><b>4</b><br/><b>Location : </b>equals<br/><b>Killed by : </b>com.googlecode.jmxtrans.model.EqualsTests.testQuery2(com.googlecode.jmxtrans.model.EqualsTests)</span></span> removed call to org/apache/commons/lang/builder/EqualsBuilder::append &rarr; KILLED</p> <p class='KILLED'><span class='pop'>5.<span><b>5</b><br/><b>Location : </b>equals<br/><b>Killed by : </b>com.googlecode.jmxtrans.model.EqualsTests.testQuery(com.googlecode.jmxtrans.model.EqualsTests)</span></span> removed call to com/googlecode/jmxtrans/model/Query::getKeys &rarr; KILLED</p> <p class='KILLED'><span class='pop'>6.<span><b>6</b><br/><b>Location : </b>equals<br/><b>Killed by : </b>com.googlecode.jmxtrans.model.EqualsTests.testQuery(com.googlecode.jmxtrans.model.EqualsTests)</span></span> removed call to com/googlecode/jmxtrans/model/Query::getKeys &rarr; KILLED</p> <p class='KILLED'><span class='pop'>7.<span><b>7</b><br/><b>Location : </b>equals<br/><b>Killed by : </b>com.googlecode.jmxtrans.model.EqualsTests.testQuery2(com.googlecode.jmxtrans.model.EqualsTests)</span></span> removed call to org/apache/commons/lang/builder/EqualsBuilder::append &rarr; KILLED</p> <p class='KILLED'><span class='pop'>8.<span><b>8</b><br/><b>Location : </b>equals<br/><b>Killed by : </b>com.googlecode.jmxtrans.model.EqualsTests.testQuery(com.googlecode.jmxtrans.model.EqualsTests)</span></span> removed call to com/googlecode/jmxtrans/model/Query::getAttr &rarr; KILLED</p> <p class='KILLED'><span class='pop'>9.<span><b>9</b><br/><b>Location : </b>equals<br/><b>Killed by : </b>com.googlecode.jmxtrans.model.EqualsTests.testQuery(com.googlecode.jmxtrans.model.EqualsTests)</span></span> removed call to com/googlecode/jmxtrans/model/Query::getAttr &rarr; KILLED</p> <p class='KILLED'><span class='pop'>10.<span><b>10</b><br/><b>Location : </b>equals<br/><b>Killed by : </b>com.googlecode.jmxtrans.model.EqualsTests.testQuery2(com.googlecode.jmxtrans.model.EqualsTests)</span></span> removed call to org/apache/commons/lang/builder/EqualsBuilder::append &rarr; KILLED</p> <p class='KILLED'><span class='pop'>11.<span><b>11</b><br/><b>Location : </b>equals<br/><b>Killed by : </b>com.googlecode.jmxtrans.model.EqualsTests.testQuery(com.googlecode.jmxtrans.model.EqualsTests)</span></span> removed call to com/googlecode/jmxtrans/model/Query::getResultAlias &rarr; KILLED</p> <p class='KILLED'><span class='pop'>12.<span><b>12</b><br/><b>Location : </b>equals<br/><b>Killed by : </b>com.googlecode.jmxtrans.model.EqualsTests.testQuery(com.googlecode.jmxtrans.model.EqualsTests)</span></span> removed call to com/googlecode/jmxtrans/model/Query::getResultAlias &rarr; KILLED</p> <p class='KILLED'><span class='pop'>13.<span><b>13</b><br/><b>Location : </b>equals<br/><b>Killed by : </b>com.googlecode.jmxtrans.model.EqualsTests.testQuery2(com.googlecode.jmxtrans.model.EqualsTests)</span></span> removed call to org/apache/commons/lang/builder/EqualsBuilder::append &rarr; KILLED</p> <p class='SURVIVED'><span class='pop'>14.<span><b>14</b><br/><b>Location : </b>equals<br/><b>Killed by : </b>none</span></span> removed call to com/googlecode/jmxtrans/model/Query::getOutputWriters &rarr; SURVIVED</p> <p class='SURVIVED'><span class='pop'>15.<span><b>15</b><br/><b>Location : </b>equals<br/><b>Killed by : </b>none</span></span> removed call to com/googlecode/jmxtrans/model/Query::sizeOf &rarr; SURVIVED</p> <p class='SURVIVED'><span class='pop'>16.<span><b>16</b><br/><b>Location : </b>equals<br/><b>Killed by : </b>none</span></span> removed call to com/googlecode/jmxtrans/model/Query::getOutputWriters &rarr; SURVIVED</p> <p class='SURVIVED'><span class='pop'>17.<span><b>17</b><br/><b>Location : </b>equals<br/><b>Killed by : </b>none</span></span> removed call to com/googlecode/jmxtrans/model/Query::sizeOf &rarr; SURVIVED</p> <p class='KILLED'><span class='pop'>18.<span><b>18</b><br/><b>Location : </b>equals<br/><b>Killed by : </b>com.googlecode.jmxtrans.model.EqualsTests.testQuery2(com.googlecode.jmxtrans.model.EqualsTests)</span></span> removed call to org/apache/commons/lang/builder/EqualsBuilder::append &rarr; KILLED</p> <p class='KILLED'><span class='pop'>19.<span><b>19</b><br/><b>Location : </b>equals<br/><b>Killed by : </b>com.googlecode.jmxtrans.model.EqualsTests.testQuery(com.googlecode.jmxtrans.model.EqualsTests)</span></span> removed call to org/apache/commons/lang/builder/EqualsBuilder::isEquals &rarr; KILLED</p> <p class='KILLED'><span class='pop'>20.<span><b>20</b><br/><b>Location : </b>equals<br/><b>Killed by : </b>com.googlecode.jmxtrans.model.EqualsTests.testQuery2(com.googlecode.jmxtrans.model.EqualsTests)</span></span> replaced return of integer sized value with (x == 0 ? 1 : 0) &rarr; KILLED</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@75c5354_159'>159</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_159'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>hashCode<br/><b>Killed by : </b>com.googlecode.jmxtrans.ConfigurationParserTest.sameServerWithTwoDifferentQueriesMergesQueries(com.googlecode.jmxtrans.ConfigurationParserTest)</span></span> removed call to org/apache/commons/lang/builder/HashCodeBuilder::&#60;init&#62; &rarr; KILLED</p> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>hashCode<br/><b>Killed by : </b>com.googlecode.jmxtrans.ConfigurationParserTest.sameServerWithTwoDifferentQueriesMergesQueries(com.googlecode.jmxtrans.ConfigurationParserTest)</span></span> Substituted 41 with 42 &rarr; KILLED</p> <p class='KILLED'><span class='pop'>3.<span><b>3</b><br/><b>Location : </b>hashCode<br/><b>Killed by : </b>com.googlecode.jmxtrans.ConfigurationParserTest.sameServerWithTwoDifferentQueriesMergesQueries(com.googlecode.jmxtrans.ConfigurationParserTest)</span></span> Substituted 97 with 98 &rarr; KILLED</p> <p class='SURVIVED'><span class='pop'>4.<span><b>4</b><br/><b>Location : </b>hashCode<br/><b>Killed by : </b>none</span></span> removed call to com/googlecode/jmxtrans/model/Query::getObj &rarr; SURVIVED</p> <p class='KILLED'><span class='pop'>5.<span><b>5</b><br/><b>Location : </b>hashCode<br/><b>Killed by : </b>com.googlecode.jmxtrans.ConfigurationParserTest.sameServerWithTwoDifferentQueriesMergesQueries(com.googlecode.jmxtrans.ConfigurationParserTest)</span></span> removed call to org/apache/commons/lang/builder/HashCodeBuilder::append &rarr; KILLED</p> <p class='SURVIVED'><span class='pop'>6.<span><b>6</b><br/><b>Location : </b>hashCode<br/><b>Killed by : </b>none</span></span> removed call to com/googlecode/jmxtrans/model/Query::getKeys &rarr; SURVIVED</p> <p class='KILLED'><span class='pop'>7.<span><b>7</b><br/><b>Location : </b>hashCode<br/><b>Killed by : </b>com.googlecode.jmxtrans.ConfigurationParserTest.sameServerWithTwoDifferentQueriesMergesQueries(com.googlecode.jmxtrans.ConfigurationParserTest)</span></span> removed call to org/apache/commons/lang/builder/HashCodeBuilder::append &rarr; KILLED</p> <p class='SURVIVED'><span class='pop'>8.<span><b>8</b><br/><b>Location : </b>hashCode<br/><b>Killed by : </b>none</span></span> removed call to com/googlecode/jmxtrans/model/Query::getAttr &rarr; SURVIVED</p> <p class='KILLED'><span class='pop'>9.<span><b>9</b><br/><b>Location : </b>hashCode<br/><b>Killed by : </b>com.googlecode.jmxtrans.ConfigurationParserTest.sameServerWithTwoDifferentQueriesMergesQueries(com.googlecode.jmxtrans.ConfigurationParserTest)</span></span> removed call to org/apache/commons/lang/builder/HashCodeBuilder::append &rarr; KILLED</p> <p class='SURVIVED'><span class='pop'>10.<span><b>10</b><br/><b>Location : </b>hashCode<br/><b>Killed by : </b>none</span></span> removed call to com/googlecode/jmxtrans/model/Query::getResultAlias &rarr; SURVIVED</p> <p class='KILLED'><span class='pop'>11.<span><b>11</b><br/><b>Location : </b>hashCode<br/><b>Killed by : </b>com.googlecode.jmxtrans.ConfigurationParserTest.sameServerWithTwoDifferentQueriesMergesQueries(com.googlecode.jmxtrans.ConfigurationParserTest)</span></span> removed call to org/apache/commons/lang/builder/HashCodeBuilder::append &rarr; KILLED</p> <p class='SURVIVED'><span class='pop'>12.<span><b>12</b><br/><b>Location : </b>hashCode<br/><b>Killed by : </b>none</span></span> removed call to com/googlecode/jmxtrans/model/Query::getOutputWriters &rarr; SURVIVED</p> <p class='SURVIVED'><span class='pop'>13.<span><b>13</b><br/><b>Location : </b>hashCode<br/><b>Killed by : </b>none</span></span> removed call to com/googlecode/jmxtrans/model/Query::sizeOf &rarr; SURVIVED</p> <p class='KILLED'><span class='pop'>14.<span><b>14</b><br/><b>Location : </b>hashCode<br/><b>Killed by : </b>com.googlecode.jmxtrans.ConfigurationParserTest.sameServerWithTwoDifferentQueriesMergesQueries(com.googlecode.jmxtrans.ConfigurationParserTest)</span></span> removed call to org/apache/commons/lang/builder/HashCodeBuilder::append &rarr; KILLED</p> <p class='SURVIVED'><span class='pop'>15.<span><b>15</b><br/><b>Location : </b>hashCode<br/><b>Killed by : </b>none</span></span> removed call to org/apache/commons/lang/builder/HashCodeBuilder::toHashCode &rarr; SURVIVED</p> <p class='SURVIVED'><span class='pop'>16.<span><b>16</b><br/><b>Location : </b>hashCode<br/><b>Killed by : </b>none</span></span> replaced return of integer sized value with (x == 0 ? 1 : 0) &rarr; SURVIVED</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@75c5354_169'>169</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_169'/> 
+
+<p class='SURVIVED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>sizeOf<br/><b>Killed by : </b>none</span></span> negated conditional &rarr; SURVIVED</p> <p class='SURVIVED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>sizeOf<br/><b>Killed by : </b>none</span></span> removed conditional &rarr; SURVIVED</p> <p class='SURVIVED'><span class='pop'>3.<span><b>3</b><br/><b>Location : </b>sizeOf<br/><b>Killed by : </b>none</span></span> removed conditional &rarr; SURVIVED</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@75c5354_170'>170</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_170'/> 
+
+<p class='NO_COVERAGE'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>sizeOf<br/><b>Killed by : </b>none</span></span> Substituted 0 with 1 &rarr; NO_COVERAGE</p> <p class='NO_COVERAGE'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>sizeOf<br/><b>Killed by : </b>none</span></span> replaced return of integer sized value with (x == 0 ? 1 : 0) &rarr; NO_COVERAGE</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@75c5354_172'>172</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_172'/> 
+
+<p class='SURVIVED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>sizeOf<br/><b>Killed by : </b>none</span></span> removed call to java/util/List::size &rarr; SURVIVED</p> <p class='SURVIVED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>sizeOf<br/><b>Killed by : </b>none</span></span> replaced return of integer sized value with (x == 0 ? 1 : 0) &rarr; SURVIVED</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@75c5354_176'>176</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_176'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>builder<br/><b>Killed by : </b>com.googlecode.jmxtrans.model.EqualsTests.testQuery2(com.googlecode.jmxtrans.model.EqualsTests)</span></span> removed call to com/googlecode/jmxtrans/model/Query$Builder::&#60;init&#62; &rarr; KILLED</p> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>builder<br/><b>Killed by : </b>com.googlecode.jmxtrans.model.EqualsTests.testQuery2(com.googlecode.jmxtrans.model.EqualsTests)</span></span> mutated return of Object value for com/googlecode/jmxtrans/model/Query::builder to ( if (x != null) null else throw new RuntimeException ) &rarr; KILLED</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@75c5354_183'>183</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_183'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b><init><br/><b>Killed by : </b>com.googlecode.jmxtrans.model.EqualsTests.testQuery2(com.googlecode.jmxtrans.model.EqualsTests)</span></span> removed call to com/google/common/collect/Lists::newArrayList &rarr; KILLED</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@75c5354_185'>185</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_185'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b><init><br/><b>Killed by : </b>com.googlecode.jmxtrans.model.EqualsTests.testQuery2(com.googlecode.jmxtrans.model.EqualsTests)</span></span> removed call to com/google/common/collect/Lists::newArrayList &rarr; KILLED</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@75c5354_188'>188</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_188'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b><init><br/><b>Killed by : </b>com.googlecode.jmxtrans.jmx.JmxProcessingTests.querySimpleAttribute(com.googlecode.jmxtrans.jmx.JmxProcessingTests)</span></span> removed call to com/google/common/collect/Lists::newArrayList &rarr; KILLED</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@75c5354_189'>189</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_189'/> 
+
+<p class='SURVIVED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b><init><br/><b>Killed by : </b>none</span></span> removed call to com/google/common/collect/Sets::newHashSet &rarr; SURVIVED</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@75c5354_195'>195</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_195'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>setObj<br/><b>Killed by : </b>com.googlecode.jmxtrans.model.EqualsTests.testQuery2(com.googlecode.jmxtrans.model.EqualsTests)</span></span> mutated return of Object value for com/googlecode/jmxtrans/model/Query$Builder::setObj to ( if (x != null) null else throw new RuntimeException ) &rarr; KILLED</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@75c5354_199'>199</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_199'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>addAttr<br/><b>Killed by : </b>com.googlecode.jmxtrans.model.EqualsTests.testQuery2(com.googlecode.jmxtrans.model.EqualsTests)</span></span> removed call to java/util/Arrays::asList &rarr; KILLED</p> <p class='SURVIVED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>addAttr<br/><b>Killed by : </b>none</span></span> removed call to java/util/List::addAll &rarr; SURVIVED</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@75c5354_200'>200</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_200'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>addAttr<br/><b>Killed by : </b>com.googlecode.jmxtrans.model.EqualsTests.testQuery2(com.googlecode.jmxtrans.model.EqualsTests)</span></span> mutated return of Object value for com/googlecode/jmxtrans/model/Query$Builder::addAttr to ( if (x != null) null else throw new RuntimeException ) &rarr; KILLED</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@75c5354_205'>205</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_205'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>setResultAlias<br/><b>Killed by : </b>com.googlecode.jmxtrans.model.EqualsTests.testQuery2(com.googlecode.jmxtrans.model.EqualsTests)</span></span> mutated return of Object value for com/googlecode/jmxtrans/model/Query$Builder::setResultAlias to ( if (x != null) null else throw new RuntimeException ) &rarr; KILLED</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@75c5354_210'>210</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_210'/> 
+
+<p class='NO_COVERAGE'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>setUseObjDomainAsKey<br/><b>Killed by : </b>none</span></span> mutated return of Object value for com/googlecode/jmxtrans/model/Query$Builder::setUseObjDomainAsKey to ( if (x != null) null else throw new RuntimeException ) &rarr; NO_COVERAGE</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@75c5354_214'>214</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_214'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>addKey<br/><b>Killed by : </b>com.googlecode.jmxtrans.ConfigurationParserTest.testMerge(com.googlecode.jmxtrans.ConfigurationParserTest)</span></span> Substituted 1 with 0 &rarr; KILLED</p> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>addKey<br/><b>Killed by : </b>com.googlecode.jmxtrans.ConfigurationParserTest.testMerge(com.googlecode.jmxtrans.ConfigurationParserTest)</span></span> Substituted 0 with 1 &rarr; KILLED</p> <p class='KILLED'><span class='pop'>3.<span><b>3</b><br/><b>Location : </b>addKey<br/><b>Killed by : </b>com.googlecode.jmxtrans.ConfigurationParserTest.testMerge(com.googlecode.jmxtrans.ConfigurationParserTest)</span></span> removed call to com/googlecode/jmxtrans/model/Query$Builder::addKeys &rarr; KILLED</p> <p class='KILLED'><span class='pop'>4.<span><b>4</b><br/><b>Location : </b>addKey<br/><b>Killed by : </b>com.googlecode.jmxtrans.ConfigurationParserTest.testMerge(com.googlecode.jmxtrans.ConfigurationParserTest)</span></span> mutated return of Object value for com/googlecode/jmxtrans/model/Query$Builder::addKey to ( if (x != null) null else throw new RuntimeException ) &rarr; KILLED</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@75c5354_218'>218</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_218'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>addKeys<br/><b>Killed by : </b>com.googlecode.jmxtrans.model.EqualsTests.testQuery2(com.googlecode.jmxtrans.model.EqualsTests)</span></span> removed call to java/util/Arrays::asList &rarr; KILLED</p> <p class='SURVIVED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>addKeys<br/><b>Killed by : </b>none</span></span> removed call to java/util/List::addAll &rarr; SURVIVED</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@75c5354_219'>219</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_219'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>addKeys<br/><b>Killed by : </b>com.googlecode.jmxtrans.model.EqualsTests.testQuery2(com.googlecode.jmxtrans.model.EqualsTests)</span></span> mutated return of Object value for com/googlecode/jmxtrans/model/Query$Builder::addKeys to ( if (x != null) null else throw new RuntimeException ) &rarr; KILLED</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@75c5354_224'>224</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_224'/> 
+
+<p class='NO_COVERAGE'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>setAllowDottedKeys<br/><b>Killed by : </b>none</span></span> mutated return of Object value for com/googlecode/jmxtrans/model/Query$Builder::setAllowDottedKeys to ( if (x != null) null else throw new RuntimeException ) &rarr; NO_COVERAGE</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@75c5354_228'>228</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_228'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>addOutputWriter<br/><b>Killed by : </b>com.googlecode.jmxtrans.jmx.JmxProcessingTests.querySimpleAttribute(com.googlecode.jmxtrans.jmx.JmxProcessingTests)</span></span> Substituted 1 with 0 &rarr; KILLED</p> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>addOutputWriter<br/><b>Killed by : </b>com.googlecode.jmxtrans.jmx.JmxProcessingTests.querySimpleAttribute(com.googlecode.jmxtrans.jmx.JmxProcessingTests)</span></span> Substituted 0 with 1 &rarr; KILLED</p> <p class='KILLED'><span class='pop'>3.<span><b>3</b><br/><b>Location : </b>addOutputWriter<br/><b>Killed by : </b>com.googlecode.jmxtrans.jmx.JmxProcessingTests.querySimpleAttribute(com.googlecode.jmxtrans.jmx.JmxProcessingTests)</span></span> removed call to com/googlecode/jmxtrans/model/Query$Builder::addOutputWriters &rarr; KILLED</p> <p class='KILLED'><span class='pop'>4.<span><b>4</b><br/><b>Location : </b>addOutputWriter<br/><b>Killed by : </b>com.googlecode.jmxtrans.jmx.JmxProcessingTests.querySimpleAttribute(com.googlecode.jmxtrans.jmx.JmxProcessingTests)</span></span> mutated return of Object value for com/googlecode/jmxtrans/model/Query$Builder::addOutputWriter to ( if (x != null) null else throw new RuntimeException ) &rarr; KILLED</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@75c5354_232'>232</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_232'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>addOutputWriters<br/><b>Killed by : </b>com.googlecode.jmxtrans.jmx.JmxProcessingTests.querySimpleAttribute(com.googlecode.jmxtrans.jmx.JmxProcessingTests)</span></span> removed call to java/util/Arrays::asList &rarr; KILLED</p> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>addOutputWriters<br/><b>Killed by : </b>com.googlecode.jmxtrans.jmx.JmxProcessingTests.querySimpleAttribute(com.googlecode.jmxtrans.jmx.JmxProcessingTests)</span></span> removed call to java/util/List::addAll &rarr; KILLED</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@75c5354_233'>233</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_233'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>addOutputWriters<br/><b>Killed by : </b>com.googlecode.jmxtrans.jmx.JmxProcessingTests.querySimpleAttribute(com.googlecode.jmxtrans.jmx.JmxProcessingTests)</span></span> mutated return of Object value for com/googlecode/jmxtrans/model/Query$Builder::addOutputWriters to ( if (x != null) null else throw new RuntimeException ) &rarr; KILLED</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@75c5354_237'>237</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_237'/> 
+
+<p class='NO_COVERAGE'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>setTypeNames<br/><b>Killed by : </b>none</span></span> removed call to java/util/Set::addAll &rarr; NO_COVERAGE</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@75c5354_238'>238</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_238'/> 
+
+<p class='NO_COVERAGE'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>setTypeNames<br/><b>Killed by : </b>none</span></span> mutated return of Object value for com/googlecode/jmxtrans/model/Query$Builder::setTypeNames to ( if (x != null) null else throw new RuntimeException ) &rarr; NO_COVERAGE</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@75c5354_242'>242</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@75c5354_242'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>build<br/><b>Killed by : </b>com.googlecode.jmxtrans.model.EqualsTests.testQuery2(com.googlecode.jmxtrans.model.EqualsTests)</span></span> removed call to com/googlecode/jmxtrans/model/Query::&#60;init&#62; &rarr; KILLED</p> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>build<br/><b>Killed by : </b>com.googlecode.jmxtrans.model.EqualsTests.testQuery2(com.googlecode.jmxtrans.model.EqualsTests)</span></span> mutated return of Object value for com/googlecode/jmxtrans/model/Query$Builder::build to ( if (x != null) null else throw new RuntimeException ) &rarr; KILLED</p> 
+</td>
+</tr>
+
+</table>
+
+
+<h2>Active mutators</h2>
+<ul>
+<li class='mutator'>INCREMENTS_MUTATOR</li>
+<li class='mutator'>CONDITIONALS_BOUNDARY_MUTATOR</li>
+<li class='mutator'>RETURN_VALS_MUTATOR</li>
+<li class='mutator'>VOID_METHOD_CALL_MUTATOR</li>
+<li class='mutator'>INVERT_NEGS_MUTATOR</li>
+<li class='mutator'>REMOVE_CONDITIONALS_EQUAL_IF_MUTATOR</li>
+<li class='mutator'>MATH_MUTATOR</li>
+<li class='mutator'>REMOVE_CONDITIONALS_EQUAL_ELSE_MUTATOR</li>
+<li class='mutator'>NON_VOID_METHOD_CALL_MUTATOR</li>
+<li class='mutator'>NEGATE_CONDITIONALS_MUTATOR</li>
+<li class='mutator'>INLINE_CONSTANT_MUTATOR</li>
+<li class='mutator'>CONSTRUCTOR_CALL_MUTATOR</li>
+<li class='mutator'>REMOVE_CONDITIONALS_ORDER_ELSE_MUTATOR</li>
+<li class='mutator'>REMOVE_CONDITIONALS_ORDER_IF_MUTATOR</li>
+
+</ul>
+
+<h2>Tests examined</h2>
+<ul>
+<li>com.googlecode.jmxtrans.ConfigurationParserTest.mergeAlreadyExistingServerDoesNotModifyList(com.googlecode.jmxtrans.ConfigurationParserTest) (21 ms)</li><li>com.googlecode.jmxtrans.model.EqualsTests.testQuery(com.googlecode.jmxtrans.model.EqualsTests) (3 ms)</li><li>com.googlecode.jmxtrans.model.EqualsTests.testQuery2(com.googlecode.jmxtrans.model.EqualsTests) (3 ms)</li><li>com.googlecode.jmxtrans.jmx.JmxResultProcessorTest.canReadMapData(com.googlecode.jmxtrans.jmx.JmxResultProcessorTest) (5 ms)</li><li>com.googlecode.jmxtrans.jmx.JmxResultProcessorTest.canCreateBasicResultData(com.googlecode.jmxtrans.jmx.JmxResultProcessorTest) (88 ms)</li><li>com.googlecode.jmxtrans.jmx.JmxResultProcessorTest.canReadCompositeData(com.googlecode.jmxtrans.jmx.JmxResultProcessorTest) (8 ms)</li><li>com.googlecode.jmxtrans.ConfigurationParserTest.continueParsingOnErrorIfRequested(com.googlecode.jmxtrans.ConfigurationParserTest) (1230 ms)</li><li>com.googlecode.jmxtrans.util.JsonPrinterTest.prettyJsonPrinting(com.googlecode.jmxtrans.util.JsonPrinterTest) (109 ms)</li><li>com.googlecode.jmxtrans.ConfigurationParserTest.failParsingOnErrorIfRequested(com.googlecode.jmxtrans.ConfigurationParserTest) (104 ms)</li><li>com.googlecode.jmxtrans.jmx.JmxResultProcessorTest.canReadMapDataWithNonStringKeys(com.googlecode.jmxtrans.jmx.JmxResultProcessorTest) (4 ms)</li><li>com.googlecode.jmxtrans.ConfigurationParserTest.testMerge(com.googlecode.jmxtrans.ConfigurationParserTest) (8 ms)</li><li>com.googlecode.jmxtrans.jmx.JmxResultProcessorTest.canReadSingleBooleanValue(com.googlecode.jmxtrans.jmx.JmxResultProcessorTest) (4 ms)</li><li>com.googlecode.jmxtrans.util.JsonUtilsTest.loadingFromFile(com.googlecode.jmxtrans.util.JsonUtilsTest) (80 ms)</li><li>com.googlecode.jmxtrans.jmx.JmxResultProcessorTest.canReadSingleIntegerValue(com.googlecode.jmxtrans.jmx.JmxResultProcessorTest) (5 ms)</li><li>com.googlecode.jmxtrans.ConfigurationParserTest.sameServerWithTwoDifferentQueriesMergesQueries(com.googlecode.jmxtrans.ConfigurationParserTest) (5 ms)</li><li>com.googlecode.jmxtrans.jmx.JmxProcessingTests.querySimpleAttribute(com.googlecode.jmxtrans.jmx.JmxProcessingTests) (485 ms)</li><li>com.googlecode.jmxtrans.util.JsonPrinterTest.standardJsonPrinting(com.googlecode.jmxtrans.util.JsonPrinterTest) (59 ms)</li><li>com.googlecode.jmxtrans.jmx.JmxResultProcessorTest.canReadTabularData(com.googlecode.jmxtrans.jmx.JmxResultProcessorTest) (24 ms)</li>
+</ul>
+
+<br/>
+
+Report generated by <a href='http://pitest.org'>PIT</a> 1.1.4
+
+</body>
+</html>

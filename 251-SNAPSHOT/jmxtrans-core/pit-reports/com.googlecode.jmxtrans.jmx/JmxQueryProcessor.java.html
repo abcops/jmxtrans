@@ -1,0 +1,1475 @@
+<html>
+<head>
+<style type='text/css'>
+html, body, div, span, p, blockquote, pre {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-weight: inherit;
+	font-style: inherit;
+	font-size: 100%;
+	font-family: inherit;
+	vertical-align: baseline;
+}
+
+body{
+	line-height: 1;
+	color: black;
+	background: white;
+	margin-left: 20px;
+}
+
+.src { 
+border: 1px solid #dddddd;
+padding-top: 10px;
+padding-right: 5px;
+padding-left: 5px;
+}
+
+
+.covered {background-color: #ddffdd}
+.uncovered {background-color: #ffdddd}
+.killed {background-color: #aaffaa}
+.survived {background-color: #ffaaaa}
+.uncertain {background-color: #dde7ef}
+.run_error {background-color: #dde7ef}
+.na {background-color: #eeeeee}
+.timed_out {background-color: #dde7ef}
+.non_viable {background-color: #aaffaa}
+.memory_error {background-color: #dde7ef}
+.not_started {background-color: #dde7ef; color : red}
+.no_coverage {background-color: #ffaaaa}
+
+
+.pop {outline:none; }
+.pop strong {line-height:30px;}
+.pop {text-decoration:none;}
+.pop span { z-index:10;display:none; padding:14px 20px; margin-top:-30px; margin-left:28px; width:800px; line-height:16px; word-wrap:break-word; }
+.pop:hover span{ display:inline; position:absolute; color:#111; border:1px solid #DCA; background:#fffAF0;}
+
+.pop span { border-radius:4px; -moz-border-radius: 4px; -webkit-border-radius: 4px; -moz-box-shadow: 5px 5px 8px #CCC; -webkit-box-shadow: 5px 5px 8px #CCC; box-shadow: 5px 5px 8px #CCC; }
+</style>
+
+</head>
+<body>
+
+
+<h1>JmxQueryProcessor.java</h1>
+
+<table class="src">
+
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@61403e3_1'/>
+1
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@61403e3_1'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''>package com.googlecode.jmxtrans.jmx;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@61403e3_2'/>
+2
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@61403e3_2'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@61403e3_3'/>
+3
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@61403e3_3'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''>import com.google.common.collect.ImmutableList;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@61403e3_4'/>
+4
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@61403e3_4'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''>import com.googlecode.jmxtrans.model.OutputWriter;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@61403e3_5'/>
+5
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@61403e3_5'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''>import com.googlecode.jmxtrans.model.Query;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@61403e3_6'/>
+6
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@61403e3_6'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''>import com.googlecode.jmxtrans.model.Result;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@61403e3_7'/>
+7
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@61403e3_7'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''>import com.googlecode.jmxtrans.model.Server;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@61403e3_8'/>
+8
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@61403e3_8'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''>import org.slf4j.Logger;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@61403e3_9'/>
+9
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@61403e3_9'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''>import org.slf4j.LoggerFactory;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@61403e3_10'/>
+10
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@61403e3_10'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@61403e3_11'/>
+11
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@61403e3_11'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''>import javax.management.AttributeList;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@61403e3_12'/>
+12
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@61403e3_12'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''>import javax.management.InstanceNotFoundException;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@61403e3_13'/>
+13
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@61403e3_13'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''>import javax.management.IntrospectionException;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@61403e3_14'/>
+14
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@61403e3_14'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''>import javax.management.MBeanAttributeInfo;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@61403e3_15'/>
+15
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@61403e3_15'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''>import javax.management.MBeanInfo;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@61403e3_16'/>
+16
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@61403e3_16'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''>import javax.management.MBeanServerConnection;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@61403e3_17'/>
+17
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@61403e3_17'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''>import javax.management.ObjectInstance;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@61403e3_18'/>
+18
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@61403e3_18'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''>import javax.management.ObjectName;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@61403e3_19'/>
+19
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@61403e3_19'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''>import javax.management.ReflectionException;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@61403e3_20'/>
+20
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@61403e3_20'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''>import java.io.IOException;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@61403e3_21'/>
+21
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@61403e3_21'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''>import java.rmi.UnmarshalException;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@61403e3_22'/>
+22
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@61403e3_22'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''>import java.util.ArrayList;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@61403e3_23'/>
+23
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@61403e3_23'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''>import java.util.List;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@61403e3_24'/>
+24
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@61403e3_24'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@61403e3_25'/>
+25
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@61403e3_25'></a>
+<span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>public class JmxQueryProcessor {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@61403e3_26'/>
+26
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@61403e3_26'></a>
+<span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>&#9;private final Logger log = LoggerFactory.getLogger(getClass());</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@61403e3_27'/>
+27
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@61403e3_27'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@61403e3_28'/>
+28
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@61403e3_28'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''>&#9;/**</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@61403e3_29'/>
+29
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@61403e3_29'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''>&#9; * Responsible for processing individual Queries.</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@61403e3_30'/>
+30
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@61403e3_30'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''>&#9; */</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@61403e3_31'/>
+31
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@61403e3_31'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''>&#9;public void processQuery(MBeanServerConnection mbeanServer, Server server, Query query) throws Exception {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@61403e3_32'/>
+32
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@61403e3_32'>2</a>
+<span>
+1. processQuery : removed call to javax/management/ObjectName::&#60;init&#62; &rarr; KILLED<br/>
+2. processQuery : removed call to com/googlecode/jmxtrans/model/Query::getObj &rarr; KILLED<br/>
+
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>&#9;&#9;ObjectName oName = new ObjectName(query.getObj());</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@61403e3_33'/>
+33
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@61403e3_33'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''>&#9;&#9;</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@61403e3_34'/>
+34
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@61403e3_34'>7</a>
+<span>
+1. processQuery : negated conditional &rarr; KILLED<br/>
+2. processQuery : removed call to javax/management/MBeanServerConnection::queryNames &rarr; KILLED<br/>
+3. processQuery : removed call to java/util/Set::iterator &rarr; KILLED<br/>
+4. processQuery : removed call to java/util/Iterator::hasNext &rarr; KILLED<br/>
+5. processQuery : removed call to java/util/Iterator::next &rarr; KILLED<br/>
+6. processQuery : removed conditional &rarr; KILLED<br/>
+7. processQuery : removed conditional &rarr; KILLED<br/>
+
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>&#9;&#9;for (ObjectName queryName : mbeanServer.queryNames(oName, null)) {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@61403e3_35'/>
+35
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@61403e3_35'>1</a>
+<span>
+1. processQuery : removed call to com/googlecode/jmxtrans/jmx/JmxQueryProcessor::fetchResults &rarr; KILLED<br/>
+
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>&#9;&#9;&#9;ImmutableList&#60;Result&#62; results = fetchResults(mbeanServer, query, queryName);</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@61403e3_36'/>
+36
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@61403e3_36'>1</a>
+<span>
+1. processQuery : removed call to com/googlecode/jmxtrans/jmx/JmxQueryProcessor::runOutputWritersForQuery &rarr; KILLED<br/>
+
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>&#9;&#9;&#9;runOutputWritersForQuery(server, query, results);</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@61403e3_37'/>
+37
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@61403e3_37'></a>
+<span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>&#9;&#9;}</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@61403e3_38'/>
+38
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@61403e3_38'></a>
+<span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>&#9;}</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@61403e3_39'/>
+39
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@61403e3_39'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@61403e3_40'/>
+40
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@61403e3_40'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''>&#9;private ImmutableList&#60;Result&#62; fetchResults(MBeanServerConnection mbeanServer, Query query, ObjectName queryName) throws InstanceNotFoundException, IntrospectionException, ReflectionException, IOException {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@61403e3_41'/>
+41
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@61403e3_41'>1</a>
+<span>
+1. fetchResults : removed call to javax/management/MBeanServerConnection::getMBeanInfo &rarr; KILLED<br/>
+
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>&#9;&#9;MBeanInfo info = mbeanServer.getMBeanInfo(queryName);</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@61403e3_42'/>
+42
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@61403e3_42'>1</a>
+<span>
+1. fetchResults : removed call to javax/management/MBeanServerConnection::getObjectInstance &rarr; KILLED<br/>
+
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>&#9;&#9;ObjectInstance oi = mbeanServer.getObjectInstance(queryName);</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@61403e3_43'/>
+43
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@61403e3_43'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@61403e3_44'/>
+44
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@61403e3_44'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''>&#9;&#9;List&#60;String&#62; attributes;</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@61403e3_45'/>
+45
+</td>
+<td class='survived'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@61403e3_45'>5</a>
+<span>
+1. fetchResults : negated conditional &rarr; SURVIVED<br/>
+2. fetchResults : removed call to com/google/common/collect/ImmutableList::isEmpty &rarr; SURVIVED<br/>
+3. fetchResults : removed conditional &rarr; SURVIVED<br/>
+4. fetchResults : removed conditional &rarr; SURVIVED<br/>
+5. fetchResults : removed call to com/googlecode/jmxtrans/model/Query::getAttr &rarr; KILLED<br/>
+
+</span>
+</td>
+<td class='covered'><pre><span  class='survived'>&#9;&#9;if (query.getAttr().isEmpty()) {</span></pre></td></tr>
+
+
+<tr>
+<td class='uncovered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@61403e3_46'/>
+46
+</td>
+<td class='survived'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@61403e3_46'>1</a>
+<span>
+1. fetchResults : removed call to java/util/ArrayList::&#60;init&#62; &rarr; NO_COVERAGE<br/>
+
+</span>
+</td>
+<td class='uncovered'><pre><span  class='survived'>&#9;&#9;&#9;attributes = new ArrayList&#60;String&#62;();</span></pre></td></tr>
+
+
+<tr>
+<td class='uncovered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@61403e3_47'/>
+47
+</td>
+<td class='survived'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@61403e3_47'>7</a>
+<span>
+1. fetchResults : changed conditional boundary &rarr; NO_COVERAGE<br/>
+2. fetchResults : Changed increment from 1 to -1 &rarr; NO_COVERAGE<br/>
+3. fetchResults : Substituted 0 with 1 &rarr; NO_COVERAGE<br/>
+4. fetchResults : negated conditional &rarr; NO_COVERAGE<br/>
+5. fetchResults : removed call to javax/management/MBeanInfo::getAttributes &rarr; NO_COVERAGE<br/>
+6. fetchResults : removed conditional &rarr; NO_COVERAGE<br/>
+7. fetchResults : removed conditional &rarr; NO_COVERAGE<br/>
+
+</span>
+</td>
+<td class='uncovered'><pre><span  class='survived'>&#9;&#9;&#9;for (MBeanAttributeInfo attrInfo : info.getAttributes()) {</span></pre></td></tr>
+
+
+<tr>
+<td class='uncovered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@61403e3_48'/>
+48
+</td>
+<td class='survived'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@61403e3_48'>2</a>
+<span>
+1. fetchResults : removed call to javax/management/MBeanAttributeInfo::getName &rarr; NO_COVERAGE<br/>
+2. fetchResults : removed call to java/util/List::add &rarr; NO_COVERAGE<br/>
+
+</span>
+</td>
+<td class='uncovered'><pre><span  class='survived'>&#9;&#9;&#9;&#9;attributes.add(attrInfo.getName());</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@61403e3_49'/>
+49
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@61403e3_49'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''>&#9;&#9;&#9;}</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@61403e3_50'/>
+50
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@61403e3_50'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''>&#9;&#9;} else {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@61403e3_51'/>
+51
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@61403e3_51'>1</a>
+<span>
+1. fetchResults : removed call to com/googlecode/jmxtrans/model/Query::getAttr &rarr; KILLED<br/>
+
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>&#9;&#9;&#9;attributes = query.getAttr();</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@61403e3_52'/>
+52
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@61403e3_52'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''>&#9;&#9;}</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@61403e3_53'/>
+53
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@61403e3_53'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@61403e3_54'/>
+54
+</td>
+<td class='survived'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@61403e3_54'>1</a>
+<span>
+1. fetchResults : removed call to com/google/common/collect/ImmutableList::of &rarr; SURVIVED<br/>
+
+</span>
+</td>
+<td class='covered'><pre><span  class='survived'>&#9;&#9;ImmutableList&#60;Result&#62; results = ImmutableList.of();</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@61403e3_55'/>
+55
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@61403e3_55'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''>&#9;&#9;try {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@61403e3_56'/>
+56
+</td>
+<td class='survived'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@61403e3_56'>5</a>
+<span>
+1. fetchResults : changed conditional boundary &rarr; SURVIVED<br/>
+2. fetchResults : removed conditional &rarr; SURVIVED<br/>
+3. fetchResults : negated conditional &rarr; KILLED<br/>
+4. fetchResults : removed call to java/util/List::size &rarr; KILLED<br/>
+5. fetchResults : removed conditional &rarr; KILLED<br/>
+
+</span>
+</td>
+<td class='covered'><pre><span  class='survived'>&#9;&#9;&#9;if (attributes.size() &#62; 0) {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@61403e3_57'/>
+57
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@61403e3_57'></a>
+<span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>&#9;&#9;&#9;&#9;log.debug(&#34;Executing queryName [{}] from query [{}]&#34;, queryName.getCanonicalName(), query);</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@61403e3_58'/>
+58
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@61403e3_58'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@61403e3_59'/>
+59
+</td>
+<td class='survived'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@61403e3_59'>3</a>
+<span>
+1. fetchResults : removed call to java/util/List::size &rarr; SURVIVED<br/>
+2. fetchResults : removed call to java/util/List::toArray &rarr; KILLED<br/>
+3. fetchResults : removed call to javax/management/MBeanServerConnection::getAttributes &rarr; KILLED<br/>
+
+</span>
+</td>
+<td class='covered'><pre><span  class='survived'>&#9;&#9;&#9;&#9;AttributeList al = mbeanServer.getAttributes(queryName, attributes.toArray(new String[attributes.size()]));</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@61403e3_60'/>
+60
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@61403e3_60'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@61403e3_61'/>
+61
+</td>
+<td class='survived'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@61403e3_61'>5</a>
+<span>
+1. fetchResults : removed call to javax/management/MBeanInfo::getClassName &rarr; SURVIVED<br/>
+2. fetchResults : removed call to javax/management/ObjectName::getDomain &rarr; SURVIVED<br/>
+3. fetchResults : removed call to com/googlecode/jmxtrans/jmx/JmxResultProcessor::&#60;init&#62; &rarr; KILLED<br/>
+4. fetchResults : removed call to javax/management/AttributeList::asList &rarr; KILLED<br/>
+5. fetchResults : removed call to com/googlecode/jmxtrans/jmx/JmxResultProcessor::getResults &rarr; KILLED<br/>
+
+</span>
+</td>
+<td class='covered'><pre><span  class='survived'>&#9;&#9;&#9;&#9;results = new JmxResultProcessor(query, oi, al.asList(), info.getClassName(), queryName.getDomain()).getResults();</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@61403e3_62'/>
+62
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@61403e3_62'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''>&#9;&#9;&#9;}</span></pre></td></tr>
+
+
+<tr>
+<td class='uncovered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@61403e3_63'/>
+63
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@61403e3_63'></a>
+<span>
+</span>
+</td>
+<td class='uncovered'><pre><span  class=''>&#9;&#9;} catch (UnmarshalException ue) {</span></pre></td></tr>
+
+
+<tr>
+<td class='uncovered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@61403e3_64'/>
+64
+</td>
+<td class='survived'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@61403e3_64'>8</a>
+<span>
+1. fetchResults : negated conditional &rarr; NO_COVERAGE<br/>
+2. fetchResults : negated conditional &rarr; NO_COVERAGE<br/>
+3. fetchResults : removed call to java/rmi/UnmarshalException::getCause &rarr; NO_COVERAGE<br/>
+4. fetchResults : removed call to java/rmi/UnmarshalException::getCause &rarr; NO_COVERAGE<br/>
+5. fetchResults : removed conditional &rarr; NO_COVERAGE<br/>
+6. fetchResults : removed conditional &rarr; NO_COVERAGE<br/>
+7. fetchResults : removed conditional &rarr; NO_COVERAGE<br/>
+8. fetchResults : removed conditional &rarr; NO_COVERAGE<br/>
+
+</span>
+</td>
+<td class='uncovered'><pre><span  class='survived'>&#9;&#9;&#9;if ((ue.getCause() != null) &#38;&#38; (ue.getCause() instanceof ClassNotFoundException)) {</span></pre></td></tr>
+
+
+<tr>
+<td class='uncovered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@61403e3_65'/>
+65
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@61403e3_65'></a>
+<span>
+</span>
+</td>
+<td class='uncovered'><pre><span  class=''>&#9;&#9;&#9;&#9;log.debug(&#34;Bad unmarshall, continuing. This is probably ok and due to something like this: &#34;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@61403e3_66'/>
+66
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@61403e3_66'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''>&#9;&#9;&#9;&#9;&#9;&#9;+ &#34;http://ehcache.org/xref/net/sf/ehcache/distribution/RMICacheManagerPeerListener.html#52&#34;, ue.getMessage());</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@61403e3_67'/>
+67
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@61403e3_67'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''>&#9;&#9;&#9;}</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@61403e3_68'/>
+68
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@61403e3_68'></a>
+<span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>&#9;&#9;}</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@61403e3_69'/>
+69
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@61403e3_69'>1</a>
+<span>
+1. fetchResults : mutated return of Object value for com/googlecode/jmxtrans/jmx/JmxQueryProcessor::fetchResults to ( if (x != null) null else throw new RuntimeException ) &rarr; KILLED<br/>
+
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>&#9;&#9;return results;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@61403e3_70'/>
+70
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@61403e3_70'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''>&#9;}</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@61403e3_71'/>
+71
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@61403e3_71'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@61403e3_72'/>
+72
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@61403e3_72'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''>&#9;private void runOutputWritersForQuery(Server server, Query query, ImmutableList&#60;Result&#62; results) throws Exception {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@61403e3_73'/>
+73
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@61403e3_73'>7</a>
+<span>
+1. runOutputWritersForQuery : negated conditional &rarr; KILLED<br/>
+2. runOutputWritersForQuery : removed call to com/googlecode/jmxtrans/model/Query::getOutputWriters &rarr; KILLED<br/>
+3. runOutputWritersForQuery : removed call to com/google/common/collect/ImmutableList::iterator &rarr; KILLED<br/>
+4. runOutputWritersForQuery : removed call to java/util/Iterator::hasNext &rarr; KILLED<br/>
+5. runOutputWritersForQuery : removed call to java/util/Iterator::next &rarr; KILLED<br/>
+6. runOutputWritersForQuery : removed conditional &rarr; KILLED<br/>
+7. runOutputWritersForQuery : removed conditional &rarr; KILLED<br/>
+
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>&#9;&#9;for (OutputWriter writer : query.getOutputWriters()) {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@61403e3_74'/>
+74
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@61403e3_74'>1</a>
+<span>
+1. runOutputWritersForQuery : removed call to com/googlecode/jmxtrans/model/OutputWriter::doWrite &rarr; KILLED<br/>
+
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>&#9;&#9;&#9;writer.doWrite(server, query, results);</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@61403e3_75'/>
+75
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@61403e3_75'></a>
+<span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>&#9;&#9;}</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@61403e3_76'/>
+76
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@61403e3_76'></a>
+<span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>&#9;&#9;log.debug(&#34;Finished running outputWriters for query: {}&#34;, query);</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@61403e3_77'/>
+77
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@61403e3_77'></a>
+<span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>&#9;}</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@61403e3_78'/>
+78
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@61403e3_78'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@61403e3_79'/>
+79
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@61403e3_79'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''>}</span></pre></td></tr>
+
+
+
+<tr><td></td><td></td><td><h2>Mutations</h2></td></tr>
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@61403e3_32'>32</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@61403e3_32'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>processQuery<br/><b>Killed by : </b>com.googlecode.jmxtrans.jmx.JmxProcessingTests.querySimpleAttribute(com.googlecode.jmxtrans.jmx.JmxProcessingTests)</span></span> removed call to javax/management/ObjectName::&#60;init&#62; &rarr; KILLED</p> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>processQuery<br/><b>Killed by : </b>com.googlecode.jmxtrans.jmx.JmxProcessingTests.querySimpleAttribute(com.googlecode.jmxtrans.jmx.JmxProcessingTests)</span></span> removed call to com/googlecode/jmxtrans/model/Query::getObj &rarr; KILLED</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@61403e3_34'>34</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@61403e3_34'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>processQuery<br/><b>Killed by : </b>com.googlecode.jmxtrans.jmx.JmxProcessingTests.querySimpleAttribute(com.googlecode.jmxtrans.jmx.JmxProcessingTests)</span></span> negated conditional &rarr; KILLED</p> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>processQuery<br/><b>Killed by : </b>com.googlecode.jmxtrans.jmx.JmxProcessingTests.querySimpleAttribute(com.googlecode.jmxtrans.jmx.JmxProcessingTests)</span></span> removed call to javax/management/MBeanServerConnection::queryNames &rarr; KILLED</p> <p class='KILLED'><span class='pop'>3.<span><b>3</b><br/><b>Location : </b>processQuery<br/><b>Killed by : </b>com.googlecode.jmxtrans.jmx.JmxProcessingTests.querySimpleAttribute(com.googlecode.jmxtrans.jmx.JmxProcessingTests)</span></span> removed call to java/util/Set::iterator &rarr; KILLED</p> <p class='KILLED'><span class='pop'>4.<span><b>4</b><br/><b>Location : </b>processQuery<br/><b>Killed by : </b>com.googlecode.jmxtrans.jmx.JmxProcessingTests.querySimpleAttribute(com.googlecode.jmxtrans.jmx.JmxProcessingTests)</span></span> removed call to java/util/Iterator::hasNext &rarr; KILLED</p> <p class='KILLED'><span class='pop'>5.<span><b>5</b><br/><b>Location : </b>processQuery<br/><b>Killed by : </b>com.googlecode.jmxtrans.jmx.JmxProcessingTests.querySimpleAttribute(com.googlecode.jmxtrans.jmx.JmxProcessingTests)</span></span> removed call to java/util/Iterator::next &rarr; KILLED</p> <p class='KILLED'><span class='pop'>6.<span><b>6</b><br/><b>Location : </b>processQuery<br/><b>Killed by : </b>com.googlecode.jmxtrans.jmx.JmxProcessingTests.querySimpleAttribute(com.googlecode.jmxtrans.jmx.JmxProcessingTests)</span></span> removed conditional &rarr; KILLED</p> <p class='KILLED'><span class='pop'>7.<span><b>7</b><br/><b>Location : </b>processQuery<br/><b>Killed by : </b>com.googlecode.jmxtrans.jmx.JmxProcessingTests.querySimpleAttribute(com.googlecode.jmxtrans.jmx.JmxProcessingTests)</span></span> removed conditional &rarr; KILLED</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@61403e3_35'>35</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@61403e3_35'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>processQuery<br/><b>Killed by : </b>com.googlecode.jmxtrans.jmx.JmxProcessingTests.querySimpleAttribute(com.googlecode.jmxtrans.jmx.JmxProcessingTests)</span></span> removed call to com/googlecode/jmxtrans/jmx/JmxQueryProcessor::fetchResults &rarr; KILLED</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@61403e3_36'>36</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@61403e3_36'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>processQuery<br/><b>Killed by : </b>com.googlecode.jmxtrans.jmx.JmxProcessingTests.querySimpleAttribute(com.googlecode.jmxtrans.jmx.JmxProcessingTests)</span></span> removed call to com/googlecode/jmxtrans/jmx/JmxQueryProcessor::runOutputWritersForQuery &rarr; KILLED</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@61403e3_41'>41</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@61403e3_41'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>fetchResults<br/><b>Killed by : </b>com.googlecode.jmxtrans.jmx.JmxProcessingTests.querySimpleAttribute(com.googlecode.jmxtrans.jmx.JmxProcessingTests)</span></span> removed call to javax/management/MBeanServerConnection::getMBeanInfo &rarr; KILLED</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@61403e3_42'>42</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@61403e3_42'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>fetchResults<br/><b>Killed by : </b>com.googlecode.jmxtrans.jmx.JmxProcessingTests.querySimpleAttribute(com.googlecode.jmxtrans.jmx.JmxProcessingTests)</span></span> removed call to javax/management/MBeanServerConnection::getObjectInstance &rarr; KILLED</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@61403e3_45'>45</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@61403e3_45'/> 
+
+<p class='SURVIVED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>fetchResults<br/><b>Killed by : </b>none</span></span> negated conditional &rarr; SURVIVED</p> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>fetchResults<br/><b>Killed by : </b>com.googlecode.jmxtrans.jmx.JmxProcessingTests.querySimpleAttribute(com.googlecode.jmxtrans.jmx.JmxProcessingTests)</span></span> removed call to com/googlecode/jmxtrans/model/Query::getAttr &rarr; KILLED</p> <p class='SURVIVED'><span class='pop'>3.<span><b>3</b><br/><b>Location : </b>fetchResults<br/><b>Killed by : </b>none</span></span> removed call to com/google/common/collect/ImmutableList::isEmpty &rarr; SURVIVED</p> <p class='SURVIVED'><span class='pop'>4.<span><b>4</b><br/><b>Location : </b>fetchResults<br/><b>Killed by : </b>none</span></span> removed conditional &rarr; SURVIVED</p> <p class='SURVIVED'><span class='pop'>5.<span><b>5</b><br/><b>Location : </b>fetchResults<br/><b>Killed by : </b>none</span></span> removed conditional &rarr; SURVIVED</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@61403e3_46'>46</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@61403e3_46'/> 
+
+<p class='NO_COVERAGE'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>fetchResults<br/><b>Killed by : </b>none</span></span> removed call to java/util/ArrayList::&#60;init&#62; &rarr; NO_COVERAGE</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@61403e3_47'>47</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@61403e3_47'/> 
+
+<p class='NO_COVERAGE'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>fetchResults<br/><b>Killed by : </b>none</span></span> changed conditional boundary &rarr; NO_COVERAGE</p> <p class='NO_COVERAGE'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>fetchResults<br/><b>Killed by : </b>none</span></span> Changed increment from 1 to -1 &rarr; NO_COVERAGE</p> <p class='NO_COVERAGE'><span class='pop'>3.<span><b>3</b><br/><b>Location : </b>fetchResults<br/><b>Killed by : </b>none</span></span> Substituted 0 with 1 &rarr; NO_COVERAGE</p> <p class='NO_COVERAGE'><span class='pop'>4.<span><b>4</b><br/><b>Location : </b>fetchResults<br/><b>Killed by : </b>none</span></span> negated conditional &rarr; NO_COVERAGE</p> <p class='NO_COVERAGE'><span class='pop'>5.<span><b>5</b><br/><b>Location : </b>fetchResults<br/><b>Killed by : </b>none</span></span> removed call to javax/management/MBeanInfo::getAttributes &rarr; NO_COVERAGE</p> <p class='NO_COVERAGE'><span class='pop'>6.<span><b>6</b><br/><b>Location : </b>fetchResults<br/><b>Killed by : </b>none</span></span> removed conditional &rarr; NO_COVERAGE</p> <p class='NO_COVERAGE'><span class='pop'>7.<span><b>7</b><br/><b>Location : </b>fetchResults<br/><b>Killed by : </b>none</span></span> removed conditional &rarr; NO_COVERAGE</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@61403e3_48'>48</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@61403e3_48'/> 
+
+<p class='NO_COVERAGE'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>fetchResults<br/><b>Killed by : </b>none</span></span> removed call to javax/management/MBeanAttributeInfo::getName &rarr; NO_COVERAGE</p> <p class='NO_COVERAGE'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>fetchResults<br/><b>Killed by : </b>none</span></span> removed call to java/util/List::add &rarr; NO_COVERAGE</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@61403e3_51'>51</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@61403e3_51'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>fetchResults<br/><b>Killed by : </b>com.googlecode.jmxtrans.jmx.JmxProcessingTests.querySimpleAttribute(com.googlecode.jmxtrans.jmx.JmxProcessingTests)</span></span> removed call to com/googlecode/jmxtrans/model/Query::getAttr &rarr; KILLED</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@61403e3_54'>54</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@61403e3_54'/> 
+
+<p class='SURVIVED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>fetchResults<br/><b>Killed by : </b>none</span></span> removed call to com/google/common/collect/ImmutableList::of &rarr; SURVIVED</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@61403e3_56'>56</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@61403e3_56'/> 
+
+<p class='SURVIVED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>fetchResults<br/><b>Killed by : </b>none</span></span> changed conditional boundary &rarr; SURVIVED</p> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>fetchResults<br/><b>Killed by : </b>com.googlecode.jmxtrans.jmx.JmxProcessingTests.querySimpleAttribute(com.googlecode.jmxtrans.jmx.JmxProcessingTests)</span></span> negated conditional &rarr; KILLED</p> <p class='KILLED'><span class='pop'>3.<span><b>3</b><br/><b>Location : </b>fetchResults<br/><b>Killed by : </b>com.googlecode.jmxtrans.jmx.JmxProcessingTests.querySimpleAttribute(com.googlecode.jmxtrans.jmx.JmxProcessingTests)</span></span> removed call to java/util/List::size &rarr; KILLED</p> <p class='KILLED'><span class='pop'>4.<span><b>4</b><br/><b>Location : </b>fetchResults<br/><b>Killed by : </b>com.googlecode.jmxtrans.jmx.JmxProcessingTests.querySimpleAttribute(com.googlecode.jmxtrans.jmx.JmxProcessingTests)</span></span> removed conditional &rarr; KILLED</p> <p class='SURVIVED'><span class='pop'>5.<span><b>5</b><br/><b>Location : </b>fetchResults<br/><b>Killed by : </b>none</span></span> removed conditional &rarr; SURVIVED</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@61403e3_59'>59</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@61403e3_59'/> 
+
+<p class='SURVIVED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>fetchResults<br/><b>Killed by : </b>none</span></span> removed call to java/util/List::size &rarr; SURVIVED</p> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>fetchResults<br/><b>Killed by : </b>com.googlecode.jmxtrans.jmx.JmxProcessingTests.querySimpleAttribute(com.googlecode.jmxtrans.jmx.JmxProcessingTests)</span></span> removed call to java/util/List::toArray &rarr; KILLED</p> <p class='KILLED'><span class='pop'>3.<span><b>3</b><br/><b>Location : </b>fetchResults<br/><b>Killed by : </b>com.googlecode.jmxtrans.jmx.JmxProcessingTests.querySimpleAttribute(com.googlecode.jmxtrans.jmx.JmxProcessingTests)</span></span> removed call to javax/management/MBeanServerConnection::getAttributes &rarr; KILLED</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@61403e3_61'>61</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@61403e3_61'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>fetchResults<br/><b>Killed by : </b>com.googlecode.jmxtrans.jmx.JmxProcessingTests.querySimpleAttribute(com.googlecode.jmxtrans.jmx.JmxProcessingTests)</span></span> removed call to com/googlecode/jmxtrans/jmx/JmxResultProcessor::&#60;init&#62; &rarr; KILLED</p> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>fetchResults<br/><b>Killed by : </b>com.googlecode.jmxtrans.jmx.JmxProcessingTests.querySimpleAttribute(com.googlecode.jmxtrans.jmx.JmxProcessingTests)</span></span> removed call to javax/management/AttributeList::asList &rarr; KILLED</p> <p class='SURVIVED'><span class='pop'>3.<span><b>3</b><br/><b>Location : </b>fetchResults<br/><b>Killed by : </b>none</span></span> removed call to javax/management/MBeanInfo::getClassName &rarr; SURVIVED</p> <p class='SURVIVED'><span class='pop'>4.<span><b>4</b><br/><b>Location : </b>fetchResults<br/><b>Killed by : </b>none</span></span> removed call to javax/management/ObjectName::getDomain &rarr; SURVIVED</p> <p class='KILLED'><span class='pop'>5.<span><b>5</b><br/><b>Location : </b>fetchResults<br/><b>Killed by : </b>com.googlecode.jmxtrans.jmx.JmxProcessingTests.querySimpleAttribute(com.googlecode.jmxtrans.jmx.JmxProcessingTests)</span></span> removed call to com/googlecode/jmxtrans/jmx/JmxResultProcessor::getResults &rarr; KILLED</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@61403e3_64'>64</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@61403e3_64'/> 
+
+<p class='NO_COVERAGE'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>fetchResults<br/><b>Killed by : </b>none</span></span> negated conditional &rarr; NO_COVERAGE</p> <p class='NO_COVERAGE'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>fetchResults<br/><b>Killed by : </b>none</span></span> negated conditional &rarr; NO_COVERAGE</p> <p class='NO_COVERAGE'><span class='pop'>3.<span><b>3</b><br/><b>Location : </b>fetchResults<br/><b>Killed by : </b>none</span></span> removed call to java/rmi/UnmarshalException::getCause &rarr; NO_COVERAGE</p> <p class='NO_COVERAGE'><span class='pop'>4.<span><b>4</b><br/><b>Location : </b>fetchResults<br/><b>Killed by : </b>none</span></span> removed call to java/rmi/UnmarshalException::getCause &rarr; NO_COVERAGE</p> <p class='NO_COVERAGE'><span class='pop'>5.<span><b>5</b><br/><b>Location : </b>fetchResults<br/><b>Killed by : </b>none</span></span> removed conditional &rarr; NO_COVERAGE</p> <p class='NO_COVERAGE'><span class='pop'>6.<span><b>6</b><br/><b>Location : </b>fetchResults<br/><b>Killed by : </b>none</span></span> removed conditional &rarr; NO_COVERAGE</p> <p class='NO_COVERAGE'><span class='pop'>7.<span><b>7</b><br/><b>Location : </b>fetchResults<br/><b>Killed by : </b>none</span></span> removed conditional &rarr; NO_COVERAGE</p> <p class='NO_COVERAGE'><span class='pop'>8.<span><b>8</b><br/><b>Location : </b>fetchResults<br/><b>Killed by : </b>none</span></span> removed conditional &rarr; NO_COVERAGE</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@61403e3_69'>69</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@61403e3_69'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>fetchResults<br/><b>Killed by : </b>com.googlecode.jmxtrans.jmx.JmxProcessingTests.querySimpleAttribute(com.googlecode.jmxtrans.jmx.JmxProcessingTests)</span></span> mutated return of Object value for com/googlecode/jmxtrans/jmx/JmxQueryProcessor::fetchResults to ( if (x != null) null else throw new RuntimeException ) &rarr; KILLED</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@61403e3_73'>73</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@61403e3_73'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>runOutputWritersForQuery<br/><b>Killed by : </b>com.googlecode.jmxtrans.jmx.JmxProcessingTests.querySimpleAttribute(com.googlecode.jmxtrans.jmx.JmxProcessingTests)</span></span> negated conditional &rarr; KILLED</p> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>runOutputWritersForQuery<br/><b>Killed by : </b>com.googlecode.jmxtrans.jmx.JmxProcessingTests.querySimpleAttribute(com.googlecode.jmxtrans.jmx.JmxProcessingTests)</span></span> removed call to com/googlecode/jmxtrans/model/Query::getOutputWriters &rarr; KILLED</p> <p class='KILLED'><span class='pop'>3.<span><b>3</b><br/><b>Location : </b>runOutputWritersForQuery<br/><b>Killed by : </b>com.googlecode.jmxtrans.jmx.JmxProcessingTests.querySimpleAttribute(com.googlecode.jmxtrans.jmx.JmxProcessingTests)</span></span> removed call to com/google/common/collect/ImmutableList::iterator &rarr; KILLED</p> <p class='KILLED'><span class='pop'>4.<span><b>4</b><br/><b>Location : </b>runOutputWritersForQuery<br/><b>Killed by : </b>com.googlecode.jmxtrans.jmx.JmxProcessingTests.querySimpleAttribute(com.googlecode.jmxtrans.jmx.JmxProcessingTests)</span></span> removed call to java/util/Iterator::hasNext &rarr; KILLED</p> <p class='KILLED'><span class='pop'>5.<span><b>5</b><br/><b>Location : </b>runOutputWritersForQuery<br/><b>Killed by : </b>com.googlecode.jmxtrans.jmx.JmxProcessingTests.querySimpleAttribute(com.googlecode.jmxtrans.jmx.JmxProcessingTests)</span></span> removed call to java/util/Iterator::next &rarr; KILLED</p> <p class='KILLED'><span class='pop'>6.<span><b>6</b><br/><b>Location : </b>runOutputWritersForQuery<br/><b>Killed by : </b>com.googlecode.jmxtrans.jmx.JmxProcessingTests.querySimpleAttribute(com.googlecode.jmxtrans.jmx.JmxProcessingTests)</span></span> removed conditional &rarr; KILLED</p> <p class='KILLED'><span class='pop'>7.<span><b>7</b><br/><b>Location : </b>runOutputWritersForQuery<br/><b>Killed by : </b>com.googlecode.jmxtrans.jmx.JmxProcessingTests.querySimpleAttribute(com.googlecode.jmxtrans.jmx.JmxProcessingTests)</span></span> removed conditional &rarr; KILLED</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@61403e3_74'>74</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@61403e3_74'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>runOutputWritersForQuery<br/><b>Killed by : </b>com.googlecode.jmxtrans.jmx.JmxProcessingTests.querySimpleAttribute(com.googlecode.jmxtrans.jmx.JmxProcessingTests)</span></span> removed call to com/googlecode/jmxtrans/model/OutputWriter::doWrite &rarr; KILLED</p> 
+</td>
+</tr>
+
+</table>
+
+
+<h2>Active mutators</h2>
+<ul>
+<li class='mutator'>INCREMENTS_MUTATOR</li>
+<li class='mutator'>CONDITIONALS_BOUNDARY_MUTATOR</li>
+<li class='mutator'>RETURN_VALS_MUTATOR</li>
+<li class='mutator'>VOID_METHOD_CALL_MUTATOR</li>
+<li class='mutator'>INVERT_NEGS_MUTATOR</li>
+<li class='mutator'>REMOVE_CONDITIONALS_EQUAL_IF_MUTATOR</li>
+<li class='mutator'>MATH_MUTATOR</li>
+<li class='mutator'>REMOVE_CONDITIONALS_EQUAL_ELSE_MUTATOR</li>
+<li class='mutator'>NON_VOID_METHOD_CALL_MUTATOR</li>
+<li class='mutator'>NEGATE_CONDITIONALS_MUTATOR</li>
+<li class='mutator'>INLINE_CONSTANT_MUTATOR</li>
+<li class='mutator'>CONSTRUCTOR_CALL_MUTATOR</li>
+<li class='mutator'>REMOVE_CONDITIONALS_ORDER_ELSE_MUTATOR</li>
+<li class='mutator'>REMOVE_CONDITIONALS_ORDER_IF_MUTATOR</li>
+
+</ul>
+
+<h2>Tests examined</h2>
+<ul>
+<li>com.googlecode.jmxtrans.jmx.JmxProcessingTests.querySimpleAttribute(com.googlecode.jmxtrans.jmx.JmxProcessingTests) (485 ms)</li>
+</ul>
+
+<br/>
+
+Report generated by <a href='http://pitest.org'>PIT</a> 1.1.4
+
+</body>
+</html>
